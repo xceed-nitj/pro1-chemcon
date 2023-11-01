@@ -8,3 +8,13 @@
   font-family: 'Plus Jakarta Sans', system-ui, Avenir, Helvetica, Arial,
     sans-serif;
 }
+
+#news::-webkit-scrollbar {
+  display: none;
+}
+
+#news {
+  scrollbar-width: none;
+}
+
+

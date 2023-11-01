@@ -1,11 +1,14 @@
-import Timeline from './components/Timeline'
-import Navbar from './components/Navbar'
+
+import AboutNews from './components/AboutNews'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Timeline />
+ 
+    
+    <AboutNews/> 
+   
+      
     </>
   )
 }
