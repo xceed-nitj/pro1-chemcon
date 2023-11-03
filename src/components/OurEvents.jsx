@@ -36,7 +36,7 @@ function OurEvents() {
                 <h2 className="text-4xl font-bold">Our Events
                 </h2>
             </div>
-            <div className="grid md:grid-rows-2 md:grid-cols-4 md:gap-3 gap-5 ">
+            <div className="grid md:grid-rows-2 md:grid-cols-4 gap-5 md:gap-3">
                 {data.map((item, index) => (<div
                     className={`shadow-md py-8 px-6 bg-amber-${300 + (index % 5) * 100} rounded-md ${index % 7 === 0 ? "md:col-span-2" : ""
                         }`}
@@ -44,7 +44,7 @@ function OurEvents() {
                     <div className="flex items-center h-full ">
                         <div>
                             <h4 className='font-semibold mb-3 md:text-2xl text-xl text-center'>{item.title}</h4>
-                            <p className='text-sm leading-relaxed '>
+                            <p className='text-sm leading-relaxed'>
                                 {item.content}
                             </p>
                         </div>
