@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import Separator from "./common/Separator";
 
 function AboutNews() {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -37,12 +38,12 @@ function AboutNews() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-evenly max-w-7xl mx-auto py-20">
-      <div className="w-full lg:w-3/5 lg:px-5 max-w-[450px] max-h-[400px] lg:max-w-full mx-auto ">
+    <div className="flex flex-col items-center lg:flex-row lg:justify-evenly max-w-7xl mx-auto px-4 py-20">
+      <div className="w-full lg:w-3/5 lg:max-w-full">
         <h2 className="text-4xl font-bold text-gray-950 mb-3 lg:mb-5 ">
           About
         </h2>
-        <hr className="mb-4 bg-amber-400 h-1 rounded-full max-w-xs" />
+        <Separator />
         <p className="text-base font-medium text-gray-800">
           Indian Institute of Chemical Engineers (IIChE) is a national body of
           professional chemical engineers with 32000 members across the country
@@ -67,12 +68,9 @@ function AboutNews() {
       <div className="w-full lg:w-2/5 max-w-[450px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ">
         <h2 className="text-4xl font-bold text-gray-950 mb-3 lg:mb-5">News</h2>
 
-        <hr className="mb-4 bg-amber-400 h-1 rounded-full max-w-xs" />
+        <Separator />
         <div
           id="news"
-          //   className={`h-[360px] ${
-          //     isMouseOver ? " overflow-auto " : "overflow-hidden"
-          //   }`}
           className="h-[400px] overflow-auto bg-amber-100 rounded-xl p-4"
         >
           <div
