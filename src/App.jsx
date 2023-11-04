@@ -1,3 +1,4 @@
+import AboutNews from './components/AboutNews'
 import Timeline from './components/Timeline'
 import Navbar from './components/Navbar'
 import OurEvents from './components/OurEvents'
@@ -8,6 +9,7 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
+      <AboutNews/> 
       <Timeline />
       <OurEvents />
     </>
