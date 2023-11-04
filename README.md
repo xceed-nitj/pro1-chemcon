@@ -2,11 +2,11 @@
 
 ### Structure and distribution
 
-- [ ] Navbar
-- [ ] Hero -- bhavya
-- [ ] about & news -- avnash
-- [ ] important dates -- gautam
-- [ ] our events -- akleem
+- [x] Navbar
+- [x] Hero -- bhavya
+- [x] about & news -- avnash
+- [x] important dates -- gautam
+- [x] our events -- akleem
 - [ ] speakers -- bhavya
 - [ ] technical sessions -- akleem
 - [ ] footer
