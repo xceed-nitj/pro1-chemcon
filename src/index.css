@@ -18,3 +18,35 @@
 }
 
 
+.hero-sec {
+  /* background-image: url(/public/yellowbgonly.png); */
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+   /* Set the section height to 100% of its container's height */
+
+  /* Ensure the section covers the entire viewport height */
+  min-height: 100vh;
+}
+
+.upper-cut-img {
+  position: absolute;
+  height: 60%;
+  top: 0;
+  right: 0;
+}
+
+.lower-cut-img {
+  position: absolute;
+  height: 60%;
+  bottom: 0;
+  right: 0;
+}
+
+.industry-img {
+  position: absolute; /* Position the image absolutely within the parent container */
+  top: 50%; /* Align the top edge of the image at the vertical center */
+  left: 80%; /* Align the left edge of the image at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the image precisely */
+}
