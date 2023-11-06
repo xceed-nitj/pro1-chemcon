@@ -5,7 +5,7 @@ function HeroSection() {
     // <section className="relative isolate bg-amber-800 lg:bg-gradient-to-tr from-amber-600 to-amber-400">
     <section className=" hero-sec relative isolate bg-gradient-to-br from-gray-800 to-gray-950  shadow-xl shadow-amber-900/10">
       <img className="upper-cut-img" src="../public/uppercut.png" alt="" />
-      <img className="lower-cut-img" src="../public/Vector2.png" alt="" />
+      <img className="lower-cut-img" src="../public/Vectorlower.png" alt="" />
 
       <Navbar />
       {/* <div
