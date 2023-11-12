@@ -1,10 +1,9 @@
 import { React, useState } from "react";
-import Separator from "./common/Separator";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import Separator from "./Separator";
 
 function AboutNews() {
+  const [isMouseOver, setIsMouseOver] = useState(false);
+
   const dummyData = [
     {
       id: 1,
@@ -37,19 +36,6 @@ function AboutNews() {
         "The last date for abstract submission has been extended to September 30, 2023. The acceptance Notification date has been extended to October 5, 2023. The last date for full-paper submission has been extended to October 20, 2023. The last date for registration has been changed to October 15, 2023.",
     },
   ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 9000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    vertical: true,
-    pauseOnHover: true,
-  };
 
   return (
     <div className="flex flex-col items-center lg:flex-row lg:justify-evenly max-w-7xl mx-auto px-4 py-20">
@@ -85,21 +71,25 @@ function AboutNews() {
         <Separator />
         <div
           id="news"
-          className="h-[420px] overflow-auto bg-amber-100 rounded-xl p-4"
+          className="h-[400px] overflow-auto bg-amber-100 rounded-xl p-4"
         >
-          <Slider {...settings}>
+          <div
+            className={`space-y-4 ${
+              isMouseOver ? "animate-none" : "animate-wiggle"
+            }`}
+            onMouseOver={() => setIsMouseOver(true)}
+            onMouseOut={() => setIsMouseOver(false)}
+            // className="flex flex-col  animate-wiggle"
+          >
             {dummyData.map((item) => (
-              <div
-                key={item.id}
-                className="p-4 rounded-xl bg-white space-y-4 mb-2"
-              >
+              <div key={item.id} className="p-4 rounded-xl bg-white space-y-4">
                 <p className="text-base font-medium ">{item.title1}</p>
                 <p className="text-sm text-gray-600 line-clamp-2 ">
                   {item.description}
                 </p>
               </div>
             ))}
-          </Slider>
+          </div>
         </div>
       </div>
     </div>

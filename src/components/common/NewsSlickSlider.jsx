@@ -87,6 +87,14 @@ function AboutNews() {
           id="news"
           className="h-[420px] overflow-auto bg-amber-100 rounded-xl p-4"
         >
+          {/* <div
+            className={`space-y-4 ${
+              isMouseOver ? "animate-none" : "animate-wiggle"
+            }`}
+            onMouseOver={() => setIsMouseOver(true)}
+            onMouseOut={() => setIsMouseOver(false)}
+            // className="flex flex-col  animate-wiggle"
+          > */}
           <Slider {...settings}>
             {dummyData.map((item) => (
               <div
