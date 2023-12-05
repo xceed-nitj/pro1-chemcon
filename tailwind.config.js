@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        "4.5xl": "2.5rem",
+      },
       colors: {
         accent: {
           50: "hsl(26, 89%, 96%)",

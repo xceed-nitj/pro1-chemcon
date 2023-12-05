@@ -1,10 +1,15 @@
 import React from "react";
 import { PhoneIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
 
-
-const TopNavInfo = ({ icon, value }) => {
+const TopNavInfo = ({ className, icon, value }) => {
     return (
-        <div className="flex items-center gap-x-2 text-white hover:text-orange-50">
+        <div className={
+            clsx(
+                "flex items-center gap-x-2 text-white hover:text-orange-50",
+                className
+            )
+        }>
             <dt className="flex-none">
                 {icon}
             </dt>

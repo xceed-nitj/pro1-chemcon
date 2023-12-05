@@ -39,6 +39,7 @@ export default function Example() {
               </div>
               <div className="flex items-center gap-6">
                 <TopNavInfo
+                  className="hidden md:flex"
                   icon={<PhoneIcon className="h-5 w-5" />}
                   value="+91 9876543210"
                 />
