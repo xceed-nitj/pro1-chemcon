@@ -26,8 +26,8 @@ export default function Timeline() {
             <div className="bg-gray-100 hover:ring hover:ring-gray-100 hover:ring-offset-2 rounded-xl p-4">
               <h4 className="font-semibold mb-2">3.0 update is now live!</h4>
               <p className="text-sm leading-relaxed">
-                It's finally here are comes packed with many awesome features.
-                Be sure to{" "}
+                It&apos;s finally here are comes packed with many awesome
+                features. Be sure to{" "}
                 <a
                   href="#"
                   className="font-medium text-amber-600 hover:text-amber-400"
