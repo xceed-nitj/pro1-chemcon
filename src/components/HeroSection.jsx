@@ -37,7 +37,7 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute w-full h-full bg-accent-500 z-10 mix-blend-color" />
             <img
-              src="/side-1.jpg"
+              src="/side-1.webp"
               className="bg-black object-cover h-full w-full "
               alt=""
             />
@@ -45,7 +45,7 @@ function HeroSection() {
           <div className="relative row-span-3">
             <div className="absolute w-full h-full bg-gradient-to-b from-stone-900 to-accent-500 z-10 mix-blend-color" />
             <img
-              src="/main.jpg"
+              src="/main.webp"
               className="bg-black  object-cover h-full object-left"
               alt=""
             />
@@ -53,7 +53,7 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute w-full h-full bg-yellow-500 z-10 mix-blend-color" />
             <img
-              src="/side-2.jpg"
+              src="/side-2.webp"
               className="bg-black object-cover h-full w-full"
               alt=""
             />
@@ -61,7 +61,7 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute w-full h-full bg-cyan-500 z-10 mix-blend-color" />
             <img
-              src="/side-3.jpg"
+              src="/side-3.webp"
               className="bg-black object-cover h-full w-full"
               alt=""
             />
