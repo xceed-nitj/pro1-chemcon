@@ -3,43 +3,43 @@ const data = [
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-100",
+    bg: "bg-accent-100",
   },
   {
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-200",
+    bg: "bg-accent-200",
   },
   {
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-300",
+    bg: "bg-accent-300",
   },
   {
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-400",
+    bg: "bg-accent-400 text-white",
   },
   {
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-500",
+    bg: "bg-accent-500 text-white",
   },
   {
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-100",
+    bg: "bg-accent-100",
   },
   {
     title: "Event Tittle",
     content:
       "Every year, the day of 28 December is observed as Dhirubhai Ambani Commemoration Day on the occasion of his Birth Anniversary of the late Shri Dhirubhai Ambani and the Dhirubhai Ambani Oration on varied topics is delivered by eminent personalities of the country to celebrate the occasion.",
-    bg: "bg-amber-200",
+    bg: "bg-accent-200",
   },
 ]; // replace Array.from({ length: 12 }) with data to get layout
 function OurEvents() {
