@@ -8,6 +8,10 @@
   font-family: "Plus Jakarta Sans", system-ui, Avenir, Helvetica, Arial,
     sans-serif;
 }
+::selection {
+  color: white;
+  background: hsl(17, 83%, 54%);
+}
 
 #news::-webkit-scrollbar {
   display: none;
