@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: 'Plus Jakarta Sans', system-ui, Avenir, Helvetica, Arial,
+  font-family: "Plus Jakarta Sans", system-ui, Avenir, Helvetica, Arial,
     sans-serif;
 }
 
@@ -17,14 +17,13 @@
   scrollbar-width: none;
 }
 
-
 .hero-sec {
   /* background-image: url(/public/yellowbgonly.png); */
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-   /* Set the section height to 100% of its container's height */
+  /* Set the section height to 100% of its container's height */
 
   /* Ensure the section covers the entire viewport height */
   min-height: 100vh;
