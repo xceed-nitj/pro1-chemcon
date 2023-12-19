@@ -8,10 +8,13 @@ import {
 import TopNavInfo from "./TopNavInfo";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "#", current: true },
+  { name: "Sponsors", href: "#", current: false },
+  { name: "Organising Committee", href: "#", current: false },
+  { name: "Location", href: "#", current: false },
+  { name: "Accommodation", href: "#", current: false },
+  { name: "Souvenir", href: "#", current: false },
+
 ];
 
 function classNames(...classes) {
@@ -37,15 +40,15 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center font-bold gap-6">
                 <TopNavInfo
                   className="hidden md:flex"
                   icon={<PhoneIcon className="h-5 w-5" />}
-                  value="+91 9876543210"
+                  value="+91-9888895253"
                 />
                 <TopNavInfo
                   icon={<EnvelopeIcon className="h-5 w-5" />}
-                  value="ggsingla777@gmail.com"
+                  value="chemcon2024@gmail.com"
                 />
               </div>
               <nav className="hidden lg:flex" aria-label="Global">
@@ -65,7 +68,8 @@ export default function Example() {
               className="hidden lg:flex px-2 sm:px-4 lg:px-8 lg:space-x-8 lg:py-4"
               aria-label="Global"
             >
-              hi
+              <p className="font-bold">IIChE ChemCon 2024 | December 27-30, 2024</p>
+
             </div>
           </div>
 
