@@ -3,18 +3,10 @@ name: Deploy
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        description: "Environment to deploy to"
-        required: true
-        default: "staging"
       branch:
         description: "Branch to deploy"
         required: true
         default: "main"
-      build:
-        description: "Build to deploy"
-        required: true
-        default: "latest"
 jobs:
   build:
     name: Build
