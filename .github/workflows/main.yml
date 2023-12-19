@@ -46,8 +46,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/heads/') && github.ref == 'refs/heads/main'
-    permissions:
-      actions: write
+    permissions: write-all
 
     steps:
       - name: Download artifact
