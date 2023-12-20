@@ -1,3 +1,5 @@
+import {  Link } from "react-router-dom";
+
 const data = [
   {
     title: "Technical Sessions",
@@ -46,15 +48,18 @@ function OurEvents() {
   
   return (
 
-    <div className="container space-y-8 xl:max-w-7xl mx-auto px-8 lg:px-8 ">
+    <div className="container space-y-8 xl:max-w-7xl mx-auto px-8 lg:px-8 md:mb-1 ">
       <div className="text-center">
-        <h2 className="text-4xl font-bold">Our Events</h2>
+        <h2 className="text-4xl font-bold mb-5">Our Events</h2>
       </div>
-      <div className="grid md:grid-rows-2 md:grid-cols-4 gap-5 md:gap-3">
+      <Link to="/events">
+
+      <div className="grid md:grid-rows-2 md:grid-cols-3 gap-5 md:gap-5 ">
+
         {data.map((item, index) => (
           <div
-            className={`py-8 px-6 rounded-xl ${item.bg} ${
-              index % 7 === 0 ? "md:col-span-2" : ""
+            className={`py-8 px-6 max-h-[350px] overflow-hidden rounded-xl ${item.bg} ${
+              index % 7 === 0? "md:col-span-2" : ""
             }`}
             key={index}
           >
@@ -69,6 +74,8 @@ function OurEvents() {
           </div>
         ))}
       </div>
+      </Link>
+
     </div>
   );
 }

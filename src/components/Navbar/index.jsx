@@ -8,12 +8,16 @@ import {
 import TopNavInfo from "./TopNavInfo";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Sponsors", href: "#", current: false },
-  { name: "Organising Committee", href: "#", current: false },
-  { name: "Location", href: "#", current: false },
-  { name: "Accommodation", href: "#", current: false },
-  { name: "Souvenir", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Events", href: "events", current: false },
+  { name: "Sponsors", href: "/sponsorship", current: false },
+  { name: "Committees", href: "committee", current: false },
+
+  { name: "Location", href: "location", current: false },
+  { name: "Accommodation", href: "accommodation", current: false },
+  { name: "Souvenir", href: "souvenir", current: false },
+  { name: "Registration-Fee", href: "registration", current: false },
+
 
 ];
 
@@ -23,12 +27,12 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="header" className="bg-accent-200 shadow">
+    <Disclosure as="header" className="bg-accent-200 shadow ">
       {({ open }) => (
         <>
-          <div className="mx-auto ">
+          <div className="mx-auto  ">
             <div className="relative px-2 sm:px-4 lg:px-8 flex h-16 bg-accent-500 justify-between items-center">
-              <div className="relative z-10 flex items-center lg:hidden">
+              <div className="relative z-10 flex items-center lg:hidden ">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-accent-400 hover:text-accent-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-300">
                   <span className="absolute -inset-0.5" />

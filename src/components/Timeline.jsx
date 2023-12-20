@@ -119,7 +119,7 @@ export default function Timeline() {
       </div>
       </div>
 
-      <div className="w-full lg:w-2/5 max-w-[450px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ">
+      <div className="w-full md:w-[700px] lg:w-2/5  lg:max-w-[450px]  mt-10 lg:mt-0 mx-auto lg:px-5 ">
         <h2 className="text-4xl font-sans font-bold text-gray-950 mb-3 lg:mb-4">About Doaba Regional Centre (DRC)
 </h2>
 <Separator/>

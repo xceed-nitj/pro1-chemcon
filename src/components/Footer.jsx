@@ -1,27 +1,27 @@
-import { SocialIcon } from "react-social-icons";
+// import { SocialIcon } from "react-social-icons";
 
-const socialLinks = [
-  {
-    id: 1,
-    url: "https://www.facebook.com/",
-  },
-  {
-    id: 2,
-    url: "https://www.instagram.com/",
-  },
-  {
-    id: 3,
-    url: "https://www.x.com/",
-  },
-  {
-    id: 4,
-    url: "https://www.linkedin.com/",
-  },
-  {
-    id: 5,
-    url: "https://www.github.com/",
-  },
-];
+// const socialLinks = [
+//   {
+//     id: 1,
+//     url: "https://www.facebook.com/",
+//   },
+//   {
+//     id: 2,
+//     url: "https://www.instagram.com/",
+//   },
+//   {
+//     id: 3,
+//     url: "https://www.x.com/",
+//   },
+//   {
+//     id: 4,
+//     url: "https://www.linkedin.com/",
+//   },
+//   {
+//     id: 5,
+//     url: "https://www.github.com/",
+//   },
+// ];
 const footerLinks = [
   {
     id: 1,
@@ -94,26 +94,26 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <p>
-                <span className="text-xs uppercase tracking-wide text-stone-500">
+                {/* <span className="text-xs uppercase tracking-wide text-stone-500">
                   {" "}
                   Call us{" "}
-                </span>
+                </span> */}
 
-                <a
-                  href="#"
-                  className="block text-2xl font-medium text-stone-900 hover:opacity-75 sm:text-3xl"
-                >
-                   9888895253
-                </a>
+
               </p>
+              <p className="block text-2xl font-medium text-stone-900 hover:opacity-75 sm:text-3xl">Contact Us</p>
 
-              <ul className="mt-8 space-y-1 text-sm text-stone-700">
-                <li>Email: chemcon2024@gmail.com
-</li>
-                <li>Website: www.chemcon2024.com</li>
+              <ul className="mt-4 space-y-1 text-sm text-stone-700">
+              <li>Prof. S. Bajpai</li>
+              <li>Organizing Secretary, CHEMCON-2024</li>
+              <li>NIT Jalandhar</li>
+                <li>Phone:9888895253</li>
+                <li>Email: chemcon2024@gmail.com</li>
+                <li> <a href="/">
+                  Website: www.chemcon2024.com </a></li>
               </ul>
 
-              <ul className="mt-8 flex gap-6">
+              {/* <ul className="mt-8 flex gap-6">
                 {socialLinks.map((socialLink) => (
                   <li key={socialLink.id}>
                     <SocialIcon
@@ -125,7 +125,7 @@ const Footer = () => {
                     />
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -184,7 +184,7 @@ const Footer = () => {
               </ul>
 
               <p className="mt-8 text-xs text-stone-500 sm:mt-0">
-                &copy; 2023 Company Name. All rights reserved.
+                &copy; 2023 XCEED All rights reserved.
               </p>
             </div>
           </div>

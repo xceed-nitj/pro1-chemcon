@@ -5,8 +5,8 @@ function AboutNITJ() {
 
 
     return (
-        <div className='flex flex-col lg:flex-row lg:justify-evenly mt-5 mx-7 lg:mx-15 cursor-default'  >
-            <div className="w-full lg:w-3/5 lg:max-w-full">
+        <div className="flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start max-w-7xl mx-auto px-4 pt-20">
+            <div className="w-full md:w-[700px] lg:w-3/5 lg:max-w-full">
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">
                     About NITJ        </h2>
                 <Separator />
@@ -25,13 +25,13 @@ function AboutNITJ() {
                 </p>
 
             </div>
-            <div className="w-full lg:w-2/5 max-w-[450px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ">
+            <div className="w-full md:w-[700px] lg:w-2/5 lg:max-w-[450px]  mt-10 lg:mt-0 mx-auto lg:px-5 ">
             
                 <h2 className="text-4xl font-sans font-bold  text-gray-950  ">
                     About the Department
                 </h2>
                 <Separator />
-                <p className="text-base text-justify font-sans font-base text-gray-800">
+                <p className="text-base  text-justify font-sans font-base text-gray-800">
                     The Department (FIST Sponsored) was established in 1990 and
                     has been playing a vital role in the development of Chemical
                     Engineering education and research by offering B. Tech, M. Tech

@@ -22,14 +22,13 @@ function AboutNews() {
 
   return (
     <div className="flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start max-w-7xl mx-auto px-4 py-20">
-      <div className="w-full lg:w-3/5 lg:max-w-full">
+      <div className="w-full  md:w-[700px] lg:w-3/5 lg:max-w-full">
         <h2 className="text-4xl font-sans font-bold text-gray-950  ">
         CHEMCON 2024
         </h2>
         <Separator />
         <p className="text-base text-justify font-sans font-base text-gray-800">
-          CHEMCON 2024, the 77
-          th Annual Session of the Indian Institute of
+          CHEMCON 2024, the 77th Annual Session of the Indian Institute of
           Chemical Engineers will be held during December 27-30, 2024 at
           NIT Jalandhar.
           The annual technical jamboree of IIChE, CHEMCON, continues
@@ -59,7 +58,7 @@ function AboutNews() {
           Journal “The Indian Chemical Engineer” since 1959..
         </p>
       </div>
-      <div className="w-full lg:w-2/5 max-w-[450px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ">
+      <div className="sm:w-full md:w-[500px] lg:w-2/5 max-w-[500px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ml-5 ">
         <h2 className="text-4xl font-sans font-bold text-gray-950 mb-3 lg:mb-4">News</h2>
 
         <Separator />
@@ -75,9 +74,9 @@ function AboutNews() {
           // className="flex flex-col  animate-wiggle"
           >
             {dummyData.map((item) => (
-              <div key={item.id} className="p-4 rounded-xl bg-white space-y-4">
+              <div key={item.id} className="p-4 rounded-xl hover:shadow-md hover:shadow-accent-400  bg-white space-y-4">
                 <p className="text-base font-medium ">{item.title1}</p>
-                <p className="text-sm text-gray-600  ">
+                <p className="text-sm font-sans   ">
                   {item.description}
                 </p>
               </div>
