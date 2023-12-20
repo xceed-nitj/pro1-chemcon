@@ -10,14 +10,14 @@ import {  Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Events", href: "events", current: false },
-  { name: "Sponsors", href: "sponsorship", current: false },
-  { name: "Committees", href: "committee", current: false },
+  { name: "Events", href: "/events", current: false },
+  { name: "Sponsors", href: "/sponsorship", current: false },
+  { name: "Committees", href: "/committee", current: false },
 
-  { name: "Location", href: "location", current: false },
-  { name: "Accommodation", href: "accommodation", current: false },
-  { name: "Souvenir", href: "souvenir", current: false },
-  { name: "Registration-Fee", href: "registration", current: false },
+  { name: "Location", href: "/location", current: false },
+  { name: "Accommodation", href: "/accommodation", current: false },
+  { name: "Souvenir", href: "/souvenir", current: false },
+  { name: "Registration-Fee", href: "/registration", current: false },
 
 
 ];
