@@ -6,11 +6,12 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import TopNavInfo from "./TopNavInfo";
+import {  Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "Events", href: "events", current: false },
-  { name: "Sponsors", href: "/sponsorship", current: false },
+  { name: "Sponsors", href: "sponsorship", current: false },
   { name: "Committees", href: "committee", current: false },
 
   { name: "Location", href: "location", current: false },
@@ -57,14 +58,14 @@ export default function Example() {
               </div>
               <nav className="hidden lg:flex" aria-label="Global">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className="inline-flex items-center rounded-md py-2 px-3 text-xs text-white uppercase hover:bg-accent-400 font-semibold"
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
