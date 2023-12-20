@@ -27,7 +27,7 @@ function AboutNITJ() {
             </div>
             <div className="w-full lg:w-2/5 max-w-[450px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ">
             
-                <h2 className="text-4xl font-sans font-bold mt-4 text-gray-950  ">
+                <h2 className="text-4xl font-sans font-bold  text-gray-950  ">
                     About the Department
                 </h2>
                 <Separator />

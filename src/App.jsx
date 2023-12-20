@@ -9,6 +9,7 @@ import AboutNITJ from "./components/AboutNITJ";
 function App() {
   return (
     <>
+    
       <HeroSection />
       <AboutNews />
       <Timeline />
@@ -16,6 +17,7 @@ function App() {
       <OurEvents />
       <AboutNITJ/>
       <Footer />
+      
     </>
   );
 }

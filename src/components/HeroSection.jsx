@@ -10,11 +10,11 @@ function HeroSection() {
           <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center ">
             Indian Chemical Engineering Congress
           </p>
-          <p className="lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-300 text-center my-3 mx-auto">
+          <p className="lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-3 mx-auto">
             CHEMCON 2024
           </p>
 
-          <h3 className=" mx-auto font-bold text-center tracking-wide md:text-center lg:text-xl">
+          <h3 className=" mx-auto font-bold text-center tracking-wide  lg:text-xl">
             Role of Chemical Engineering towards Sustainable
             Development and Atmanirbhar bharat
           </h3>
@@ -25,7 +25,7 @@ function HeroSection() {
           <p className=" mx-auto font-semibold text-center  ">Organized by
 
           </p>
-          <h4 className=" mx-auto font-bold  text-xl text-center md:text-left ">
+          <h4 className=" mx-auto font-bold  text-xl text-center md:text-center ">
             Indian Institute of Chemical Engineers
             Doaba Regional Centre
           </h4>
@@ -67,12 +67,12 @@ function HeroSection() {
 
             </div>
           </section> */}
-          {/* <a
+          <a
             href="#"
-            className="mt-8 lg:mt-16 flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
+            className="mt-8 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
           >
             Register
-          </a> */}
+          </a>
         </div>
         <div className="grid grid-cols-2 grid-rows-3 gap-3 md:gap-5 w-full h-full">
           <div className="relative">
