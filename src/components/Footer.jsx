@@ -103,13 +103,14 @@ const Footer = () => {
                   href="#"
                   className="block text-2xl font-medium text-stone-900 hover:opacity-75 sm:text-3xl"
                 >
-                  0123456789
+                   9888895253
                 </a>
               </p>
 
               <ul className="mt-8 space-y-1 text-sm text-stone-700">
-                <li>Monday to Friday: 10am - 5pm</li>
-                <li>Weekend: 10am - 3pm</li>
+                <li>Email: chemcon2024@gmail.com
+</li>
+                <li>Website: www.chemcon2024.com</li>
               </ul>
 
               <ul className="mt-8 flex gap-6">
@@ -183,7 +184,7 @@ const Footer = () => {
               </ul>
 
               <p className="mt-8 text-xs text-stone-500 sm:mt-0">
-                &copy; 2022. Company Name. All rights reserved.
+                &copy; 2023 Company Name. All rights reserved.
               </p>
             </div>
           </div>
