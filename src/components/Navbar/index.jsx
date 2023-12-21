@@ -87,8 +87,8 @@ export default function Example() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="Link"
-                  to={item.href}
+                  as="a"
+                  href={item.href}
                   className={classNames(
                     item.current
                       ? "bg-gray-100 text-gray-900"

@@ -52,7 +52,7 @@ function OurEvents() {
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-5">Our Events</h2>
       </div>
-      <Link  to="/events#targetSection" scroll>
+      <Link  to="/events" smooth>
 
       <div className="grid md:grid-rows-2 md:grid-cols-3 gap-5 md:gap-5 ">
 
