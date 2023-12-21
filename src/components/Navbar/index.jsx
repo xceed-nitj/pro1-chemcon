@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import TopNavInfo from "./TopNavInfo";
 import {  Link } from "react-router-dom";
+import CountdownTimer from "../CountdownTimer";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -17,7 +18,7 @@ const navigation = [
   { name: "Location", href: "/location", current: false },
   { name: "Accommodation", href: "/accommodation", current: false },
   { name: "Souvenir", href: "/souvenir", current: false },
-  { name: "Registration-Fee", href: "/registration", current: false },
+  { name: "Reg.-Fee", href: "/registration", current: false },
 
 
 ];
@@ -45,7 +46,7 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex items-center font-bold gap-6">
+              <div className="flex items-center font-bold gap-4">
                 <TopNavInfo
                   className="hidden md:flex"
                   icon={<PhoneIcon className="h-5 w-5" />}
@@ -61,7 +62,7 @@ export default function Example() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="inline-flex items-center rounded-md py-2 px-3 text-xs text-white uppercase hover:bg-accent-400 font-semibold"
+                    className="inline-flex items-center rounded-md py-2 px-2 text-xs text-white uppercase hover:bg-accent-400 font-semibold"
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
@@ -73,7 +74,10 @@ export default function Example() {
               className="hidden lg:flex px-2 sm:px-4 lg:px-8 lg:space-x-8 lg:py-4"
               aria-label="Global"
             >
-              <p className="font-bold">IIChE ChemCon 2024 | December 27-30, 2024</p>
+              <span><p className="font-bold">IIChE ChemCon 2024 | December 27-30, 2024</p></span>
+              <span className='fixed right-[120px] top-[68px]'>
+                <CountdownTimer />
+              </span>
 
             </div>
           </div>
@@ -83,8 +87,8 @@ export default function Example() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as="Link"
+                  to={item.href}
                   className={classNames(
                     item.current
                       ? "bg-gray-100 text-gray-900"

@@ -35,7 +35,7 @@ function Registration() {
                     Registration Fee
 
                     </p>
-                    <p className="text-base  text-justify font-sans font-base text-gray-800">
+                    <p className="text-xs md:text-base   text-justify font-sans  text-gray-800">
                     
                         <table className="mt-3 border-collapse box-border min-w-full">
                             <thead>
@@ -54,7 +54,7 @@ function Registration() {
                                     </tr>
                                 )) : (
                                     <tr>
-                                        <td colSpan="7" className="p-1 text-center">No data available</td>
+                                        <td colSpan="2" className="p-1 text-center">No data available</td>
                                     </tr>
 
                                 )}

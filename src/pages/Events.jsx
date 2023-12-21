@@ -57,8 +57,8 @@ function Events() {
             </ul>
           </p>
         </div>
-
-        <div className="m-5 md:m-10">
+<section id="targetSection">
+        <div className="m-5 md:m-10" >
           <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
             Sri Dhirubhai Ambani Commemoration Day
           </p>
@@ -68,7 +68,7 @@ function Events() {
           </p>
 
         </div>
-
+        </section>
         <div className="m-5 md:m-10">
           <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
             International Symposium
@@ -93,7 +93,7 @@ function Events() {
             organizations will be allotted space of the following dimensions in
             the form of exhibition stalls with all facilities like furniture, power,
             etc., at a cost given below:
-            <table className="mt-3  border-collapse box-border w-[400px]">
+            <table className="mt-3  border-collapse box-border md:w-[400px]">
               <thead>
                 <tr className="border-[2px] bg-accent-100  border-accent-500">
                   <th className="p-1 pl-4 text-left">Dimension</th>
@@ -104,13 +104,13 @@ function Events() {
               <tbody>
                 {data.length > 0 ? data.map((item, index) => (
                   <tr key={index} className="border-[1px] font-serif border-accent-500">
-                    <td className="p-1 pl-4 text-left">{item.dimension}</td>
-                    <td className="p-1 pl-4 text-left">{item.price}</td>
+                    <td className="p-1 md:pl-4 text-left">{item.dimension}</td>
+                    <td className="p-1 md:pl-4 text-left">{item.price}</td>
 
                   </tr>
                 )) : (
                   <tr>
-                    <td colSpan="7" className="p-1 text-center">No data available</td>
+                    <td colSpan="2" className="p-1 text-center">No data available</td>
                   </tr>
 
                 )}

@@ -58,13 +58,13 @@ function AboutNews() {
           Journal “The Indian Chemical Engineer” since 1959..
         </p>
       </div>
-      <div className="sm:w-full md:w-[500px] lg:w-2/5 max-w-[500px] h-96 mt-10 lg:mt-0 mx-auto lg:px-5 ml-5 ">
+      <div className="sm:w-full md:w-[500px] lg:w-2/5 max-w-[500px] h-96 mt-10 lg:mt-0 ml-5 md:mx-auto lg:px-5  ">
         <h2 className="text-4xl font-sans font-bold text-gray-950 mb-3 lg:mb-4">News</h2>
 
         <Separator />
         <div
           id="news"
-          className="h-[400px] overflow-auto bg-amber-100 rounded-xl p-4"
+          className="h-[400px]  overflow-auto bg-amber-100 rounded-xl p-4"
         >
           <div
             className={`space-y-4 ${isMouseOver ? "animate-none" : "animate-wiggle"

@@ -7,13 +7,14 @@ import Souvenir from "./pages/Souvenir";
 import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
 import Committee from "./components/Committee";
+// import CoundownTracker from "./components/CoundownTracker";
 
 function App() {
   return (
     <>
 
       < Routes >
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="sponsorship" element={<Sponsors />} />
         <Route path="events" element={<Events />} />
         <Route path="location" element={<Location />} />
@@ -29,3 +30,5 @@ function App() {
 }
 
 export default App;
+
+
