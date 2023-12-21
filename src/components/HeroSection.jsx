@@ -1,20 +1,26 @@
 import Navbar from "./Navbar";
+import SecNavbar from "./SecNavbar";
 
 function HeroSection() {
   return (
     <>
-      <Navbar />
+      <div className="fixed top-0 w-screen z-40 "> 
+      <Navbar />      
+      </div>
+      <SecNavbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto lg:px-8 px-3">
-        <div className="flex flex-col items-center md:items-start justify-center py-10 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+
+        <div className="flex flex-col items-center md:items-start justify-center py-4 gap-3">
           <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center ">
             Indian Chemical Engineering Congress
           </p>
+
           <p className="lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-3 mx-auto">
             CHEMCON 2024
           </p>
 
-          <h3 className=" mx-auto font-bold text-center tracking-wide md:text-center lg:text-xl">
+          <h3 className=" mx-auto font-bold text-center tracking-wide  lg:text-xl">
             Role of Chemical Engineering towards Sustainable
             Development and Atmanirbhar bharat
           </h3>
@@ -22,13 +28,14 @@ function HeroSection() {
           <h4 className="text-accent-500 mx-auto font-bold text-center md:text-left text-md ">December 27-30, 2024
           </h4>
           <p className=" mx-auto">
-          <p className=" mx-auto font-semibold text-center  ">Organized by
+            <p className=" mx-auto font-semibold text-center  ">Organized by
 
-          </p>
-          <h4 className=" mx-auto font-bold  text-xl text-center md:text-left ">
-            Indian Institute of Chemical Engineers
-            Doaba Regional Centre
-          </h4>
+            </p>
+            <h4 className=" mx-auto font-bold  text-xl text-center md:text-center ">
+              <p>            Indian Institute of Chemical Engineers</p>
+              <p>            Doaba Regional Centre</p>          <p>NITJ</p>
+
+            </h4>
           </p>
           <div className="flex flex-col md:flex-row   gap-4 items-center">
             <div className="flex flex-col justify-center items-center max-w-[300px]">
@@ -69,7 +76,7 @@ function HeroSection() {
           </section> */}
           <a
             href="#"
-            className="mt-4 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
+            className="mt-3 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
           >
             Register
           </a>

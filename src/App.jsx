@@ -1,23 +1,33 @@
-import AboutNews from "./components/AboutNews";
-import Timeline from "./components/Timeline";
-import OurEvents from "./components/OurEvents";
-import HeroSection from "./components/HeroSection";
-// import Speakers from "./components/SpeakerSection/Speakers";
-import Footer from "./components/Footer";
-import AboutNITJ from "./components/AboutNITJ";
-// import AboutNews from "./components/Dummy";
+import Home from "./pages/Home";
+import Events from "./pages/Events";
+import Accommodation from "./pages/Accomodation";
+import Location from "./pages/Location";
+import Registration from "./pages/Registration";
+import Souvenir from "./pages/Souvenir";
+import Sponsors from "./pages/Sponsors";
+import { Route, Routes } from "react-router-dom";
+import Committee from "./pages/Committee";
+
 function App() {
   return (
     <>
-      <HeroSection />
-      <AboutNews />
-      <Timeline />
-      {/* <Speakers /> */}
-      <OurEvents />
-      <AboutNITJ/>
-      <Footer />
+
+      < Routes >
+        <Route path="/" element={<Home/>} />
+        <Route path="sponsorship" element={<Sponsors />} />
+        <Route path="events" element={<Events />} />
+        <Route path="location" element={<Location />} />
+        <Route path="accommodation" element={<Accommodation />} />
+        <Route path="souvenir" element={<Souvenir />} />
+        <Route path="registration" element={<Registration />} />
+        <Route path="committee" element={<Committee />} />
+
+
+      </Routes >
     </>
   );
 }
 
 export default App;
+
+
