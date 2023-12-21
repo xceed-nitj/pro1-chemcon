@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 
 
 function Sponsors() {
-    useEffects(() => {
+    useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
     const data = [
