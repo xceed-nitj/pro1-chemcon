@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 function Accommodation() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <div className="fixed top-0 w-screen z-50 ">

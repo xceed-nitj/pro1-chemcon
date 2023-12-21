@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 
 
 function Registration() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const data = [
         { title: 'IICHE Member', price: 5000 },
         { title: 'Non Member / Industrial Personnel', price: 6200 },

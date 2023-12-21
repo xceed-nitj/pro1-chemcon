@@ -58,11 +58,11 @@ function OurEvents() {
 
         {data.map((item, index) => (
           <div
-            className={`py-8 px-6 max-h-[350px] overflow-hidden rounded-xl ${item.bg} ${
-              index % 7 === 0? "md:col-span-2" : ""
-            }`}
-            key={index}
-          >
+          className={`py-8 px-6 max-h-[350px] overflow-hidden hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
+            index % 7 === 6 ? "md:col-span-2" : ""
+          }`}
+          key={index}
+        >
             <div className="flex h-full ">
               <div>
                 <h4 className="font-semibold mb-3 md:text-2xl text-xl">

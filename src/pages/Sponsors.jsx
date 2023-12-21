@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 
 
 function Sponsors() {
+    useEffects(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const data = [
         { category: 'Platinum Sponsorship', price: 3000000 },
         { category: 'Gold Sponsorship', price: 2000000 },

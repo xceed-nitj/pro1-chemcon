@@ -1,7 +1,7 @@
 // import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-
+import { useEffect } from 'react';
 const data = [
   { dimension: '6m x 6m (Central Hall)', price: 100000 },
   { dimension: '3m x 3m', price: 30000 },
@@ -9,6 +9,9 @@ const data = [
 ];
 
 function Events() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="fixed top-0 w-screen z-50 ">

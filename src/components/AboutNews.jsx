@@ -74,7 +74,7 @@ function AboutNews() {
           // className="flex flex-col  animate-wiggle"
           >
             {dummyData.map((item) => (
-              <div key={item.id} className="p-4 rounded-xl hover:shadow-md hover:shadow-accent-400  bg-white space-y-4">
+              <div key={item.id} className="p-4 rounded-xl hover:shadow-lg hover:shadow-accent-600  bg-white space-y-4">
                 <p className="text-base font-medium ">{item.title1}</p>
                 <p className="text-sm font-sans   ">
                   {item.description}

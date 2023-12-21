@@ -6,8 +6,12 @@ import Footer from "../components/Footer";
 import AboutNITJ from "../components/AboutNITJ";
 import AboutNews from "../components/AboutNews";
 import SponsorShip from "../components/Sponsorship";
+import { useEffect } from "react";
 // import AboutNews from "./components/Dummy";
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     

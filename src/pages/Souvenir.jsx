@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 
 
 function Souvenir() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const data = [
         { location: 'Multicolor Back page', price: 150000 },
         { location: 'Multicolor Back inside gatefold', price: 100000 },
