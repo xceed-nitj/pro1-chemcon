@@ -64,6 +64,7 @@ export default function Example() {
                     to={item.href}
                     className="inline-flex items-center rounded-md py-2 px-2 text-xs text-white uppercase hover:bg-accent-400 font-semibold"
                     aria-current={item.current ? "page" : undefined}
+
                   >
                     {item.name}
                   </Link>
@@ -88,7 +89,6 @@ export default function Example() {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.href}
                   className={classNames(
                     item.current
                       ? "bg-gray-100 text-gray-900"
@@ -97,7 +97,12 @@ export default function Example() {
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
+                  <Link
+                    key={item.name}
+                    to={item.href}>
+
                   {item.name}
+                  </Link>
                 </Disclosure.Button>
               ))}
             </div>
