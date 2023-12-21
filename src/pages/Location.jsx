@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import SecNavbar from '../components/SecNavbar';
 function Location() {
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
     return (
-        <>
-            <div className="fixed top-0 w-screen z-50 ">
-                <Navbar />
-            </div>
-            <div className="  lg:px-8 px-3 mt-[70px] lg:mt-[130px] min-h-[300px]">
+        <><div className="fixed top-0 w-screen z-40 "> 
+        <Navbar />      
+        </div>
+        <SecNavbar />
+            <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px] min-h-[300px]">
                 <div className="m-5">
                     <p className="text-2xl font-sans font-bold mb-5  text-gray-950 underline ">
                         How to Reach NITJ

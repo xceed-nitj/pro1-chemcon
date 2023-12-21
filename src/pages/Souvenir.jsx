@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import SecNavbar from '../components/SecNavbar';
 
 
 
@@ -22,11 +23,12 @@ function Souvenir() {
 
     return (
         <>
-            <div className="fixed top-0 w-screen z-50 ">
-                <Navbar />
-            </div>
+            <div className="fixed top-0 w-screen z-40 "> 
+      <Navbar />      
+      </div>
+      <SecNavbar />
 
-            <div className="  lg:px-8 px-3 mt-[70px] lg:mt-[130px]">
+            <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
 
 
 

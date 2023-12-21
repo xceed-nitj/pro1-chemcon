@@ -1,13 +1,15 @@
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import SecNavbar from '../components/SecNavbar'
 
 function Committee() {
     return (
         <>
-            <div className="fixed top-0 w-screen z-50 ">
-                <Navbar />
-            </div>
-            <div className="font-sans  lg:px-8 px-3 mt-[70px] lg:mt-[130px] min-h-[300px]">
+            <div className="fixed top-0 w-screen z-40 "> 
+      <Navbar />      
+      </div>
+      <SecNavbar/>
+            <div className="font-sans  lg:px-8 px-3 mt-[58px] lg:mt-[2px] min-h-[300px]">
                 <div className="m-5">
                     <p className="text-xl font-sans font-bold  text-gray-950 underline ">
                         NATIONAL ORGANISING COMMITTEE

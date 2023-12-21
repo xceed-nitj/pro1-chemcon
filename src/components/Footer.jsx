@@ -22,60 +22,60 @@
 //     url: "https://www.github.com/",
 //   },
 // ];
-const footerLinks = [
-  {
-    id: 1,
-    title: "Services",
-    links: [
-      {
-        id: 1,
-        title: "1on1 Coaching",
-        url: "#",
-      },
-      {
-        id: 2,
-        title: "Company Review",
-        url: "#",
-      },
-      {
-        id: 3,
-        title: "Accounts Review",
-        url: "#",
-      },
-      {
-        id: 4,
-        title: "HR Consulting",
-        url: "#",
-      },
-      {
-        id: 5,
-        title: "SEO Optimisation",
-        url: "#",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Company",
-    links: [
-      {
-        id: 1,
-        title: "About",
-        url: "#",
-      },
-      {
-        id: 2,
-        title: "Meet the Team",
-        url: "#",
-      },
-      {
-        id: 3,
-        title: "Accounts Review",
-        url: "#",
-      },
-    ],
-  },
-];
+// const footerLinks = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     links: [
+//       {
+//         id: 1,
+//         title: "1on1 Coaching",
+//         url: "#",
+//       },
+//       {
+//         id: 2,
+//         title: "Company Review",
+//         url: "#",
+//       },
+//       {
+//         id: 3,
+//         title: "Accounts Review",
+//         url: "#",
+//       },
+//       {
+//         id: 4,
+//         title: "HR Consulting",
+//         url: "#",
+//       },
+//       {
+//         id: 5,
+//         title: "SEO Optimisation",
+//         url: "#",
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     title: "Company",
+//     links: [
+//       {
+//         id: 1,
+//         title: "About",
+//         url: "#",
+//       },
+//       {
+//         id: 2,
+//         title: "Meet the Team",
+//         url: "#",
+//       },
+//       {
+//         id: 3,
+//         title: "Accounts Review",
+//         url: "#",
+//       },
+//     ],
+//   },
+// ];
 const Footer = () => {
   3;
   return (
@@ -90,7 +90,7 @@ const Footer = () => {
           <div className="absolute w-full h-full bg-accent-500 z-10 mix-blend-color" />
         </div>
 
-        <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+        <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:mx-20">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <p>
@@ -103,7 +103,7 @@ const Footer = () => {
               </p>
               <p className="block text-2xl font-medium text-stone-900 hover:opacity-75 sm:text-3xl">Contact Us</p>
 
-              <ul className="mt-4 space-y-1 text-sm text-stone-700">
+              <ul className="mt-4 space-y-1 text-sm text-stone-700 ">
               <li>Prof. S. Bajpai</li>
               <li>Organizing Secretary, CHEMCON-2024</li>
               <li>NIT Jalandhar</li>
@@ -128,7 +128,7 @@ const Footer = () => {
               </ul> */}
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {footerLinks.map((footerLink) => (
                 <div key={footerLink.id}>
                   <p className="font-medium text-stone-900">
@@ -149,8 +149,8 @@ const Footer = () => {
                   </ul>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>*/}
+          </div> 
 
           <div className="mt-12 border-t border-stone-200 pt-12">
             <div className="sm:flex sm:items-center sm:justify-between">

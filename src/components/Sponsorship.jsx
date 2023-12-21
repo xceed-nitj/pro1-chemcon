@@ -41,7 +41,7 @@ function SponsorShip() {
         <div className="flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start max-w-7xl mx-auto px-4 py-20">
             <div className="w-full md:w-[700px] lg:w-3/5 lg:max-w-full">
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">
-                SponsorShip Rates
+                Sponsorship Rates
                 </h2>
                 <Separator />
                 

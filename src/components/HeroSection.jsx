@@ -1,12 +1,16 @@
 import Navbar from "./Navbar";
+import SecNavbar from "./SecNavbar";
 
 function HeroSection() {
   return (
     <>
-      <div className="fixed top-0 w-screen z-50 ">      <Navbar />
+      <div className="fixed top-0 w-screen z-40 "> 
+      <Navbar />      
       </div>
+      <SecNavbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[64px] lg:mt-[120px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+
         <div className="flex flex-col items-center md:items-start justify-center py-4 gap-3">
           <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center ">
             Indian Chemical Engineering Congress

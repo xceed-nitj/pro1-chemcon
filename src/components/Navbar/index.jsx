@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import TopNavInfo from "./TopNavInfo";
 import {  Link } from "react-router-dom";
-import CountdownTimer from "../CountdownTimer";
+// import CountdownTimer from "../CountdownTimer";
 import { useState,useEffect } from "react";
 
 const navigation = [
@@ -19,7 +19,7 @@ const navigation = [
   { name: "Location", href: "/location", current: false },
   { name: "Accommodation", href: "/accommodation", current: false },
   { name: "Souvenir", href: "/souvenir", current: false },
-  { name: "Reg.-Fee", href: "/registration", current: false },
+  { name: "Registration Fee", href: "/registration", current: false },
 
 
 ];
@@ -41,11 +41,12 @@ useEffect(() => {
   setCurrentNavigation(updatedNavigation);
 }, [location.pathname]);
   return (
+    <div>
     <Disclosure as="header" className="bg-accent-200 shadow ">
       {({ open }) => (
         <>
           <div className="mx-auto  ">
-            <div className="relative px-2 sm:px-4 lg:px-8 flex h-16 bg-accent-500 justify-between items-center">
+            <div className="relative px-2 sm:px-4 lg:px-8 flex h-14 bg-accent-500 justify-between items-center ">
               <div className="relative z-10 flex items-center lg:hidden ">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-accent-400 hover:text-accent-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-300">
@@ -83,16 +84,16 @@ useEffect(() => {
                 ))}
               </nav>
             </div>
-            <div
-              className="hidden lg:flex px-2 sm:px-4 lg:px-8 lg:space-x-8 lg:py-4"
+            {/* <div
+              className="hidden  lg:flex px-2 sm:px-4 lg:px-8 lg:space-x-8 lg:py-3"
               aria-label="Global"
             >
               <span><p className="font-bold">IIChE ChemCon 2024 | December 27-30, 2024</p></span>
-              <span className='fixed right-[120px] top-[68px]'>
+              <span className='fixed right-[120px] top-[58px]'>
                 <CountdownTimer />
               </span>
 
-            </div>
+            </div> */}
           </div>
 
           <Disclosure.Panel as="nav" className="lg:hidden" aria-label="Global">
@@ -122,5 +123,6 @@ useEffect(() => {
         </>
       )}
     </Disclosure>
+    </div>
   );
 }

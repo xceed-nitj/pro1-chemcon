@@ -54,11 +54,11 @@ function OurEvents() {
       </div>
       <Link  to="/events" smooth>
 
-      <div className="grid md:grid-rows-2 md:grid-cols-3 gap-5 md:gap-5 ">
+      <div className="flex flex-wrap justify-evenly gap-y-4 gap-x-2 ">
 
         {data.map((item, index) => (
           <div
-          className={`py-8 px-6 max-h-[350px] overflow-hidden hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
+          className={`py-8 px-6 w-full md:w-[220px] lg:w-[310px] xl:w-[390px] max-h-[350px] overflow-hidden  hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
             index % 7 === 6 ? "md:col-span-2" : ""
           }`}
           key={index}

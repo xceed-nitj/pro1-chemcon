@@ -33,23 +33,23 @@ const CountdownTimer = () => {
     });
 
     return (
-        < span className='flex text-xs gap-0.5  '>
-            <div className=' border-2 border-accent-500 rounded-md   p-1 w-10 text-center bg-slate-50'>
+        < span className='flex text-xs gap-0.5 h-[45px] '>
+            <div className=' border-2 border-accent-500 rounded-md   p-0.75 w-10 text-center bg-slate-50'>
                 <div className='font-bold text-sm'>{timeLeft.days.toLocaleString('en-US', { minimumIntegerDigits: 2 })} </div>
                 <div> days</div>
             </div>
             
-            <div className='border-2 rounded-md border-accent-500  p-1 w-10 bg-slate-50 text-center'>
+            <div className='border-2 rounded-md border-accent-500  p-0.75 w-10 bg-slate-50 text-center'>
                 <div className='font-bold text-sm ' >{timeLeft.hours.toLocaleString('en-US', { minimumIntegerDigits: 2 })} </div>
                 <div>hrs</div>
             </div>
             
-            <div className='border-2 rounded-md border-accent-500  p-1 w-10 bg-slate-50 text-center'>
+            <div className='border-2 rounded-md border-accent-500  p-0.75 w-10 bg-slate-50 text-center'>
                 <div className='font-bold text-sm'>{timeLeft.minutes.toLocaleString('en-US', { minimumIntegerDigits: 2 })}  </div>
                 <div> mins</div>
             </div>
 
-            <div className='border-2 rounded-md border-accent-500 p-1 w-10 bg-slate-50 text-center'>
+            <div className='border-2 rounded-md border-accent-500 p-0.75 w-10 bg-slate-50 text-center'>
                 <div className='font-bold text-sm'>{timeLeft.seconds.toLocaleString('en-US', { minimumIntegerDigits: 2 })} </div>
                 <div> sec</div>
             </div>

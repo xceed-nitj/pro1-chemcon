@@ -2,6 +2,7 @@
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { useEffect } from 'react';
+import SecNavbar from '../components/SecNavbar';
 const data = [
   { dimension: '6m x 6m (Central Hall)', price: 100000 },
   { dimension: '3m x 3m', price: 30000 },
@@ -14,13 +15,14 @@ function Events() {
   }, []);
   return (
     <>
-      <div className="fixed top-0 w-screen z-50 ">
-        <Navbar />
+      <div className="fixed top-0 w-screen z-40 "> 
+      <Navbar />      
       </div>
+      <SecNavbar />
 
-      <div className="  lg:px-8 px-3 mt-[70px] lg:mt-[130px]">
+      <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
 
-        <div className="m-5 md:m-10">
+        <div className="m-5 ">
           <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
             Technical Sessions
           </p>

@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import SecNavbar from '../components/SecNavbar';
 
 
 
 function Sponsors() {
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     const data = [
         { category: 'Platinum Sponsorship', price: 3000000 },
         { category: 'Gold Sponsorship', price: 2000000 },
@@ -30,17 +31,18 @@ function Sponsors() {
 
     return (
         <>
-            <div className="fixed top-0 w-screen z-50 ">
+            <div className="fixed top-0 w-screen z-40 ">
                 <Navbar />
             </div>
+            <SecNavbar />
 
-            <div className="  lg:px-8 px-3 mt-[70px] lg:mt-[130px]">
+            <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
 
 
 
                 <div className="m-5">
                     <p className="text-2xl font-sans font-bold  text-gray-950 underline ">
-                        SponsorShip Rates
+                        Sponsorship Rates
                     </p>
                     <p className="text-base  text-justify font-sans font-base text-gray-800">
                         The sponsors are entitled to nominate two complimentary

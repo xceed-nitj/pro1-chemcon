@@ -6,8 +6,7 @@ import Registration from "./pages/Registration";
 import Souvenir from "./pages/Souvenir";
 import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
-import Committee from "./components/Committee";
-// import CoundownTracker from "./components/CoundownTracker";
+import Committee from "./pages/Committee";
 
 function App() {
   return (
