@@ -8,6 +8,7 @@ import {
 import TopNavInfo from "./TopNavInfo";
 import {  Link } from "react-router-dom";
 import CountdownTimer from "../CountdownTimer";
+import { useState,useEffect } from "react";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -28,6 +29,17 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const [currentNavigation, setCurrentNavigation] = useState(navigation);
+
+useEffect(() => {
+  // Update the "current" property of navigation items based on the current route
+  const updatedNavigation = navigation.map((item) => ({
+    ...item,
+    current: location.pathname.endsWith(item.href),
+  }));
+
+  setCurrentNavigation(updatedNavigation);
+}, [location.pathname]);
   return (
     <Disclosure as="header" className="bg-accent-200 shadow ">
       {({ open }) => (
@@ -58,7 +70,7 @@ export default function Example() {
                 />
               </div>
               <nav className="hidden lg:flex" aria-label="Global">
-                {navigation.map((item) => (
+                {currentNavigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
@@ -85,7 +97,7 @@ export default function Example() {
 
           <Disclosure.Panel as="nav" className="lg:hidden" aria-label="Global">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {currentNavigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
