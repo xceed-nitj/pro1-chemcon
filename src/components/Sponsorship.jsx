@@ -38,8 +38,8 @@ function SponsorShip() {
         { location: 'Black & White half Page', price: 7500 },
     ];
     return (
-        <div className="flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start max-w-7xl mx-auto px-4 py-20">
-            <div className="w-full md:w-[700px] lg:w-3/5 lg:max-w-full">
+        <div className=" container flex flex-col items-center lg:flex-row lg:justify-between lg:items-start max-w-7xl mx-auto px-5 sm:px-10 lg:px-8 py-20">
+            <div className="w-full md:w-[700px] lg:w-3/5 px-4 lg:max-w-full">
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">
                 Sponsorship Rates
                 </h2>
@@ -84,7 +84,7 @@ function SponsorShip() {
             </div>
 
 
-            <div className="w-full md:w-[700px]  lg:w-2/5 lg:max-w-[450px] mt-10 lg:mt-0 mx-auto lg:px-5 ">
+            <div className="w-full md:w-[700px] px-4 lg:w-2/5 lg:max-w-[450px] mt-10 lg:mt-0 mx-auto lg:px-5 ">
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">Souvenir</h2>
 
                 <Separator />

@@ -2,8 +2,8 @@ import Separator from "./common/Separator";
 
 export default function Timeline() {
   return (
-    <div className=" container xl:max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-4 py-16 lg:px-8 lg:py-16">
-            <div className="w-full lg:w-3/5 lg:max-w-full">
+    <div className=" container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16">
+            <div className="w-full lg:w-3/5 md:max-w-[700px] pr-4">
 
       <div className="text-center">
         <h2 className="text-4xl font-black mb-4">Timeline</h2>
@@ -119,7 +119,7 @@ export default function Timeline() {
       </div>
       </div>
 
-      <div className="w-full md:w-[700px] lg:w-2/5  lg:max-w-[450px]  mt-10 lg:mt-0 mx-auto lg:px-5 ">
+      <div className="w-full md:w-[700px] lg:w-2/5 px-4 lg:max-w-[450px]  mt-10 lg:mt-0 mx-auto lg:pl-5 ">
         <h2 className="text-4xl font-sans font-bold text-gray-950 mb-3 lg:mb-4">About Doaba Regional Centre (DRC)
 </h2>
 <Separator/>

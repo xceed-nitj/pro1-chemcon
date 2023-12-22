@@ -9,7 +9,7 @@ function Committee() {
       <Navbar />      
       </div>
       <SecNavbar/>
-            <div className="font-sans  lg:px-8 px-3 mt-[58px] lg:mt-[2px] min-h-[300px]">
+            <div className="font-sans  mx-5 sm:mx-14 lg:mx-28   mt-[58px] lg:mt-[10px] min-h-[300px]">
                 <div className="m-5">
                     <p className="text-xl font-sans font-bold  text-gray-950 underline ">
                         NATIONAL ORGANISING COMMITTEE

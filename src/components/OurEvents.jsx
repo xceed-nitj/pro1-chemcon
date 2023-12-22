@@ -78,7 +78,7 @@ function OurEvents() {
   
   return (
 
-    <div className="container space-y-8 xl:max-w-7xl mx-auto px-8 lg:px-8 md:mb-1 ">
+    <div className="container space-y-8 xl:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:mb-1 ">
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-5">Our Events</h2>
       </div>
@@ -88,7 +88,7 @@ function OurEvents() {
 
         {data.map((item, index) => (
           <div
-          className={`py-8 px-6 max-h-[300px] overflow-hidden  hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
+          className={`py-8 px-4 max-h-[300px] overflow-hidden text-justify hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
             index % 7 === 0 ? "md:row-span-2 md:max-h-[620px] " : ""
           }`}
           key={index}

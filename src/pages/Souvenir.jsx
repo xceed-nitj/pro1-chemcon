@@ -28,7 +28,7 @@ function Souvenir() {
       </div>
       <SecNavbar />
 
-            <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+            <div className=" mx-5 sm:mx-14  lg:mx-28  mt-[58px] lg:mt-[10px]">
 
 
 

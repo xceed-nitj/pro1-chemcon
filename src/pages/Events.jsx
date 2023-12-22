@@ -20,10 +20,10 @@ function Events() {
       </div>
       <SecNavbar />
 
-      <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+      <div className="mx-5 sm:mx-14 lg:mx-28   mt-[58px] lg:mt-[10px] ">
 
         <div className="m-5 ">
-          <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
+          <p className="text-2xl font-sans font-bold mb-2 text-accent-500 underline ">
             Technical Sessions
           </p>
           <p className="text-base  text-justify font-sans font-base text-gray-800">
@@ -63,8 +63,8 @@ function Events() {
           </p>
         </div>
 <section id="targetSection">
-        <div className="m-5 md:m-10" >
-          <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
+        <div className="m-5 " >
+          <p className="text-2xl font-sans font-bold mb-2 text-accent-500 underline ">
             Sri Dhirubhai Ambani Commemoration Day
           </p>
           <p className="text-base  text-justify font-sans font-base text-gray-800">
@@ -74,8 +74,8 @@ function Events() {
 
         </div>
         </section>
-        <div className="m-5 md:m-10">
-          <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
+        <div className="m-5 ">
+          <p className="text-2xl font-sans font-bold mb-2 text-accent-500 underline ">
             International Symposium
           </p>
           <p className="text-base  text-justify font-sans font-base text-gray-800">
@@ -86,8 +86,8 @@ function Events() {
 
         </div>
 
-        <div className="m-5 md:m-10">
-          <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
+        <div className="m-5 ">
+          <p className="text-2xl font-sans font-bold mb-2 text-accent-500 underline ">
             Exhibition
           </p>
           <p className="text-base  text-justify font-sans font-base text-gray-800">
@@ -125,8 +125,8 @@ function Events() {
           </p>
 
         </div>
-        <div className="m-5 md:m-10">
-          <p className="text-2xl font-sans font-bold  text-accent-500 underline ">
+        <div className="m-5 ">
+          <p className="text-2xl font-sans font-bold mb-2 text-accent-500 underline ">
             Quiz Competition           </p>
           <p className="text-base  text-justify font-sans font-base text-gray-800">
             Quiz Competition will be conducted for the student delegates

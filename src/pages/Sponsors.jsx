@@ -36,12 +36,12 @@ function Sponsors() {
             </div>
             <SecNavbar />
 
-            <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+            <div className=" mx-5 sm:mx-14  lg:mx-28  mt-[58px] lg:mt-[10px]">
 
 
 
                 <div className="m-5">
-                    <p className="text-2xl font-sans font-bold  text-gray-950 underline ">
+                    <p className="text-2xl font-sans font-bold mb-5 text-gray-950 underline ">
                         Sponsorship Rates
                     </p>
                     <p className="text-base  text-justify font-sans font-base text-gray-800">
@@ -49,7 +49,7 @@ function Sponsors() {
                         delegates along with availing of local hospitality during the
                         congress. They are also entitled to put hoardings/ Banners at the
                         suitable locations provided by the organizers.
-                        <table className="mt-3 mx-auto  border-collapse box-border max-w-[400px]">
+                        <table className="mt-3   border-collapse box-border max-w-[400px]">
                             <thead>
                                 <tr className="border-[2px] bg-accent-100  border-accent-500">
                                     <th className="p-1 md:pl-4 text-left">Category</th>
