@@ -21,8 +21,8 @@ function AboutNews() {
   ];
 
   return (
-    <div className="flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start max-w-7xl mx-auto px-4 py-20">
-      <div className="w-full  md:w-[700px] lg:w-3/5 lg:max-w-full">
+    <div className=" container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start  mx-auto px-5 sm:px-10  lg:px-8 py-20">
+      <div className="w-full  md:w-[700px] px-4 lg:w-3/5 ">
         <h2 className="text-4xl font-sans font-bold text-gray-950  ">
         CHEMCON 2024
         </h2>
@@ -58,13 +58,13 @@ function AboutNews() {
           Journal “The Indian Chemical Engineer” since 1959..
         </p>
       </div>
-      <div className="sm:w-full md:w-[500px] lg:w-2/5 max-w-[500px] h-96 mt-10 lg:mt-0 ml-5 md:mx-auto lg:px-5  ">
+      <div className="sm:w-full md:w-[700px] sm:pr-6 lg:w-2/5 lg:ml-4 max-w-[700px] h-96 mt-10 sm:px-2 lg:mt-0 ml-5 md:mx-auto lg:px-5  ">
         <h2 className="text-4xl font-sans font-bold text-gray-950 mb-3 lg:mb-4">News</h2>
 
         <Separator />
         <div
           id="news"
-          className="h-[400px]  overflow-auto bg-amber-100 rounded-xl p-4"
+          className="h-[400px]  overflow-auto bg-amber-100  rounded-xl p-4"
         >
           <div
             className={`space-y-4 ${isMouseOver ? "animate-none" : "animate-wiggle"

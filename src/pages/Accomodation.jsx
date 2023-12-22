@@ -13,8 +13,8 @@ function Accommodation() {
       </div>
       <SecNavbar />
 
-            <div className="  lg:px-8 px-3 mt-[58px] lg:mt-[2px] min-h-[300px]">
-                <div className="m-5">
+            <div className="mx-5 sm:mx-14  lg:mx-28  mt-[58px] lg:mt-[10px] min-h-[300px]">
+                <div >
                     <p className="text-2xl font-sans font-bold mb-5 text-gray-950 underline ">
                         Accomodation                    </p>
                     <p className="text-base  text-justify font-sans font-base text-gray-800">
