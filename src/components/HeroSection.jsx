@@ -3,15 +3,15 @@ import SecNavbar from "./SecNavbar";
 
 function HeroSection() {
   return (
-    <>
+    <div className="lg:min-h-screen">
       <div className="fixed top-0 w-screen z-40 "> 
       <Navbar />      
       </div>
       <SecNavbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
 
-        <div className="flex flex-col items-center md:items-start justify-center py-4 gap-3">
+        <div className="flex flex-col items-center md:items-start justify-center py-4 gap-6 ">
           <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center ">
             Indian Chemical Engineering Congress
           </p>
@@ -33,7 +33,7 @@ function HeroSection() {
             </p>
             <h4 className=" mx-auto font-bold  text-xl text-center md:text-center ">
               <p>            Indian Institute of Chemical Engineers</p>
-              <p>            Doaba Regional Centre</p>          <p>NITJ</p>
+              <p>            Doaba Regional Centre</p>          <p>NIT Jalandhar</p>
 
             </h4>
           </p>
@@ -116,7 +116,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

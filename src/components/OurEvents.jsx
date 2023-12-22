@@ -88,8 +88,8 @@ function OurEvents() {
 
         {data.map((item, index) => (
           <div
-          className={`py-8 px-6 max-h-[350px] overflow-hidden  hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
-            index % 7 === 0 ? "md:row-span-2 md:max-h-[700px] " : ""
+          className={`py-8 px-6 max-h-[300px] overflow-hidden  hover:shadow-xl hover:shadow-accent-700 border-solid rounded-xl ${item.bg} ${
+            index % 7 === 0 ? "md:row-span-2 md:max-h-[620px] " : ""
           }`}
           key={index}
         >
