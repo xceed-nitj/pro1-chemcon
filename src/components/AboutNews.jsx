@@ -67,7 +67,7 @@ function AboutNews() {
           className="h-[400px]  overflow-auto bg-amber-100  rounded-xl p-4"
         >
           <div
-            className={`space-y-4 ${isMouseOver ? "animate-none" : "animate-wiggle"
+            className={`space-y-4 ${isMouseOver ? "animate-none cursor-default" : "animate-wiggle"
               }`}
             onMouseOver={() => setIsMouseOver(true)}
             onMouseOut={() => setIsMouseOver(false)}
