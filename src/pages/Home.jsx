@@ -7,6 +7,7 @@ import AboutNITJ from "../components/AboutNITJ";
 import AboutNews from "../components/AboutNews";
 import SponsorShip from "../components/Sponsorship";
 import { useEffect } from "react";
+import Slider from "../components/Slider";
 // import AboutNews from "./components/Dummy";
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
     
       <HeroSection />
       <AboutNews/>
+      <Slider/>
       <Timeline />
       {/* <Speakers /> */}
       <OurEvents />
