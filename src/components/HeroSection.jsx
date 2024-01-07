@@ -1,18 +1,47 @@
+import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import SecNavbar from "./SecNavbar";
 
 function HeroSection() {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const images = [
+    {
+      url: '/side-1.webp',
+      style: "absolute w-full h-full  bg-gradient-to-b from-accent-400 z-10 mix-blend-color "
+    },
+    {
+      url: '/side-2.webp',
+      style: "absolute w-full h-full  bg-gradient-to-b from-yellow-400 z-10 mix-blend-color"
+
+    },
+    {
+      url: '/side-3.webp',
+      style: "absolute w-full h-full  bg-gradient-to-b from-cyan-400 z-10 mix-blend-color"
+
+    }
+
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 700);
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+
+  }, []); //
   return (
     <>
-      <div className="fixed top-0 w-screen z-40 "> 
-      <Navbar />      
+      <div className="fixed top-0 w-screen z-40 ">
+        <Navbar />
       </div>
       <SecNavbar />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
 
         <div className="flex flex-col items-center md:items-start justify-center py-5 gap-8 ">
-          <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center ">
+          <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
             Indian Chemical Engineering Congress
           </p>
 
@@ -85,15 +114,15 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute w-full h-full bg-accent-500 z-10 mix-blend-color" />
             <img
-              src="/side-1.webp"
+              src={images[imageIndex].url}
               className="bg-black object-cover h-full w-full "
               alt=""
             />
           </div>
           <div className="relative row-span-3">
-            <div className="absolute w-full h-full bg-gradient-to-b from-stone-900 to-accent-500 z-10 mix-blend-color" />
+            <div className={images[imageIndex].style} />
             <img
-              src="/main.webp"
+              src='/main.webp'
               className="bg-black  object-cover h-full object-left"
               alt=""
             />
@@ -101,7 +130,7 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute w-full h-full bg-yellow-500 z-10 mix-blend-color" />
             <img
-              src="/side-2.webp"
+              src={images[(imageIndex + 1) % 3].url}
               className="bg-black object-cover h-full w-full"
               alt=""
             />
@@ -109,7 +138,7 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute w-full h-full bg-cyan-500 z-10 mix-blend-color" />
             <img
-              src="/side-3.webp"
+              src={images[(imageIndex + 2) % 3].url}
               className="bg-black object-cover h-full w-full"
               alt=""
             />
