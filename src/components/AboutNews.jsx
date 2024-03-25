@@ -64,7 +64,7 @@ function AboutNews() {
         <Separator />
         <div
           id="news"
-          className="h-[400px]  overflow-auto bg-amber-100  rounded-xl p-4"
+          className="h-[400px]  overflow-auto bg-amber-100  rounded-xl p-4 "
         >
           <div
             className={`space-y-4 ${isMouseOver ? "animate-none cursor-default" : "animate-wiggle"
@@ -74,9 +74,10 @@ function AboutNews() {
           // className="flex flex-col  animate-wiggle"
           >
             {dummyData.map((item) => (
-              <div key={item.id} className="p-4 rounded-xl hover:shadow-lg hover:shadow-accent-600  bg-white space-y-4">
-                <p className="text-base font-medium ">{item.title1}</p>
-                <p className="text-sm font-sans   ">
+              <div key={item.id} className="relative p-4 rounded-xl hover:shadow-md hover:shadow-accent-600/50  bg-white space-y-4 border-solid border-2 border-amber-400">
+                <div className="w-2 h-2 animate-ping bg-accent-600 absolute  -left-1 -top-1 rounded-full"></div>
+                <p className="text-base font-medium  text-accent-600">{item.title1}</p>
+                <p className="text-sm font-sans  border-solid border-l-4 border-amber-400 pl-4  ">
                   {item.description}
                 </p>
               </div>
