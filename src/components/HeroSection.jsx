@@ -23,33 +23,40 @@ useEffect(() => {
 
 }, []);
 const [imageIndex, setImageIndex] = useState(0);
+const [fade, setFade] = useState(false);
 
 const images = [
   {
-    url: '/side-1.webp',
-    style: "absolute w-full h-full  bg-gradient-to-b from-accent-400 z-10 mix-blend-color "
+    url: "/side-1.webp",
+      style:
+        `absolute w-full h-full  bg-gradient-to-b from-accent-400 z-10 mix-blend-color rounded-lg  ${fade ? "fade-in" : "fade-out"}`,
   },
   {
-    url: '/side-2.webp',
-    style: "absolute w-full h-full  bg-gradient-to-b from-yellow-400 z-10 mix-blend-color"
-
+    url: "/side-2.webp",
+      style:
+        `absolute w-full h-full  bg-gradient-to-b from-yellow-400 z-10 mix-blend-color rounded-lg  ${fade ? "fade-in" : "fade-out"}`,
   },
   {
-    url: '/side-3.webp',
-    style: "absolute w-full h-full  bg-gradient-to-b from-cyan-400 z-10 mix-blend-color"
-
+    url: "/side-3.webp",
+      style:
+        `absolute w-full h-full  bg-gradient-to-b from-cyan-400 z-10 mix-blend-color rounded-lg  ${fade ? "fade-in" : "fade-out"}`,
+    
   }
 
 ];
 
 useEffect(() => {
   const intervalId = setInterval(() => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  }, 700);
+    setFade(true);
+      setTimeout(() => {
+        setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFade(false);
+      }, 800);
+    }, 3000);
 
   return () => clearInterval(intervalId); // Cleanup the interval on component unmount
 
-}, []); //
+}, [images.length]); //
 return (
   <>
 
@@ -124,37 +131,45 @@ return (
           Register
         </a>
       </div>
-      <div className="grid grid-cols-2 grid-rows-3 gap-3 md:gap-5 w-full h-full">
-        <div className="relative">
-          <div className="absolute w-full h-full bg-accent-500 z-10 mix-blend-color" />
+      <div className="grid grid-cols-2 grid-rows-3 gap-3 md:gap-5 w-full h-full p-4">
+          <div className="relative ">
+            <div className="absolute w-full h-full bg-accent-500 z-10 mix-blend-color rounded-lg " />
           <img
             src={images[imageIndex].url}
-            className="bg-black object-cover h-full w-full "
-            alt=""
+            className={` bg-black object-cover h-full w-full rounded-lg   ${
+              fade ? "fade-in" : "fade-out"
+            } `}            alt=""
           />
         </div>
-        <div className="relative row-span-3">
+        <div className="relative row-span-3 bg-accent-500 rounded-lg">
           <div className={images[imageIndex].style} />
           <img
-            src='/main.webp'
-            className="bg-black  object-cover h-full object-left"
+            src="/main.webp"
+            className={`bg-black  object-cover h-full object-left rounded-lg   ${
+              fade ? "fade-in" : "fade-out"
+            }`}
             alt=""
           />
         </div>
         <div className="relative">
-          <div className="absolute w-full h-full bg-yellow-500 z-10 mix-blend-color" />
+        <div
+              className={`absolute w-full h-full bg-yellow-500 z-10 mix-blend-color rounded-lg `}
+            />
           <img
             src={images[(imageIndex + 1) % 3].url}
-            className="bg-black object-cover h-full w-full"
+            className={`bg-black object-cover h-full w-full rounded-lg ${
+              fade ? "fade-in" : "fade-out"
+            } `}
             alt=""
           />
         </div>
         <div className="relative">
-          <div className="absolute w-full h-full bg-cyan-500 z-10 mix-blend-color" />
+        <div className="absolute w-full h-full bg-cyan-500 z-10 mix-blend-color rounded-lg " />
           <img
             src={images[(imageIndex + 2) % 3].url}
-            className="bg-black object-cover h-full w-full"
-            alt=""
+            className={`bg-black object-cover h-full w-full rounded-lg ${
+              fade ? "fade-in" : "fade-out"
+            }`}            alt=""
           />
         </div>
       </div>

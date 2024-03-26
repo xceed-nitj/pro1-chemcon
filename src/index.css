@@ -8,10 +8,12 @@
   font-family: "Plus Jakarta Sans", system-ui, Avenir, Helvetica, Arial,
     sans-serif;
 }
+
 ::selection {
   color: white;
   background: hsl(17, 83%, 54%);
 }
+
 
 #news::-webkit-scrollbar {
   display: none;
@@ -48,8 +50,23 @@
 }
 
 .industry-img {
-  position: absolute; /* Position the image absolutely within the parent container */
-  top: 50%; /* Align the top edge of the image at the vertical center */
-  left: 80%; /* Align the left edge of the image at the horizontal center */
-  transform: translate(-50%, -50%); /* Center the image precisely */
+  position: absolute;
+  /* Position the image absolutely within the parent container */
+  top: 50%;
+  /* Align the top edge of the image at the vertical center */
+  left: 80%;
+  /* Align the left edge of the image at the horizontal center */
+  transform: translate(-50%, -50%);
+  /* Center the image precisely */
+}
+
+.fade-in{
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out ;
+}
+
+
+.fade-out{
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out ;
 }
