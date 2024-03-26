@@ -49,9 +49,9 @@ function Slider() {
     return () => clearInterval(intervalId);
   }, [currentIndex]);
   return (
-    <div className="container space-y-8 xl:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:mb-5 ">
+    <div className="container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:mb-5 ">
 
-    <div className='h-[420px] md:h-[520px] lg:h-[680px] w-full m-auto py-16  relative group'>
+    <div className='h-[420px] w-full md:h-[520px] lg:h-[680px]  m-auto py-16  relative group'>
         <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-5">
                        Image   Gallery </h2>
                        

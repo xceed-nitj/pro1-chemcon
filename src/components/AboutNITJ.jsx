@@ -10,7 +10,7 @@ function AboutNITJ() {
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">
                     About NITJ        </h2>
                 <Separator />
-                <p className="text-base text-justify font-sans font-base text-gray-800">
+                <p className="text-base text-justify font-sans font-base min-h-[216px] text-gray-800">
                     Dr. B. R. Ambedkar NIT Jalandhar was established in the year
                     1987 as erstwhile Regional Engineering College and was given
                     the status of NIT Jalandhar by the Ministry of Human Resource

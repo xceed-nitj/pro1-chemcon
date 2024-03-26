@@ -29,7 +29,7 @@ export default {
         },
       },
       animation: {
-        wiggle: "wiggle 30s linear infinite",
+        wiggle: "wiggle 15s linear infinite",
         "ping-slow": "ping 1.5s linear infinite",
       },
     },
