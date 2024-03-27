@@ -24,5 +24,8 @@ module.exports = {
     "import/no-cycle": "error",
     "import/no-unused-modules": "error",
     "import/no-dynamic-require": "error",
+    "react/prop-types": "off"
+
   },
+  
 };

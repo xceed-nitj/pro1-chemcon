@@ -8,18 +8,24 @@ import AboutNews from "../components/AboutNews";
 import SponsorShip from "../components/Sponsorship";
 import { useEffect } from "react";
 import Slider from "../components/Slider";
+import SecNavbar from "../components/SecNavbar";
+import Navbar from "../components/Navbar"
 // import AboutNews from "./components/Dummy";
-function App() {
+function Home(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+    <div className="fixed top-0 w-screen z-40 ">
+        <Navbar />
+      </div>
+      <SecNavbar />
     
-      <HeroSection />
-      <AboutNews/>
+      <HeroSection confid={props.confId} />
+      <AboutNews confid={props.confId} />
       <Slider/>
-      <Timeline />
+      <Timeline confid={props.confId} />
       {/* <Speakers /> */}
       <OurEvents />
       <AboutNITJ/>
@@ -30,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
