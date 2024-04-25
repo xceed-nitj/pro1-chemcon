@@ -43,7 +43,7 @@ function AboutNews(props) {
   return (
     <div className=" container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start  mx-auto px-5 sm:px-10  lg:px-8 py-20">
       <div className="w-full  md:w-[700px]  s px-4 lg:w-3/5 ">
-        <h2 className="text-4xl font-sans font-bold text-gray-950  ">
+        <h2 className="text-4xl   font-sans font-bold text-gray-950  ">
           CHEMCON 2024
         </h2>
         <Separator />
@@ -65,7 +65,7 @@ function AboutNews(props) {
         <Separator />
         <div
           id="news"
-          className="h-[400px]  overflow-auto bg-amber-100  rounded-xl p-4 "
+          className="h-[400px]   overflow-auto bg-amber-100  rounded-xl p-4 "
         >
           <div
             className={`space-y-4  ${isMouseOver ? "animate-none cursor-default" : "animate-wiggle"
@@ -78,9 +78,9 @@ function AboutNews(props) {
             {newsData.map((item) => (
               <Link key={item._id} to={`/news/${item._id}`}>
 
-                <div className="relative p-4 my-4 rounded-xl hover:shadow-md hover:shadow-accent-600/50  bg-white space-y-4 border-solid border-2 border-amber-400">
-                  <div className="w-2 h-2 animate-ping bg-accent-600 absolute  -left-1 -top-1 rounded-full"></div>
-                  <p className="text-base font-medium  text-accent-600">{item.title}</p>
+                <div className="relative p-4 my-4 rounded-xl hover:shadow-md hover:shadow-accent-600/50  bg-white space-y-4    border-solid border-2 border-amber-400">
+                  <div className="w-2 h-2  animate-ping bg-accent-600 absolute  -left-1 -top-1 rounded-full"></div>
+                  <p className="text-base font-medium   text-accent-600">{item.title}</p>
                   <p className="text-sm font-sans  border-solid border-l-4 border-amber-400 pl-4  ">
                     {item.metaDescription}
                   </p>
