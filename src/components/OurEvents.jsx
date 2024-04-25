@@ -78,7 +78,7 @@ function OurEvents() {
   
   return (
 
-    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:pb-1 ">
+    <div className="container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:mb-1 ">
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-5">Our Events</h2>
       </div>

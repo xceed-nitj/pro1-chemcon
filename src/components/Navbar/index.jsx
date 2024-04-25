@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import TopNavInfo from "./TopNavInfo";
 import {  Link } from "react-router-dom";
-import CountdownTimer from "../CountdownTimer";
+// import CountdownTimer from "../CountdownTimer";
 import { useState,useEffect } from "react";
 
 const navigation = [
@@ -84,7 +84,7 @@ useEffect(() => {
                 ))}
               </nav>
             </div>
-            <div
+            {/* <div
               className="hidden  lg:flex px-2 sm:px-4 lg:px-8 lg:space-x-8 lg:py-3"
               aria-label="Global"
             >
@@ -93,7 +93,7 @@ useEffect(() => {
                 <CountdownTimer />
               </span>
 
-            </div>
+            </div> */}
           </div>
 
           <Disclosure.Panel as="nav" className="lg:hidden" aria-label="Global">

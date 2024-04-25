@@ -13,7 +13,6 @@ function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
     <>
-    <div className="background">
 
       < Routes >
         <Route path="/" element={<Home confId={confid} />} />
@@ -29,7 +28,6 @@ function App() {
 
 
       </Routes >
-      </div>
     </>
   );
 }
