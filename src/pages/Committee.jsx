@@ -27,7 +27,7 @@ function Committee(props) {
       <Navbar />      
       </div>
       <SecNavbar/>
-      <div className="container max-w-7xl mx-auto px-5 sm:px-10 min-h-[300px] lg:px-8 mt-[58px] lg:mt-[10px] mb-5">
+      <div className="bg-white container max-w-7xl mx-auto px-5 sm:px-10 min-h-[300px] lg:px-8 pt-[58px] lg:pt-[10px] pb-5">
       {data.map((item) => (
 
                 <div key={item._id} className="w-full mx-auto  md:w-[700px] px-4 lg:w-full" >
