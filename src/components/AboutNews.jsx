@@ -41,7 +41,7 @@ function AboutNews(props) {
 
 
   return (
-    <div className=" container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start  mx-auto px-5 sm:px-10  lg:px-8 py-20">
+    <div className="bg-white container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start  mx-auto px-5 sm:px-10  lg:px-8 py-20">
       <div className="w-full  md:w-[700px]  s px-4 lg:w-3/5 ">
         <h2 className="text-4xl font-sans font-bold text-gray-950  ">
           CHEMCON 2024

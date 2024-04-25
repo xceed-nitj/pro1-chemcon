@@ -49,7 +49,7 @@ function Slider() {
     return () => clearInterval(intervalId);
   }, [currentIndex]);
   return (
-    <div className="container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:mb-5 ">
+    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 md:pb-5 ">
 
     <div className='h-[420px] w-full md:h-[520px] lg:h-[680px]  m-auto py-16  relative group'>
         <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-5">

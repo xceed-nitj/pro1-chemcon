@@ -5,7 +5,7 @@ function AboutNITJ() {
 
 
     return (
-        <div className="container flex flex-col items-center lg:flex-row lg:justify-between lg:items-start max-w-7xl  px-4 sm:px-10  lg:px-8 mx-auto pt-20">
+        <div className="bg-white container flex flex-col items-center lg:flex-row lg:justify-between lg:items-start max-w-7xl  px-4 sm:px-10  lg:px-8 mx-auto pt-20">
             <div className="w-full md:w-[700px] px-4 lg:w-3/5 lg:max-w-full">
                 <h2 className="text-4xl font-sans font-bold text-gray-950  ">
                     About NITJ        </h2>

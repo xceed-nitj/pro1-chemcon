@@ -17,7 +17,7 @@ function Home(props) {
   }, []);
   return (
     <>
-    <div className="fixed top-0 w-screen z-40 ">
+    <div className="fixed top-0 w-screen z-10 ">
         <Navbar />
       </div>
       <SecNavbar />
