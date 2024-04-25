@@ -110,8 +110,8 @@ function HeroSection(props) {
 
   return (
     <>
-      <div className="bg-white grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 pt-[58px] lg:pt-[2px] ">
-        <div className="flex flex-col items-center md:items-start justify-center py-5 gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
+        <div className="flex flex-col items-center md:items-start justify-center py-5 gap-8 ">
           <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
             {data ? data.confName : " "}{" "}
           </p>

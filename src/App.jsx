@@ -8,88 +8,29 @@ import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
 import Committee from "./pages/Committee";
 import CommonNews from "./pages/CommonNews";
-import './App.scss';
 
 function App() {
-  const confid = "65fed89def981d3a955ddd9f";
+   const confid="65fed89def981d3a955ddd9f";
   return (
-    <div className=" relative">
+    <>
+    <div className="background">
 
-      <div className="content ">
-
-        < Routes >
-          <Route path="/" element={<Home confId={confid} />} />
-          <Route path="sponsorship" element={<Sponsors />} />
-          <Route path="events" element={<Events />} />
-          <Route path="location" element={<Location confid={confid} />} />
-          <Route path="accommodation" element={<Accommodation />} />
-          <Route path="souvenir" element={<Souvenir />} />
-          <Route path="registration" element={<Registration />} />
-          <Route path="committee" element={<Committee confid={confid} />} />
-          <Route path="news/:newsid" element={<CommonNews />} />
-
+      < Routes >
+        <Route path="/" element={<Home confId={confid} />} />
+        <Route path="sponsorship" element={<Sponsors />} />
+        <Route path="events" element={<Events />} />
+        <Route path="location" element={<Location confid={confid}  />} />
+        <Route path="accommodation" element={<Accommodation />} />
+        <Route path="souvenir" element={<Souvenir />} />
+        <Route path="registration" element={<Registration />} />
+        <Route path="committee" element={<Committee confid={confid} />} />
+        <Route path="news/:newsid" element={<CommonNews /> } />
 
 
-        </Routes >
 
-
+      </Routes >
       </div>
-      <div className="bubbles "> {/* Add the bubble background here */}
-        <div className="bubbles">
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-          <div className="bubble"></div>
-        </div>
-      </div>
-
-    </div>
+    </>
   );
 }
 
