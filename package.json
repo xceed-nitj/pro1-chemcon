@@ -12,6 +12,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@tsparticles/all": "^3.3.0",
+    "@tsparticles/react": "^3.0.0",
     "axios": "^1.6.8",
     "clsx": "^2.0.0",
     "gsap": "^3.12.5",
