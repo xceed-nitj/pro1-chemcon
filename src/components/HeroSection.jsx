@@ -175,7 +175,7 @@ function HeroSection(props) {
             </div>
           </section> */}
           <a
-            href="https://forms.gle/KvzVgVKP33M5fhVH7" target="_blank" rel="noopener noreferrer"
+            href="https://forms.gle/WVn4xut9xZCrsXLi7" target="_blank" rel="noopener noreferrer"
             className="mt-3 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
           >
             Register
