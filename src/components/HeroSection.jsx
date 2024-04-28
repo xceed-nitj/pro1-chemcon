@@ -22,12 +22,12 @@ function HeroSection(props) {
         {
           x: 600,
           y: 600,
-    
+
         },
         {
           x: 0,
           y: 0,
-        
+
           duration: 3.5,
           stagger: 7,
           opacity: 1,
@@ -55,7 +55,7 @@ function HeroSection(props) {
           opacity: 0,
           x: 600,
           y: 600,
-         
+
         },
         {
           x: 0,
@@ -65,7 +65,7 @@ function HeroSection(props) {
           opacity: 1,
           ease: "sine.out",
           delay: 21,
-         
+
         }
       );
 
@@ -110,37 +110,37 @@ function HeroSection(props) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px]">
-        <div className="flex flex-col items-center md:items-start justify-center z-10 py-5 gap-4 ">
-          <p className="lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px] ">
+        <div className=" flex flex-col items-center md:items-start justify-center z-10 py-5 gap-4 ">
+          <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
             {data ? data.confName : " "}{" "}
           </p>
 
-          <p className="lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-3 mx-auto">
+          <p className="bg-white  lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-3 mx-auto">
             {data ? data.shortName : " "}{" "}
           </p>
 
-          <h3 className=" mx-auto font-bold text-center tracking-wide  lg:text-xl">
+          <h3 className="bg-white  mx-auto font-bold text-center tracking-wide  lg:text-xl">
             Role of Chemical Engineering towards Sustainable Development and
             Atmanirbhar bharat
           </h3>
 
-          <h4 className="text-accent-500 mx-auto font-bold text-center md:text-left text-md ">
+          <h4 className="bg-white  text-accent-500 mx-auto font-bold text-center md:text-left text-md ">
             {" "}
             {data
               ? formatDate(data.confStartDate) +
-                " to " +
-                formatDate(data.confEndDate)
+              " to " +
+              formatDate(data.confEndDate)
               : " "}
           </h4>
           <p className=" mx-auto">
-            <p className=" mx-auto font-semibold text-center  ">Organized by</p>
-            <h4 className=" mx-auto font-bold  text-xl text-center md:text-center ">
+            <p className="bg-white  mx-auto font-semibold text-center  ">Organized by</p>
+            <h4 className="bg-white  mx-auto font-bold  text-xl text-center md:text-center ">
               <p> Indian Institute of Chemical Engineers</p>
               <p> Doaba Regional Centre</p> <p>NIT Jalandhar</p>
             </h4>
           </p>
-          <div className="flex flex-col md:flex-row   gap-4 items-center">
+          <div className="bg-white  flex flex-col md:flex-row   gap-4 items-center">
             <div className="flex flex-col justify-center items-center max-w-[300px]">
               <p className="  font-semibold text-center md:text-left ">
                 77<sup>th </sup>Annual Session
@@ -182,7 +182,7 @@ function HeroSection(props) {
           </a>
         </div>
 
-        <div className="relative h-full w-full p-[0%] min-h-[20rem] overflow-hidden ">
+        <div className="relative h-full w-full p-[0%] min-h-[20rem] overflow-hidden">
           <div className="h-full w-full relative">
             <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="relative col-span-4 row-span-3 flex justify-center rounded-lg">
@@ -270,7 +270,7 @@ function HeroSection(props) {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }

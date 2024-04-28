@@ -1,7 +1,7 @@
 // envUtils.js
 function getEnvironment() {
     const currentURL = window.location.href;
-//const development = 'http://localhost:8010';
+    //const development = 'http://localhost:8010';
     const production = 'https://nitjtt.onrender.com';
      const nitjServer = 'https://xceed.nitj.ac.in';
   //for time being using nijtt server
