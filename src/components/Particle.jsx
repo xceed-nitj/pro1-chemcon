@@ -529,7 +529,7 @@ const ParticlesComponent = (props) => {
           },
           "consent": false,
           "distance": 100,
-          "enable": true,
+          "enable": false,
           "frequency": 1,
           "opacity": 1,
           "shadow": {
