@@ -16,7 +16,7 @@ function App() {
     <>
     <ParticlesComponent id="particle" />
 
-<div className="h-full ">
+<div id="content ">
       < Routes >
         <Route path="/" element={<Home confId={confid} />} />
         <Route path="sponsorship" element={<Sponsors />} />

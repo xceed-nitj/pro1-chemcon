@@ -164,7 +164,7 @@ const ParticlesComponent = (props) => {
           "grab": {
             "distance": 100,
             "links": {
-              "blink": false,
+              "blink": true,
               "consent": false,
               "opacity": 1
             }
@@ -398,8 +398,8 @@ const ParticlesComponent = (props) => {
         },
         "size": {
           "value": {
-            "min": 1,
-            "max": 3
+            "min": 5,
+            "max": 10
           },
           "animation": {
             "count": 0,
@@ -529,7 +529,7 @@ const ParticlesComponent = (props) => {
           },
           "consent": false,
           "distance": 100,
-          "enable": true,
+          "enable": false,
           "frequency": 1,
           "opacity": 1,
           "shadow": {
