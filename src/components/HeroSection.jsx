@@ -111,7 +111,7 @@ function HeroSection(props) {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px] ">
-        <div className=" flex flex-col items-center md:items-start justify-center z-10 py-5 gap-4 ">
+        <div className=" flex flex-col items-center md:items-start justify-center z-20 py-5 gap-4 ">
           <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
             {data ? data.confName : " "}{" "}
           </p>
@@ -182,11 +182,11 @@ function HeroSection(props) {
           </a>
         </div>
 
-        <div className="relative h-full w-full p-[0%] min-h-[20rem] overflow-hidden">
+        <div className="relative h-full w-full p-[0%] min-h-[20rem] top-10 overflow-hidden">
           <div className="h-full w-full relative">
             <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-30  rounded-lg" />
+                <div className="absolute w-full h-full   z-40  rounded-lg" />
                 <img
                   src="/main.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
@@ -196,7 +196,7 @@ function HeroSection(props) {
             </div>
             <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-20  rounded-lg" />
+                <div className="absolute w-full h-full   z-30  rounded-lg" />
                 <img
                   src="/side-1.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
@@ -207,7 +207,7 @@ function HeroSection(props) {
 
             <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full  z-10  rounded-lg" />
+                <div className="absolute w-full h-full  z-20  rounded-lg" />
                 <img
                   src="/side-2.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
@@ -218,7 +218,7 @@ function HeroSection(props) {
 
             <div className="opacity-0 absolute main  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full  z-10  rounded-lg" />
+                <div className="absolute w-full h-full  z-20  rounded-lg" />
                 <img
                   src="/side-3.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
@@ -228,7 +228,7 @@ function HeroSection(props) {
             </div>
             <div className="opacity-0 absolute main2 grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-30  rounded-lg" />
+                <div className="absolute w-full h-full   z-40  rounded-lg" />
                 <img
                   src="/main.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
@@ -238,7 +238,7 @@ function HeroSection(props) {
             </div>
             <div className="opacity-0 absolute main2  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-20  rounded-lg" />
+                <div className="absolute w-full h-full   z-30  rounded-lg" />
                 <img
                   src="/side-1.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
@@ -249,7 +249,7 @@ function HeroSection(props) {
 
             <div className="opacity-0 absolute main2  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full   z-10  rounded-lg" />
+                <div className="absolute w-full h-full   z-20  rounded-lg" />
                 <img
                   src="/side-2.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg `}
@@ -260,7 +260,7 @@ function HeroSection(props) {
 
             <div className="opacity-0 absolute main2  grid grid-cols-4 grid-rows-4 gap-2 md:gap-5 w-full h-full ">
               <div className="  relative col-span-4 row-span-3 flex justify-center rounded-lg">
-                <div className="absolute w-full h-full  z-10  rounded-lg" />
+                <div className="absolute w-full h-full  z-20  rounded-lg" />
                 <img
                   src="/side-3.webp"
                   className={`bg-black  object-cover h-full object-left lg:rounded-xl rounded-lg`}
