@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import getEnvironment from "../getenvironment";
 
+
 function AboutNews(props) {
   const apiUrl = getEnvironment();
 
@@ -74,26 +75,25 @@ function AboutNews(props) {
             onMouseOut={() => setIsMouseOver(false)}
           // className="flex flex-col  animate-wiggle"
           >
-
             {newsData.map((item) => (
-              <Link key={item._id} to={`/news/${item._id}`}>
-
-                <div className="relative p-4 my-4 rounded-xl hover:shadow-md hover:shadow-accent-600/50  bg-white space-y-4    border-solid border-2 border-amber-400">
-                  <div className="w-2 h-2  animate-ping bg-accent-600 absolute  -left-1 -top-1 rounded-full"></div>
-                  <p className="text-base font-medium   text-accent-600">{item.title}</p>
-                  <p className="text-sm font-sans  border-solid border-l-4 border-amber-400 pl-4  ">
+              <Link key={item._id} target="_blank" rel="noopener noreferrer"
+                to={item.link !== "" ? item.link : `/news/${item._id}`}  >
+                <div className="relative p-4 my-4 rounded-xl hover:shadow-md hover:shadow-accent-600/50 bg-white space-y-4 border-solid border-2 border-amber-400">
+                  <div className="w-2 h-2 animate-ping bg-accent-600 absolute -left-1 -top-1 rounded-full"></div>
+                  <p className="text-base font-medium text-accent-600">{item.title}</p>
+                  <p className="text-sm font-sans border-solid border-l-4 border-amber-400 pl-4">
                     {item.metaDescription}
                   </p>
-
-
                 </div>
               </Link>
-
             ))}
+
+
+
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
