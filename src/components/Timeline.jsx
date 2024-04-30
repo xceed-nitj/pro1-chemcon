@@ -6,11 +6,11 @@ import formatDate from "../utility/formatDate"
 export default function Timeline(props) {
   const confid = props.confid;
   const [datesData, setDatesData] = useState([]);
+  const [data,setData]=useState(null)
   const apiUrl = getEnvironment();
   useEffect(() => {
     axios.get(`${apiUrl}/conferencemodule/eventDates/conference/${confid}`, {
       withCredentials: true
-
     })
       .then(res => {
         setDatesData(res.data);
@@ -19,10 +19,20 @@ export default function Timeline(props) {
       })
       .catch(err => console.log(err))
 
+      axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
+        withCredentials: true
+  
+      })
+        .then(res => {
+          setData(res.data);
+          console.log(res.data);
+  
+        })
+        .catch(err => console.log(err))
   }, []);
 
   return (
-    <div className=" bg-white container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16">
+    <div className=" bg-white container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16 min-h-[200px]">
       <div className="w-full lg:w-3/5 md:max-w-[700px] pr-4">
 
         <div className="text-center">
@@ -93,16 +103,7 @@ export default function Timeline(props) {
         </h2>
         <Separator />
         <p className="text-base text-justify font-sans font-base text-gray-800">
-          The Indian Institute of Chemical Engineers (IIChE) is the apex
-          professional body of Chemical Engineers in the country instituted
-          in the year 1947 and presently has more than 25,000 corporate
-          members on its roll. The activities of the Institute are spread
-          across the country through its 47 Regional Centres and 186
-          Student Chapters, apart from the HQ located at the Jadavpur
-          University Campus, Kolkata
-          The IIChE has been conducting the Associate Membership
-          Examination since 1960 and publishes an esteemed quarterly
-          Journal “The Indian Chemical Engineer” since 1959..
+        {data ? <div dangerouslySetInnerHTML={{ __html: data.about[2].description }} /> : " "}
         </p>
       </div>
     </div>

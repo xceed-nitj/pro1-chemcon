@@ -24,12 +24,12 @@ function Home(props) {
     
       <HeroSection confid={props.confId} />
       <AboutNews confid={props.confId} />
-      <Slider/>
+      <Slider confid={props.confId} />
       <Timeline confid={props.confId} />
       {/* <Speakers /> */}
-      <OurEvents />
-      <AboutNITJ/>
-      <SponsorShip/>
+      <OurEvents confid={props.confId}  />
+      <AboutNITJ confid={props.confId} />
+      <SponsorShip confid={props.confId} />
       <Footer />
       
     </>
