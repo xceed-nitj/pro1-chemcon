@@ -32,8 +32,9 @@ function AboutNews(props) {
 
     })
       .then(res => {
-        setNewsData(res.data);
-        console.log(res.data);
+        const sortedData = res.data.sort((a, b) => a.sequence - b.sequence);
+        setNewsData(sortedData);
+        console.log(sortedData);
 
       })
       .catch(err => console.log(err))
