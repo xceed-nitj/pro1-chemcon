@@ -154,7 +154,9 @@ const Footer = () => {
 
           <div className="mt-12 border-t border-stone-200 pt-12">
             <div className="sm:flex sm:items-center sm:justify-between">
+<a href="https://info.flagcounter.com/UhQ5"><img src="https://s11.flagcounter.com/count/UhQ5/bg_FFB34F/txt_000000/border_CC4C47/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
               <ul className="flex flex-wrap gap-4 text-xs">
+
                 <li>
                   <a
                     href="#"
