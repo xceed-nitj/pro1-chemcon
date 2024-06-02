@@ -50,7 +50,7 @@ function Events() {
               <li> Chemical Engineering in the New Century</li>
               <li> Agrochemical Technology</li>
               <li>Membrane Separation Processes</li>
-              <li>Mining and Mineral</li>
+              <li>Mining and Mineral Technology</li>
               <li>Biochemical and Bioprocessing</li>
               <li> Industrial Biotechnology</li>
               <li>Process Intensification</li>
