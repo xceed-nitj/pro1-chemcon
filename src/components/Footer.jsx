@@ -104,9 +104,9 @@ const Footer = () => {
               <p className="block text-2xl font-medium text-stone-900 hover:opacity-75 sm:text-3xl">Contact Us</p>
 
               <ul className="mt-4 space-y-1 text-sm text-stone-700 ">
-              <li>Prof. S. Bajpai</li>
-              <li>Organizing Secretary, CHEMCON-2024</li>
-              <li>NIT Jalandhar</li>
+                <li>Prof. S. Bajpai</li>
+                <li>Organizing Secretary, CHEMCON-2024</li>
+                <li>NIT Jalandhar</li>
                 <li>Phone:9888895253</li>
                 <li>Email: chemcon2024@gmail.com</li>
                 <li> <a href="/">
@@ -127,13 +127,18 @@ const Footer = () => {
                 ))}
               </ul> */}
             </div>
-            <a href="https://info.flagcounter.com/1WSw">
-                  <img
-                    src="https://s01.flagcounter.com/count2/SENi/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_VISITORS/labels_1/pageviews_1/flags_0/percent_0/"
-                    alt="Flag Counter"
-                    border="0"
-                  />
-                </a>
+            <div className="mx-auto my-auto">
+
+
+              <a href="https://info.flagcounter.com/1WSw">
+                <img
+                  src="https://s01.flagcounter.com/count2/SENi/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_VISITORS/labels_1/pageviews_1/flags_0/percent_0/"
+                  alt="Flag Counter"
+                  border="0"
+                  className=" w-[300px] lg:w-[450px] border-2 border-dashed  border-accent-500 "
+                />
+              </a>
+            </div>
 
             {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {footerLinks.map((footerLink) => (
@@ -157,7 +162,7 @@ const Footer = () => {
                 </div>
               ))}
             </div>*/}
-          </div> 
+          </div>
 
           <div className="mt-12 border-t border-stone-200 pt-12">
             <div className="sm:flex sm:items-center sm:justify-between">
