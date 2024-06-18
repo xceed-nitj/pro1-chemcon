@@ -178,7 +178,7 @@ function HeroSection(props) {
             href="https://forms.gle/bcj2jYyKaSCy5pG6A" target="_blank" rel="noopener noreferrer"
             className="mt-3 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
           >
-            Register
+            Abstract Submission Link
           </a>
         </div>
 
