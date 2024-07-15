@@ -7,11 +7,18 @@ import { useState, useEffect } from "react";
 
 function AboutNITJ(props) {
 
-    const apiUrl = getEnvironment();
+    //const apiUrl = getEnvironment();
 
     const confid = props.confid;
+    const [apiUrl, setApiUrl] = useState(null);
+    useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);
+
     const [data, setData] = useState(null)
     useEffect(() => {
+        if (apiUrl) {
         axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
             withCredentials: true
 
@@ -23,7 +30,7 @@ function AboutNITJ(props) {
             })
             .catch(err => console.log(err))
 
-    }, []);
+    }}, [apiUrl]);
 
     return (
         <div className=" bg-white container flex flex-col items-center lg:flex-row lg:justify-between lg:items-start max-w-7xl  px-4 sm:px-10  lg:px-8 mx-auto pt-20 min-h-[280px]">

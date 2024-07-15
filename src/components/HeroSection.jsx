@@ -8,8 +8,11 @@ function HeroSection(props) {
   const confid = props.confid;
   const [data, setData] = useState(null);
 
-  const apiUrl = getEnvironment();
-
+   const [apiUrl, setApiUrl] = useState(null);
+    useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);
   useEffect(() => {
     const animation = () => {
       let tl = gsap.timeline();
@@ -96,6 +99,7 @@ function HeroSection(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (apiUrl) {
 
     axios
       .get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
@@ -106,7 +110,7 @@ function HeroSection(props) {
         console.log(res.data);
       })
       .catch((err) => console.log(err));
-  }, [apiUrl, confid]);
+  }}, [apiUrl, confid]);
 
   return (
     <>
