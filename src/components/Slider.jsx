@@ -5,12 +5,16 @@ import axios from "axios";
 import getEnvironment from "../getenvironment";
 
 function Slider(props) {
-  const apiUrl = getEnvironment();
-  const [slides, setSlides] = useState([]); // Initialize slides state with an empty array
+   const [apiUrl, setApiUrl] = useState(null);
+    useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);  const [slides, setSlides] = useState([]); // Initialize slides state with an empty array
   const confid = props.confid;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (apiUrl) {
     axios.get(`${apiUrl}/conferencemodule/images/conference/${confid}`, {
       withCredentials: true
     })
@@ -19,7 +23,7 @@ function Slider(props) {
         console.log(res.data);
       })
       .catch(err => console.log(err));
-  }, [apiUrl, confid]); // Add apiUrl and confid to the dependency array
+  }}, [apiUrl, confid]); // Add apiUrl and confid to the dependency array
 
   useEffect(() => {
     // Set up an interval to call nextSlide every 15 seconds

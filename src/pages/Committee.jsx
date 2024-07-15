@@ -7,8 +7,11 @@ import getEnvironment from "../getenvironment";
 function Committee(props) {
     const confid = props.confid;
     const [data, setData] = useState([]);
-    const apiUrl = getEnvironment();
+     const [apiUrl, setApiUrl] = useState(null);
     useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);    useEffect(() => { if (apiUrl) {
       axios.get(`${apiUrl}/conferencemodule/committee/conference/${confid}`, {
         withCredentials: true
   
@@ -20,7 +23,7 @@ function Committee(props) {
         })
         .catch(err => console.log(err))
   
-    }, []);
+    }}, [apiUrl]);
     return (
         <>
             <div className="fixed top-0 w-screen z-40 "> 

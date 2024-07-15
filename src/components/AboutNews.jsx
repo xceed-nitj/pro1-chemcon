@@ -6,13 +6,17 @@ import getEnvironment from "../getenvironment";
 
 
 function AboutNews(props) {
-  const apiUrl = getEnvironment();
-
+   const [apiUrl, setApiUrl] = useState(null);
+    useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);
   const [isMouseOver, setIsMouseOver] = useState(false);
   const confid = props.confid;
   const [data, setData] = useState(null)
 
   useEffect(() => {
+    if (apiUrl) {
     axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
       withCredentials: true
 
@@ -24,9 +28,10 @@ function AboutNews(props) {
       })
       .catch(err => console.log(err))
 
-  }, []);
+  }}, [apiUrl]);
   const [newsData, setNewsData] = useState([]);
   useEffect(() => {
+    if (apiUrl) {
     axios.get(`${apiUrl}/conferencemodule/announcements/conf/${confid}`, {
       withCredentials: true
 
@@ -39,7 +44,7 @@ function AboutNews(props) {
       })
       .catch(err => console.log(err))
 
-  }, []);
+  }}, [apiUrl]);
 
 
   return (

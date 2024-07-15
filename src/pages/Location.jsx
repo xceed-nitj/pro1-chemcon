@@ -7,11 +7,14 @@ import getEnvironment from "../getenvironment";
 function Location(props) {
     const confid = props.confid;
   const [data, setData] = useState(null)
-
-const apiUrl = getEnvironment();
+   const [apiUrl, setApiUrl] = useState(null);
+    useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);
 useEffect(() => {
     window.scrollTo(0, 0);
-
+    if (apiUrl) {
   axios.get(`${apiUrl}/conferencemodule/location/${confid}`, {
     withCredentials: true
 
@@ -23,7 +26,7 @@ useEffect(() => {
     })
     .catch(err => console.log(err))
 
-}, []);
+}}, [apiUrl]);
    
     return (
         <><div className="fixed top-0 w-screen z-40 "> 

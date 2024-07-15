@@ -7,8 +7,13 @@ export default function Timeline(props) {
   const confid = props.confid;
   const [datesData, setDatesData] = useState([]);
   const [data,setData]=useState(null)
-  const apiUrl = getEnvironment();
-  useEffect(() => {
+   const [apiUrl, setApiUrl] = useState(null);
+    useEffect(() => {
+        // Fetch the environment URL
+        getEnvironment().then(url => setApiUrl(url));
+    }, []);  
+    useEffect(() => {
+      if (apiUrl) {
     axios.get(`${apiUrl}/conferencemodule/eventDates/conference/${confid}`, {
       withCredentials: true
     })
@@ -29,7 +34,7 @@ export default function Timeline(props) {
   
         })
         .catch(err => console.log(err))
-  }, []);
+  }}, [apiUrl]);
 
   return (
     <div className=" bg-white container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16 min-h-[200px]">
