@@ -10,17 +10,18 @@ function Registration() {
         window.scrollTo(0, 0);
       }, []);
     const data = [
-        { title: 'IICHE Member', price: 5000 },
-        { title: 'Non Member / Industrial Personnel', price: 6200 },
-        { title: 'Research Scholar / PG Student (IICHE Member)', price: 4500 },
-        { title: 'UG Student (Student Member / Non Member)', price: 2500 },
-        { title: 'Research Scholar / PG Student (Non IICHE Member)', price: 5000 },
+        { title: 'IICHE Member', price: 5900 },
+        { title: 'Non Member / Industrial Personnel', price: 7316 },
+        { title: 'Research Scholar / PG Student (IICHE Member)', price: 3776},
+        { title: 'Research Scholar / PG Student (Non IICHE Member)', price: 4366},
+        { title: 'UG Student (Student Member )', price: 2950 },
+        { title: 'UG Student (Non Member)', price: 3776 },
         { title: 'Foreign Delegates (IICHE Member)', price: 'USD 250' },
         { title: 'Accompanying Spouse (Foreign) (IICHE Member)', price: 'USD 250' },
-        { title: 'Industrial Personnel’s (IICHE Member/ Non IICHE Member)', price: 6500 },
-        { title: 'Others (IICHE Member/ Non IICHE Member)', price: 3200 },
-        { title: 'Senior Member (Over 65 Years) (IICHE Member/ Non IICHE Member)', price: 3200 },
-        { title: 'Accompanying Spouse (India, All Categories) (IICHE Member/ Non IICHE Member)', price: 2000 },
+        { title: 'Industrial Personnel’s (IICHE Member/ Non IICHE Member)', price: '6500/7800' },
+        { title: 'Others (IICHE Member/ Non IICHE Member)', price: 3200/3700 },
+        { title: 'Senior Member (Over 65 Years) (IICHE Member/ Non IICHE Member)', price: 'NA/3200' },
+        { title: 'Accompanying Spouse (India, All Categories) (IICHE Member/ Non IICHE Member)', price: 2000/2500 },
     ];
 
 
@@ -43,7 +44,7 @@ function Registration() {
                             <thead>
                                 <tr className="border-[2px] bg-accent-100  border-accent-500">
                                     <th className="p-1 pl-4 text-left">Categories of Membership</th>
-                                    <th className="p-1 pl-4 text-left">Amount in INR (Excluding Taxes)</th>
+                                    <th className="p-1 pl-4 text-left">Amount in INR (Including Taxes)</th>
 
                                 </tr>
                             </thead>
