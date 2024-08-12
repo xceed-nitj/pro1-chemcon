@@ -19,9 +19,9 @@ function Registration() {
         { title: 'Foreign Delegates (IICHE Member)', price: 'USD 250' },
         { title: 'Accompanying Spouse (Foreign) (IICHE Member)', price: 'USD 250' },
         { title: 'Industrial Personnel’s (IICHE Member/ Non IICHE Member)', price: '6500/7800' },
-        { title: 'Others (IICHE Member/ Non IICHE Member)', price: 3200/3700 },
+        { title: 'Others (IICHE Member/ Non IICHE Member)', price: '3200/3700' },
         { title: 'Senior Member (Over 65 Years) (IICHE Member/ Non IICHE Member)', price: 'NA/3200' },
-        { title: 'Accompanying Spouse (India, All Categories) (IICHE Member/ Non IICHE Member)', price: 2000/2500 },
+        { title: 'Accompanying Spouse (India, All Categories) (IICHE Member/ Non IICHE Member)', price: '2000/2500' },
     ];
 
 
