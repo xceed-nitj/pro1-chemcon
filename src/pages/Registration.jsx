@@ -10,18 +10,16 @@ function Registration() {
         window.scrollTo(0, 0);
       }, []);
     const data = [
-        { title: 'IICHE Member', price: 5900 },
-        { title: 'Non Member / Industrial Personnel', price: 7316 },
-        { title: 'Research Scholar / PG Student (IICHE Member)', price: 3776},
-        { title: 'Research Scholar / PG Student (Non IICHE Member)', price: 4366},
-        { title: 'UG Student (Student Member )', price: 2950 },
-        { title: 'UG Student (Non Member)', price: 3776 },
-        { title: 'Foreign Delegates (IICHE Member)', price: 'USD 250' },
-        { title: 'Accompanying Spouse (Foreign) (IICHE Member)', price: 'USD 250' },
-        { title: 'Industrial Personnel’s (IICHE Member/ Non IICHE Member)', price: '6500/7800' },
-        { title: 'Others (IICHE Member/ Non IICHE Member)', price: '3200/3700' },
-        { title: 'Senior Member (Over 65 Years) (IICHE Member/ Non IICHE Member)', price: 'NA/3200' },
-        { title: 'Accompanying Spouse (India, All Categories) (IICHE Member/ Non IICHE Member)', price: '2000/2500' },
+        { title: 'Academic Personnel including faculty and scientists', price: '5900 (IICHE Member) / 6200 (Non-IICHE Member)' },
+        { title: 'Research Scholars', price: '4500 (IICHE Member) / 5000 (Non-IICHE Member)' },
+        { title: 'Industrial Personnel ', price: '6500 (IICHE Member) / 7800 (Non-IICHE Member)' },
+        { title: 'Senior IICHE Member over 65 years', price: 'NIL (IICHE Member) / 3200 (Non-IICHE Member)' },
+        { title: 'Post Graduate Students', price: '3200 (IICHE Member) / 3700 (Non-IICHE Member)' },
+        { title: 'Under Graduate Students', price: '2500 (IICHE Member) / 3200 (Non-IICHE Member)' },   
+        { title: 'Spouse Accompanying Indian Delegate (All categories)', price: '2000 (IICHE Member) / 2500 (Non-IICHE Member)' },
+        { title: 'Others', price: '3200 (IICHE Member) / 3700 (Non-IICHE Member)' },
+        { title: 'Foreign Delegates', price: 'USD 250 (IICHE Member) / USD 250 (Non-IICHE Member)' },
+        { title: 'Accompanying Spouse (Foreign Delegates)', price: 'USD 250 (IICHE Member) / USD 250 (Non-IICHE Member)' },
     ];
 
 
