@@ -10,7 +10,7 @@ function Registration() {
         window.scrollTo(0, 0);
       }, []);
     const data = [
-        { title: 'Academic Personnel including faculty and scientists', price: '5900 (IICHE Member) / 6200 (Non-IICHE Member)' },
+        { title: 'Academic Personnel including faculty and scientists', price: '5000 (IICHE Member) / 6200 (Non-IICHE Member)' },
         { title: 'Research Scholars', price: '4500 (IICHE Member) / 5000 (Non-IICHE Member)' },
         { title: 'Industrial Personnel ', price: '6500 (IICHE Member) / 7800 (Non-IICHE Member)' },
         { title: 'Senior IICHE Member over 65 years', price: 'NIL (IICHE Member) / 3200 (Non-IICHE Member)' },
