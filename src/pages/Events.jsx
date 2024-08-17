@@ -35,29 +35,22 @@ function Events() {
             and Poster presentations. The following topics but not limited to
             are to be covered:
             <ul className='list-disc list-inside md:grid md:grid-cols-2 '>
-              <li >Chemical Process Safety Management</li>  <li> Green Technology
-              </li>
-              <li>Novel Separation Techniques
-              </li> <li>New and Renewable Energy </li>
-              <li>Sustainable Development </li>
-              <li>Hydrocarbon and other fossil fuels</li>
-              <li>Energy and Environmental Policy Issues</li>
-              <li>Modelling, Simulation and Scale-up</li>
-              <li> Nanotechnology </li>
-              <li>Process Development</li>
-              <li>Chemical and Fertilizer Technology</li>
-              <li>Nuclear and Thermal Power</li>
-              <li> Chemical Engineering in the New Century</li>
-              <li> Agrochemical Technology</li>
-              <li>Membrane Separation Processes</li>
-              <li>Mining and Mineral Technology</li>
-              <li>Biochemical and Bioprocessing</li>
-              <li> Industrial Biotechnology</li>
-              <li>Process Intensification</li>
-              <li>Process Systems Engineering</li>
-              <li> Waste Water Treatment</li>
-              <li>Solid Waste Management</li>
-
+            <li>Advance Materials (AM)</li>
+    <li>Sustainability & Green Energy (SGE)</li>
+    <li>Catalysis (CT)</li>
+    <li>Petroleum Refinery, Petrochemicals & Hydrocarbon (PRPH)</li>
+    <li>Novel Separation Process (NSP)</li>
+    <li>Transport Processes (TP)</li>
+    <li>Water and Waste Water Treatment (WWT)</li>
+    <li>Process Safety, Security and Reliability (PSSR)</li>
+    <li>Agrochemical Tech & Rural Development (ATRD)</li>
+    <li>Energy & Environment (EE)</li>
+    <li>Startup, Product Development, Atamnirbhar Bharat (SPDA)</li>
+    <li>Recent Trends and Innovations in Chemical Engineering (RTIC)</li>
+    <li>Polymer and Composites (PC)</li>
+    <li>Modeling, Simulation and Control (MSC)</li>
+    <li>Artificial Intelligence in Chemical Engineering (AIC)</li>
+    <li>Biochemical and Bioprocess Engineering (BBE)</li>
             </ul>
           </p>
         </div>
