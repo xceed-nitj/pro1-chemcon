@@ -39,15 +39,11 @@ useEffect(() => {
                         How to Reach NITJ
                     </p>
                     <p className="text-base  text-justify font-sans font-base text-gray-800">
-                      
-
                         {data? <div dangerouslySetInnerHTML={{__html:data.description}}/>: " "}
                     </p>
-
                 </div>
             </div>
             <Footer />
-
         </>
     )
 }
