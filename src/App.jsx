@@ -6,10 +6,11 @@ import Registration from "./pages/Registration";
 import Souvenir from "./pages/Souvenir";
 import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
-import Committee from "./pages/Committee";
+//import Committee from "./pages/Committee";
 import CommonNews from "./pages/CommonNews";
 import ParticlesComponent from "./components/Particle";
 import './App.css'
+import CommontemplateCommittee from "./pages/CommonTemplateCommittee";
 function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
@@ -25,8 +26,8 @@ function App() {
         <Route path="accommodation" element={<Accommodation />} />
         <Route path="souvenir" element={<Souvenir />} />
         <Route path="registration" element={<Registration />} />
-        <Route path="nationalcommittee" element={<Committee confid={confid} />} />
-        <Route path="localcommittee" element={<Committee confid={confid} />} />
+        <Route path="nationalcommittee" element={<CommontemplateCommittee pageid="66c174259ae6dc5828c2cd9c" />} />
+        <Route path="localcommittee" element={<CommontemplateCommittee pageid="66c216e058052e22419a27aa" />} />
         <Route path="news/:newsid" element={<CommonNews /> } />
 
 
