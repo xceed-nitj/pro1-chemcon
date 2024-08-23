@@ -26,8 +26,8 @@ function App() {
         <Route path="accommodation" element={<Accommodation />} />
         <Route path="souvenir" element={<Souvenir />} />
         <Route path="registration" element={<Registration />} />
-        <Route path="nationalcommittee" element={<CommontemplateCommittee pageid="66c174259ae6dc5828c2cd9c" />} />
-        <Route path="localcommittee" element={<CommontemplateCommittee pageid="66c216e058052e22419a27aa" />} />
+        <Route path="nationalcommittee" element={<CommontemplateCommittee pageid="66c2bf945e7b005443191765" />} />
+        <Route path="localcommittee" element={<CommontemplateCommittee pageid="66c2c0855e7b00544319176c" />} />
         <Route path="news/:newsid" element={<CommonNews /> } />
 
 
