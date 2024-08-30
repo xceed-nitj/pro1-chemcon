@@ -121,7 +121,7 @@ function HeroSection(props) {
             {data ? data.confName : " "}{" "}
           </p>
 
-          <p className="bg-white  lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-2 mx-auto">
+          <p className="bg-white  lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center  mx-auto">
             {data ? data.shortName : " "}{" "}
           </p>
 
