@@ -8,11 +8,11 @@ function HeroSection(props) {
   const confid = props.confid;
   const [data, setData] = useState(null);
 
-   const [apiUrl, setApiUrl] = useState(null);
-    useEffect(() => {
-        // Fetch the environment URL
-        getEnvironment().then(url => setApiUrl(url));
-    }, []);
+  const [apiUrl, setApiUrl] = useState(null);
+  useEffect(() => {
+    // Fetch the environment URL
+    getEnvironment().then(url => setApiUrl(url));
+  }, []);
   useEffect(() => {
     const animation = () => {
       let tl = gsap.timeline();
@@ -101,26 +101,27 @@ function HeroSection(props) {
     window.scrollTo(0, 0);
     if (apiUrl) {
 
-    axios
-      .get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
-        withCredentials: true,
-      })
-      .then((res) => {
-        setData(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err));
-  }}, [apiUrl, confid]);
+      axios
+        .get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          setData(res.data);
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [apiUrl, confid]);
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px] ">
-        <div className=" flex flex-col items-center md:items-start justify-center z-20 py-5 gap-4 ">
+        <div className=" flex flex-col items-center md:items-start justify-center z-20 py-5 gap-3 ">
           <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
             {data ? data.confName : " "}{" "}
           </p>
 
-          <p className="bg-white  lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-3 mx-auto">
+          <p className="bg-white  lg:text-3xl md:text-3xl text-3xl leading-tight lg:leading-none tracking-wide font-bold text-accent-400 text-center my-2 mx-auto">
             {data ? data.shortName : " "}{" "}
           </p>
 
@@ -165,6 +166,13 @@ function HeroSection(props) {
                 Dr. B R Ambedkar National Institute of Technology, Jalandhar
               </p>
             </div>
+            
+          </div>
+          <div className="mx-auto text-center">
+            <p className="font-semibold "> Publication partner </p>
+            <a href="https://link.springer.com/journal/13399" target="_blank" rel="noopener noreferrer">
+              <p className="font-bold text-accent-500 underline"> Springer-Biomass Conversion and Biorefinery Journa</p>
+            </a>
           </div>
           {/* <section className="mt-8 lg:mt-14 text-stone-900 text-center md:text-left">
             <h1 className="lg:text-5xl text-3xl  font-bold">
@@ -178,9 +186,10 @@ function HeroSection(props) {
 
             </div>
           </section> */}
+          
           <a
             href="https://forms.gle/bcj2jYyKaSCy5pG6A" target="_blank" rel="noopener noreferrer"
-            className="mt-3 mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
+            className="mx-auto flex items-center justify-center whitespace-nowrap rounded-md border w-fit border-transparent bg-accent-500 px-6 py-2 text-base font-semibold text-white shadow-sm hover:bg-accent-700"
           >
             Abstract Submission Link
           </a>
@@ -274,7 +283,7 @@ function HeroSection(props) {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 }
