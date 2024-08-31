@@ -15,7 +15,7 @@ const navigation = [
   { name: "Sponsors", href: "/sponsorship", current: false },
   {
     name: "Committees",
-    href: "/nationalcommittee",
+    href: "",
     current: false,
     subItems: [
       { name: "National Organising Committee", href: "/nationalcommittee" },
@@ -24,8 +24,19 @@ const navigation = [
   },
   { name: "Location", href: "/location", current: false },
   { name: "Accommodation", href: "/accommodation", current: false },
+  { name: "Publication Partners", href: "", current: false,
+    subItems: [
+      { name: "Journal Names", href: "/journals" },
+    ],
+   },
+  { name: "Registration", href: "", current: false,
+    subItems: [
+      { name: "Registration Fee", href: "/registrationfee" },
+      { name: "Registration Link", href: "/registrationlink" },
+    ],
+   },
   { name: "Souvenir", href: "/souvenir", current: false },
-  { name: "Registration Fee", href: "/registration", current: false },
+ 
 ];
 
 function classNames(...classes) {

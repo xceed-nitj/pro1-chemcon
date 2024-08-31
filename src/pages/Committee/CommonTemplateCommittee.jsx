@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'; // Import useLocation
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import SecNavbar from '../components/SecNavbar';
-import getEnvironment from '../getenvironment';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
+import SecNavbar from '../../components/SecNavbar';
+import getEnvironment from '../../getenvironment';
 import axios from 'axios';
 
 function CommontemplateCommittee(props) {

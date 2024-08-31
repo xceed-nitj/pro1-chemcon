@@ -8,11 +8,11 @@ function HeroSection(props) {
   const confid = props.confid;
   const [data, setData] = useState(null);
 
-   const [apiUrl, setApiUrl] = useState(null);
-    useEffect(() => {
-        // Fetch the environment URL
-        getEnvironment().then(url => setApiUrl(url));
-    }, []);
+  const [apiUrl, setApiUrl] = useState(null);
+  useEffect(() => {
+    // Fetch the environment URL
+    getEnvironment().then(url => setApiUrl(url));
+  }, []);
   useEffect(() => {
     const animation = () => {
       let tl = gsap.timeline();
@@ -101,21 +101,31 @@ function HeroSection(props) {
     window.scrollTo(0, 0);
     if (apiUrl) {
 
-    axios
-      .get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
-        withCredentials: true,
-      })
-      .then((res) => {
-        setData(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err));
-  }}, [apiUrl, confid]);
+      axios
+        .get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          setData(res.data);
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [apiUrl, confid]);
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px] ">
         <div className=" flex flex-col items-center md:items-start justify-center z-20 py-5 gap-4 ">
+
+          {/* Logos added */}
+            <div className=" w-full  flex flex-row justify-evenly items-center pr-10">
+          
+              <img src="/nitjlogo.png" className=" w-10 h-10 md:w-16 md:h-16" alt="" />
+              <img src="/iichelogo.jpg" alt="" className="w-10 h-10 md:w-16 md:h-16" />
+              <img src="/chemconlogo.jpeg" alt="" className="w-10 h-10 md:w-16 md:h-16 " />
+
+            </div>
           <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
             {data ? data.confName : " "}{" "}
           </p>
@@ -126,7 +136,7 @@ function HeroSection(props) {
 
           <h3 className="bg-white  mx-auto font-bold text-center tracking-wide  lg:text-xl">
             Role of Chemical Engineering towards Sustainable Development and
-            Atmanirbhar bharat
+            Atmanirbhar Bharat
           </h3>
 
           <h4 className="bg-white  text-accent-500 mx-auto font-bold text-center md:text-left text-md ">
@@ -149,17 +159,17 @@ function HeroSection(props) {
               <p className="  font-semibold text-center md:text-left ">
                 77<sup>th </sup>Annual Session
               </p>
-              <img src="/logo77th.jpg" className=" w-16 md:w-20 " alt="" />
+              {/* <img src="/logo77th.jpg" className=" w-16 md:w-20 " alt="" /> */}
 
               <p className=" font-bold text-center ">
-                Indian Institute Of Chemical Engineers
+                Indian Institute of Chemical Engineers
               </p>
             </div>
             <div className="flex flex-col justify-center  max-w-[300px] items-center">
               <p className=" font-semibold text-center md:text-left ">
-                Organized At
+                Organized at
               </p>
-              <img src="/logo.png" className=" w-16 md:w-20 " alt="" />
+              {/* <img src="/logo.png" className=" w-16 md:w-20 " alt="" /> */}
 
               <p className=" font-bold text-center ">
                 Dr. B R Ambedkar National Institute of Technology, Jalandhar
@@ -274,7 +284,7 @@ function HeroSection(props) {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 }
