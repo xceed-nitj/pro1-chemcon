@@ -52,14 +52,14 @@ function AboutNews(props) {
       <div className="w-full  md:w-[700px]  s px-4 lg:w-3/5 ">
 
         <h2 className="text-4xl   font-sans font-bold text-gray-950  ">
-          CHEMCON 2024        </h2>
+        IIChE-Chemcon 2024        </h2>
         <Separator />
         <p className="text-base text-justify font-sans font-base text-gray-800">
           {data ? <div className="min-h-[216px]" dangerouslySetInnerHTML={{ __html: data.about[0].description }} /> : <div className="min-h-[216px]"></div>}
 
         </p>
         <h2 className="text-4xl font-sans font-bold mt-4 text-gray-950  ">
-          About IICHE
+          About IIChE
         </h2>
         <Separator />
         <p className="text-base text-justify font-sans font-base text-gray-800">

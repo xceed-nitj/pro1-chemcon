@@ -27,7 +27,7 @@ function JournalNames() {
                     
                     <div className='mt-5 mb-5'>
                     <p className="text-base font-semibold text-justify font-sans font-base text-gray-800">
-                    Springer-Biomass Conversion and Biorefinery Journa </p>
+                    Springer-Biomass Conversion and Biorefinery Journal </p>
                     <a href="https://link.springer.com/journal/13399" target="_blank" rel="noopener noreferrer" className="text-base  text-justify font-sans font-base underline text-blue-500">
                      https://link.springer.com/journal/13399 </a>
                      </div>
