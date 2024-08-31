@@ -1,9 +1,9 @@
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import SecNavbar from '../components/SecNavbar';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
+import SecNavbar from '../../components/SecNavbar';
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import getEnvironment from "../getenvironment";
+import getEnvironment from "../../getenvironment";
 import { useLocation } from "react-router-dom";
 
 function Committee(props) {
