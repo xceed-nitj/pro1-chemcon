@@ -11,6 +11,13 @@ import { useState, useEffect } from "react";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
+  { name: "Publication Partners", href: "", current: false,
+    subItems: [
+      { name: "Springer-Biomass Conversion and Biorefinery", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " },
+      { name: "Taylor & Francis - Indian Chemical Engineer", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " },
+
+    ],
+   },
   { name: "Events", href: "/events", current: false },
   { name: "Sponsors", href: "/sponsorship", current: false },
   {
@@ -24,11 +31,7 @@ const navigation = [
   },
   { name: "Location", href: "/location", current: false },
   { name: "Accommodation", href: "/accommodation", current: false },
-  { name: "Publication Partners", href: "", current: false,
-    subItems: [
-      { name: "Journal Names", href: "/journals" },
-    ],
-   },
+  
   { name: "Registration", href: "", current: false,
     subItems: [
       { name: "Registration Fee", href: "/registrationfee" },

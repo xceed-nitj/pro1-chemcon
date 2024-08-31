@@ -12,7 +12,6 @@ import CommonNews from "./pages/CommonNews";
 import ParticlesComponent from "./components/Particle";
 import './App.css'
 import CommontemplateCommittee from "./pages/Committee/CommonTemplateCommittee";
-import JournalNames from "./pages/publications/JournalNames";
 function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
@@ -29,11 +28,9 @@ function App() {
         <Route path="souvenir" element={<Souvenir />} />
         <Route path="registrationfee" element={<RegistrationFee />} />
         <Route path="registrationlink" element={<RegistrationLink />} />
-        <Route path="journals" element={<JournalNames/>} />       
         <Route path="nationalcommittee" element={<CommontemplateCommittee pageid="66c2bf945e7b005443191765" />} />
         <Route path="localcommittee" element={<CommontemplateCommittee pageid="66c2c0855e7b00544319176c" />} />
         <Route path="news/:newsid" element={<CommonNews /> } />
-
 
 
       </Routes >
