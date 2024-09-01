@@ -121,9 +121,9 @@ function HeroSection(props) {
           {/* Logos added */}
             <div className=" w-full  flex flex-row justify-evenly items-center pr-10">
           
-              <img src="/nitjlogo.png" className=" w-10 h-10 md:w-16 md:h-16" alt="" />
-              <img src="/iichelogo.jpg" alt="" className="w-10 h-10 md:w-16 md:h-16" />
-              <img src="/chemconlogo.jpeg" alt="" className="w-10 h-10 md:w-16 md:h-16 " />
+              <img src="/nitjlogo.png" className="bg-white w-10 h-10 md:w-20 md:h-20" alt="" />
+              <img src="/iichelogo.png" alt="" className="bg-white w-10 h-10 md:w-20 md:h-20" />
+              <img src="/chemconlogo.png" alt="" className="bg-white w-10 h-10 md:w-20 md:h-20 " />
 
             </div>
           <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
