@@ -76,9 +76,21 @@ export default function Timeline(props) {
                       </a>
                     </p>
                   </div>
-                  <div className="px-4 py-2 lg:w-40 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:translate-x-full lg:flex lg:flex-col lg:mt-4 lg:py-0 lg:pr-0 lg:pl-6">
+                  <div className="px-4 py-2 lg:w-48 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:translate-x-full lg:flex lg:flex-col lg:mt-4 lg:py-0 lg:pr-0 lg:pl-6">
+                  {!item.extended ?
+                  <p className="font-medium text-sm text-gray-500">
+                      {formatDate(item.date)}                
+                    </p>
+                    :
+                    <p>
                     <p className="font-medium text-sm text-gray-500">
-                      {formatDate(item.date)}                </p>
+                      {formatDate(item.newDate)}               
+                    </p>
+                    <p className="font-medium text-sm text-gray-500 line-through">
+                   {formatDate(item.date)}                
+                  </p>
+                  </p>
+                    }
                   </div>
                 </li>
 
@@ -91,9 +103,23 @@ export default function Timeline(props) {
                   <div className="bg-gray-100 hover:ring hover:ring-gray-100 hover:ring-offset-2 rounded-xl p-4">
                     <h4 className="font-semibold mb-2">{item.title}</h4>
                   </div>
-                  <div className="px-4 py-2 lg:w-40 lg:absolute lg:top-0 lg:left-0 lg:bottom-0 lg:-translate-x-full lg:flex lg:flex-col lg:text-right lg:mt-4 lg:py-0 lg:pl-0 lg:pr-6">
+                  <div className="px-4 py-2 lg:w-48 lg:absolute lg:top-0 lg:left-0 lg:bottom-0 lg:-translate-x-full lg:flex lg:flex-col lg:text-right lg:mt-4 lg:py-0 lg:pl-0 lg:pr-6">
+                    
+                  {!item.extended ?
+                  <p className="font-medium text-sm text-gray-500">
+                      {formatDate(item.date)}                
+                    </p>
+                    :
+                    <p>
                     <p className="font-medium text-sm text-gray-500">
-                      {formatDate(item.date)}                </p>
+                      {formatDate(item.newDate)}               
+                    </p>
+                    <p className="font-medium text-sm text-gray-500 line-through">
+                   {formatDate(item.date)}                
+                  </p>
+                  </p>
+                    }
+                   
                   </div>
                 </li>
               )
