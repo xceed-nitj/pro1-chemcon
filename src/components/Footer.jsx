@@ -107,7 +107,7 @@ const Footer = () => {
                 <li>Prof. S. Bajpai</li>
                 <li>Organizing Secretary, CHEMCON-2024</li>
                 <li>NIT Jalandhar</li>
-                <li>Phone:9888895253</li>
+                {/* <li>Phone:9888895253</li> */}
                 <li>Email: chemcon2024@gmail.com</li>
                 <li> <a href="/">
                   Website: www.chemcon2024.com </a></li>
