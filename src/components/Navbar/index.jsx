@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import {
   Bars3Icon,
   EnvelopeIcon,
-  PhoneIcon,
+  // PhoneIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import TopNavInfo from "./TopNavInfo";
@@ -80,11 +80,11 @@ export default function Example() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex items-center font-bold gap-4">
-                  <TopNavInfo
+                  {/* <TopNavInfo
                     className="hidden md:flex"
                     icon={<PhoneIcon className="h-5 w-5" />}
                     value="+91-9888895253"
-                  />
+                  /> */}
                   <TopNavInfo
                     icon={<EnvelopeIcon className="h-5 w-5" />}
                     value="chemcon2024@gmail.com"

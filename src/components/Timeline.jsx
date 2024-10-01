@@ -6,35 +6,36 @@ import formatDate from "../utility/formatDate"
 export default function Timeline(props) {
   const confid = props.confid;
   const [datesData, setDatesData] = useState([]);
-  const [data,setData]=useState(null)
-   const [apiUrl, setApiUrl] = useState(null);
-    useEffect(() => {
-        // Fetch the environment URL
-        getEnvironment().then(url => setApiUrl(url));
-    }, []);  
-    useEffect(() => {
-      if (apiUrl) {
-    axios.get(`${apiUrl}/conferencemodule/eventDates/conference/${confid}`, {
-      withCredentials: true
-    })
-      .then(res => {
-        setDatesData(res.data);
-        console.log(res.data);
-
+  const [data, setData] = useState(null)
+  const [apiUrl, setApiUrl] = useState(null);
+  useEffect(() => {
+    // Fetch the environment URL
+    getEnvironment().then(url => setApiUrl(url));
+  }, []);
+  useEffect(() => {
+    if (apiUrl) {
+      axios.get(`${apiUrl}/conferencemodule/eventDates/conference/${confid}`, {
+        withCredentials: true
       })
-      .catch(err => console.log(err))
+        .then(res => {
+          setDatesData(res.data);
+          console.log(res.data);
+
+        })
+        .catch(err => console.log(err))
 
       axios.get(`${apiUrl}/conferencemodule/home/conf/${confid}`, {
         withCredentials: true
-  
+
       })
         .then(res => {
           setData(res.data);
           console.log(res.data);
-  
+
         })
         .catch(err => console.log(err))
-  }}, [apiUrl]);
+    }
+  }, [apiUrl]);
 
   return (
     <div className=" bg-white container max-w-7xl flex flex-col items-center lg:flex-row lg:justify-evenly lg:items-start mx-auto px-5 sm:px-10 py-16 lg:px-8 lg:py-16 min-h-[200px]">
@@ -77,19 +78,19 @@ export default function Timeline(props) {
                     </p>
                   </div>
                   <div className="px-4 py-2 lg:w-48 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:translate-x-full lg:flex lg:flex-col lg:mt-4 lg:py-0 lg:pr-0 lg:pl-6">
-                  {!item.extended ?
-                  <p className="font-medium text-sm text-gray-500">
-                      {formatDate(item.date)}                
-                    </p>
-                    :
-                    <p>
-                    <p className="font-medium text-sm text-gray-500">
-                      {formatDate(item.newDate)}               
-                    </p>
-                    <p className="font-medium text-sm text-gray-500 line-through">
-                   {formatDate(item.date)}                
-                  </p>
-                  </p>
+                    {!item.extended ?
+                      <p className="font-medium text-sm text-gray-500">
+                        {formatDate(item.date)}
+                      </p>
+                      :
+                      <p>
+                        <p className="font-medium text-sm text-gray-500">
+                          {formatDate(item.newDate)}
+                        </p>
+                        <p className="font-medium text-sm text-gray-500 line-through">
+                          {formatDate(item.date)}
+                        </p>
+                      </p>
                     }
                   </div>
                 </li>
@@ -104,22 +105,22 @@ export default function Timeline(props) {
                     <h4 className="font-semibold mb-2">{item.title}</h4>
                   </div>
                   <div className="px-4 py-2 lg:w-48 lg:absolute lg:top-0 lg:left-0 lg:bottom-0 lg:-translate-x-full lg:flex lg:flex-col lg:text-right lg:mt-4 lg:py-0 lg:pl-0 lg:pr-6">
-                    
-                  {!item.extended ?
-                  <p className="font-medium text-sm text-gray-500">
-                      {formatDate(item.date)}                
-                    </p>
-                    :
-                    <p>
-                    <p className="font-medium text-sm text-gray-500">
-                      {formatDate(item.newDate)}               
-                    </p>
-                    <p className="font-medium text-sm text-gray-500 line-through">
-                   {formatDate(item.date)}                
-                  </p>
-                  </p>
+
+                    {!item.extended ?
+                      <p className="font-medium text-sm text-gray-500">
+                        {formatDate(item.date)}
+                      </p>
+                      :
+                      <p>
+                        <p className="font-medium text-sm text-gray-500">
+                          {formatDate(item.newDate)}
+                        </p>
+                        <p className="font-medium text-sm text-gray-500 line-through">
+                          {formatDate(item.date)}
+                        </p>
+                      </p>
                     }
-                   
+
                   </div>
                 </li>
               )
@@ -134,7 +135,7 @@ export default function Timeline(props) {
         </h2>
         <Separator />
         <p className="text-base text-justify font-sans font-base text-gray-800">
-        {data ? <div dangerouslySetInnerHTML={{ __html: data.about[2].description }} /> : " "}
+          {data ? <div dangerouslySetInnerHTML={{ __html: data.about[2].description }} /> : " "}
         </p>
       </div>
     </div>
