@@ -24,7 +24,7 @@ function App() {
         <Route path="sponsorship" element={<Sponsors />} />
         <Route path="events" element={<Events />} />
         <Route path="location" element={<Location confid={confid}  />} />
-        <Route path="accommodation" element={<Accommodation />} />
+        <Route path="accommodation" element={<Accommodation confid={confid}/>} />
         <Route path="souvenir" element={<Souvenir />} />
         <Route path="registrationfee" element={<RegistrationFee />} />
         <Route path="registrationlink" element={<RegistrationLink />} />

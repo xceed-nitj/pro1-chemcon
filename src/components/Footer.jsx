@@ -104,14 +104,20 @@ const Footer = () => {
               <p className="block text-2xl font-medium text-stone-900 hover:opacity-75 sm:text-3xl">Contact Us</p>
 
               <ul className="mt-4 space-y-1 text-sm text-stone-700 ">
-                <li>Prof. S. Bajpai</li>
+                <li>Dr. Shailendra Bajpai</li>
                 <li>Organizing Secretary, CHEMCON-2024</li>
-                <li>NIT Jalandhar</li>
-                {/* <li>Phone:9888895253</li> */}
+                <li>Phone:9815909328</li>
                 <li>Email: chemcon2024@gmail.com</li>
                 <li> <a href="/">
                   Website: www.chemcon2024.com </a></li>
-              </ul>
+                  </ul>
+                  {/* <ul className="mt-4 space-y-1 text-sm  text-stone-900 ">
+                  <li className="text-black">For Accomodation Enquiry</li>
+                  <li>Sharad Kumar</li>
+                  <li>Phone:9039487675</li>
+                  </ul> */}
+
+
 
               {/* <ul className="mt-8 flex gap-6">
                 {socialLinks.map((socialLink) => (
