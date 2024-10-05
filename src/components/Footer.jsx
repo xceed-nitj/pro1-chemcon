@@ -111,11 +111,11 @@ const Footer = () => {
                 <li> <a href="/">
                   Website: www.chemcon2024.com </a></li>
                   </ul>
-                  <ul className="mt-4 space-y-1 text-sm  text-stone-900 ">
+                  {/* <ul className="mt-4 space-y-1 text-sm  text-stone-900 ">
                   <li className="text-black">For Accomodation Enquiry</li>
                   <li>Sharad Kumar</li>
                   <li>Phone:9039487675</li>
-                  </ul>
+                  </ul> */}
 
 
 
