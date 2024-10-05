@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import {
   Bars3Icon,
   EnvelopeIcon,
-  // PhoneIcon,
+  PhoneIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import TopNavInfo from "./TopNavInfo";
@@ -15,6 +15,7 @@ const navigation = [
     subItems: [
       { name: "Springer-Biomass Conversion and Biorefinery", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " },
       { name: "Taylor & Francis - Indian Chemical Engineer", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " },
+      { name: "Elsvier-Chemical Engineering and processing - Processes Intensification", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " }
 
     ],
    },
@@ -80,11 +81,11 @@ export default function Example() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex items-center font-bold gap-4">
-                  {/* <TopNavInfo
+                  <TopNavInfo
                     className="hidden md:flex"
                     icon={<PhoneIcon className="h-5 w-5" />}
-                    value="+91-9888895253"
-                  /> */}
+                    value="+91-9815909328"
+                  />
                   <TopNavInfo
                     icon={<EnvelopeIcon className="h-5 w-5" />}
                     value="chemcon2024@gmail.com"

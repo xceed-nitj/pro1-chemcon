@@ -124,6 +124,7 @@ function HeroSection(props) {
               <img src="/nitjlogo.png" className="bg-white w-10 h-10 md:w-20 md:h-20" alt="" />
               <img src="/iichelogo.png" alt="" className="bg-white w-10 h-10 md:w-20 md:h-20" />
               <img src="/chemconlogo.png" alt="" className="bg-white w-10 h-10 md:w-20 md:h-20 " />
+              <img src="/cipetlogo.png" alt="" className="bg-white w-10 h-10 md:w-20 md:h-20 " />
 
             </div>
           <p className="bg-white lg:text-4xl md:text-4xl text-4xl leading-tight lg:leading-none tracking-wide font-bold text-accent-500 text-center  ">
