@@ -61,6 +61,11 @@ function RegistrationFee() {
                                 )}
                             </tbody>
                         </table>
+                        <p className="text-base mt-5 text-justify font-serif font-base text-gray-700">
+
+                    <span className="font-bold">Note :- </span> All Presenting / Participating authors (who are coming in person to attend the conference) need to register separately for the same paper. 
+                    For multiple papers by the same  authors, they need to register separately as stated above.
+                    </p>
                         
                     </p>
 
