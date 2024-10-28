@@ -117,6 +117,12 @@ const Timeline = forwardRef((props, ref) => {
             ))}
           </ul>
         </div>
+        <div>
+          <p className="text-sm text-justify font-sans font-sm text-gray-800">
+          Separate call for papers will be intimated from the authors participating in the conference for the possible publication in conference partner journals.
+
+          </p>
+        </div>
       </div>
 
       <div className="w-full md:w-[700px] lg:w-2/5 px-4 lg:px-0 mt-10 lg:mt-0 mx-auto lg:pl-5 lg:mx-0 ">
