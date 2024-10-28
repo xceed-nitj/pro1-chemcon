@@ -4,6 +4,7 @@ import Accommodation from "./pages/Accomodation";
 import Location from "./pages/Location";
 import RegistrationFee from "./pages/Registration/RegistrationFee";
 import RegistrationLink from "./pages/Registration/RegistrationLink";
+import RegistrationFAQ from "./pages/Registration/RegistrationFAQ";
 import Souvenir from "./pages/Souvenir";
 import Sponsors from "./pages/Sponsors";
 import { Route, Routes } from "react-router-dom";
@@ -20,6 +21,7 @@ function App() {
 
 <div id="content ">
       < Routes >
+      {/* https://xceed.nitj.ac.in/conferencemodule/commontemplate/671fb502dbcf15e8ac081476 */}
         <Route path="/" element={<Home confId={confid} />} />
         <Route path="sponsorship" element={<Sponsors />} />
         <Route path="events" element={<Events />} />
@@ -28,6 +30,7 @@ function App() {
         <Route path="souvenir" element={<Souvenir />} />
         <Route path="registrationfee" element={<RegistrationFee />} />
         <Route path="registrationlink" element={<RegistrationLink />} />
+        <Route path="registrationfaq" element={<RegistrationFAQ pageid="671fb502dbcf15e8ac081476" />} />
         <Route path="nationalcommittee" element={<CommontemplateCommittee pageid="66c2bf945e7b005443191765" />} />
         <Route path="localcommittee" element={<CommontemplateCommittee pageid="66c2c0855e7b00544319176c" />} />
         <Route path="news/:newsid" element={<CommonNews /> } />
