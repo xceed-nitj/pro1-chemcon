@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import AboutNITJ from "../components/AboutNITJ";
 import AboutNews from "../components/AboutNews";
 import SponsorShip from "../components/Sponsorship";
-import { useEffect } from "react";
+import { useEffect,useRef  } from "react";
 import Slider from "../components/Slider";
 import SecNavbar from "../components/SecNavbar";
 import Navbar from "../components/Navbar"
@@ -15,6 +15,15 @@ function Home(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const targetSectionRef = useRef(null);
+
+  // Step 2: Define the scroll function
+  const scrollToSection = () => {
+    targetSectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
   return (
     <>
     <div className="fixed top-0 w-screen z-40 ">
@@ -22,10 +31,10 @@ function Home(props) {
       </div>
       <SecNavbar />
     
-      <HeroSection confid={props.confId} />
+      <HeroSection confid={props.confId} onClickScroll={scrollToSection} />
       <AboutNews confid={props.confId} />
       <Slider confid={props.confId} />
-      <Timeline confid={props.confId} />
+      <Timeline confid={props.confId} ref={targetSectionRef}  />
       {/* <Speakers /> */}
       <OurEvents confid={props.confId}  />
       <AboutNITJ confid={props.confId} />

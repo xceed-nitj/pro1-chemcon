@@ -30,13 +30,31 @@ const navigation = [
       { name: "Local Organising Committee", href: "/localcommittee" },
     ],
   },
+  {
+    name: "Join symposium",
+    href: "",
+    current: false,
+    subItems: [
+      { name: "US symposium", href: "" },
+      { name: "Indo-Canadian symposium", href: "" },
+    ],
+  },
   { name: "Location", href: "/location", current: false },
-  { name: "Accommodation", href: "/accommodation", current: false },
+  { name: "Accommodation", href: "/accommodation", current: false,
+    subItems: [
+      { name: "Hostel in Jalandhar", href: "/accommodation" },   //here update link afterwards
+      { name: "Hostel accomodation for UG/PG Students", href: "/accommodation" },
+
+    ],
+
+  },
   
   { name: "Registration", href: "", current: false,
     subItems: [
       { name: "Registration Fee", href: "/registrationfee" },
       { name: "Registration Link", href: "/registrationlink" },
+      { name: "Frequently Asked Questions (FAQ)", href: "/registrationfaq" },
+
     ],
    },
   { name: "Souvenir", href: "/souvenir", current: false },
