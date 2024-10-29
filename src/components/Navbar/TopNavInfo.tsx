@@ -6,7 +6,7 @@ const TopNavInfo = ({ className, icon, value }) => {
     return (
         <div className={
             clsx(
-                "flex items-center gap-x-2 text-white hover:text-orange-50",
+                "flex items-center gap-x-1 text-white hover:text-orange-50",
                 className
             )
         }>
