@@ -42,7 +42,7 @@ const navigation = [
   { name: "Location", href: "/location", current: false },
   { name: "Accommodation", href: "/accommodation", current: false,
     subItems: [
-      { name: "Hostel in Jalandhar", href: "/accommodation" },   //here update link afterwards
+      { name: "Hotels in Jalandhar", href: "/accommodation" },   //here update link afterwards
       { name: "Hostel accomodation for UG/PG Students", href: "/accommodation" },
 
     ],
@@ -58,7 +58,9 @@ const navigation = [
     ],
    },
   { name: "Souvenir", href: "/souvenir", current: false },
- 
+
+ { name: "FAQs", href: "/registrationfaq",current: false},
+
 ];
 
 function classNames(...classes) {
