@@ -8,9 +8,10 @@ import {
 import TopNavInfo from "./TopNavInfo";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+// import { IoMdHome } from "react-icons/io"; <IoMdHome className="h-6 w-6" />
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home"    , href: "/", current: true },
   { name: "Publication Partners", href: "", current: false,
     subItems: [
       { name: "Springer-Biomass Conversion and Biorefinery", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " },
@@ -31,7 +32,7 @@ const navigation = [
     ],
   },
   {
-    name: "Join symposium",
+    name: "Joint symposium",
     href: "",
     current: false,
     subItems: [
@@ -100,14 +101,14 @@ export default function Example() {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex items-center font-bold gap-4">
+                <div className="flex items-center font-bold gap-3">
                   <TopNavInfo
-                    className="hidden md:flex"
+                    className="hidden xl:flex"
                     icon={<PhoneIcon className="h-5 w-5" />}
                     value="+91-9815909328"
                   />
-                  <TopNavInfo
-                    icon={<EnvelopeIcon className="h-5 w-5" />}
+                  <TopNavInfo className="mr-4 lg:mr-0"
+                    icon={<EnvelopeIcon className="h-5 w-5 "  />}
                     value="chemcon2024@gmail.com"
                   />
                 </div>
