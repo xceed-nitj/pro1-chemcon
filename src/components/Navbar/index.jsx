@@ -43,7 +43,7 @@ const navigation = [
   { name: "Location", href: "/location", current: false },
   { name: "Accommodation", href: "/accommodation", current: false,
     subItems: [
-      { name: "Hotels in Jalandhar", href: "/accommodation" },   //here update link afterwards
+      { name: "Hotels in Jalandhar", href: "/hotelslist" },   //here update link afterwards
       { name: "Hostel accomodation for UG/PG Students", href: "/accommodation" },
 
     ],
