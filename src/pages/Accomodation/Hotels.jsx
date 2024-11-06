@@ -1,12 +1,12 @@
 
 
 import { useEffect,useState } from 'react';
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import SecNavbar from '../components/SecNavbar';
+import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
+import SecNavbar from '../../components/SecNavbar';
 import axios from "axios";
-import getEnvironment from "../getenvironment";
-function Accommodation(props) {
+import getEnvironment from "../../getenvironment";
+function Hotels(props) {
     const confid = props.confid;
   const [data, setData] = useState([])
    const [apiUrl, setApiUrl] = useState(null);
@@ -37,12 +37,12 @@ useEffect(() => {
         <SecNavbar />
         <div className="bg-white container max-w-7xl mx-auto px-5 sm:px-10  lg:px-8 pt-[58px] min-h-[300px] lg:pt-[10px] pb-5">
                 <div className="w-full mx-auto  md:w-[700px] px-4 lg:w-full" >
-                    <p className="text-2xl font-sans font-bold mb-5  text-gray-950 underline ">
-                        Accomodation
+                    <p className="text-2xl font-sans font-bold   text-gray-950 underline ">
+                        Hotels in Jalandhar
                     </p>
                     {data.length > 0 && 
                     <p className="text-base  text-justify font-sans font-base text-gray-800">
-                        {data? <div dangerouslySetInnerHTML={{__html:data[0].description}}/>: " "}
+                        {data? <div dangerouslySetInnerHTML={{__html:data[1].description}}/>: " "}
                     </p>
 }
                 </div>
@@ -52,5 +52,5 @@ useEffect(() => {
     )
 }
 
-export default Accommodation
+export default Hotels
 

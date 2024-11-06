@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import Events from "./pages/Events";
-import Accommodation from "./pages/Accomodation";
+import Accommodation from "./pages/Accomodation/Accomodation";
 import Location from "./pages/Location";
 import RegistrationFee from "./pages/Registration/RegistrationFee";
 import RegistrationLink from "./pages/Registration/RegistrationLink";
@@ -13,6 +13,7 @@ import CommonNews from "./pages/CommonNews";
 import ParticlesComponent from "./components/Particle";
 import './App.css'
 import CommontemplateCommittee from "./pages/Committee/CommonTemplateCommittee";
+import Hotels from "./pages/Accomodation/Hotels";
 function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="events" element={<Events />} />
         <Route path="location" element={<Location confid={confid}  />} />
         <Route path="accommodation" element={<Accommodation confid={confid}/>} />
+        <Route path="hotelslist" element={<Hotels confid={confid}/>} />
         <Route path="souvenir" element={<Souvenir />} />
         <Route path="registrationfee" element={<RegistrationFee />} />
         <Route path="registrationlink" element={<RegistrationLink />} />
