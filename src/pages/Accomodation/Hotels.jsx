@@ -41,7 +41,7 @@ useEffect(() => {
                         Hotels in Jalandhar
                     </p>
                     {data.length > 0 && 
-                    <p className="text-base  text-justify font-sans font-base text-gray-800">
+                    <p className="text-base  text-justify font-sans font-base overflow-x-scroll  text-gray-800">
                         {data? <div dangerouslySetInnerHTML={{__html:data[1].description}}/>: " "}
                     </p>
 }
