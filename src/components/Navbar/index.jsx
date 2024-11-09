@@ -8,10 +8,10 @@ import {
 import TopNavInfo from "./TopNavInfo";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import { IoMdHome } from "react-icons/io"; <IoMdHome className="h-6 w-6" />
+import { IoMdHome } from "react-icons/io"; 
 
 const navigation = [
-  { name: "Home"    , href: "/", current: true },
+  { name:<IoMdHome className="h-5 w-5" />   , href: "/", current: true },
   { name: "Publication Partners", href: "", current: false,
     subItems: [
       { name: "Springer-Biomass Conversion and Biorefinery", href: "https://chemcon2024.com/news/66d12dad9bc0213cd4814a4d " },
