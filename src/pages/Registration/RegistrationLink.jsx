@@ -37,6 +37,8 @@ function RegistrationLink() {
                       https://forms.gle/FswBCsUuCqnBWUuR7  
                     </a>
 
+An additional late registration fee of Rs. 1000/- applies to all categories after registration deadline. 
+
                 </div>
             </div>
             <Footer />
