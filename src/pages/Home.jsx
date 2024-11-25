@@ -10,6 +10,7 @@ import { useEffect,useRef  } from "react";
 import Slider from "../components/Slider";
 import SecNavbar from "../components/SecNavbar";
 import Navbar from "../components/Navbar"
+import Speaker from "../components/Speaker";
 // import AboutNews from "./components/Dummy";
 function Home(props) {
   useEffect(() => {
@@ -34,6 +35,7 @@ function Home(props) {
       <HeroSection confid={props.confId} onClickScroll={scrollToSection} />
       <AboutNews confid={props.confId} />
       <Slider confid={props.confId} />
+      <Speaker confid={props.confId} />
       <Timeline confid={props.confId} ref={targetSectionRef}  />
       {/* <Speakers /> */}
       <OurEvents confid={props.confId}  />
