@@ -64,7 +64,9 @@ function RegistrationFee() {
                         <p className="text-base mt-5 text-justify font-serif font-base text-gray-700">
 
                     <span className="font-bold">Note :- </span> All Presenting / Participating authors (who are coming in person to attend the conference) need to register separately for the same paper. 
-                    For multiple papers by the same  authors, they need to register separately as stated above.
+                    For multiple papers by the same  authors, they need to register separately as stated above. 
+
+<p>An additional late registration fee of Rs. 1000/- applies to all categories after registration deadline </p>
                     </p>
                         
                     </p>
