@@ -2,6 +2,8 @@
 import  { useState, useEffect } from 'react';
 import axios from "axios";
 import getEnvironment from "../getenvironment";
+import {  Link } from "react-router-dom";
+
 // const speakers = [
 //   { id: 1, name: "Dr. John Doe", photo: "https://via.placeholder.com/150" },
 //   { id: 2, name: "Jane Smith", photo: "https://via.placeholder.com/150" },
@@ -35,9 +37,15 @@ const Speaker = (props) => {
     <div className="w-full overflow-x-auto  ">
 
       <div className="flex justify-evenly space-x-6 py-4 px-6">
+
         {speakers.map((speaker) => (
+            <Link key={speaker.id} target="_blank" rel="noopener noreferrer"
+            to={speaker.ProfileLink !== "" ? speaker.ProfileLink : "/"}  > 
+            {/* `/news/${item._id}` */}
+            
           <div
-          key={speaker.id}
+          
+          
             className="flex-shrink-0 w-48 h-64 bg-white shadow-md hover:shadow-lg hover:shadow-accent-700 rounded-lg border border-gray-200 flex flex-col items-center justify-center"
           >
             <img
@@ -45,8 +53,9 @@ const Speaker = (props) => {
               alt={speaker.Name}
               className="w-32 h-32 rounded-full object-cover mb-4"
             />
-            <p className="  text-gray-700">{speaker.Name}</p>
+            <p className="font-sans text-[18px] font-semibold  text-gray-700">{speaker.Name}</p>
             </div>
+            </Link>
         ))}
       </div>
     </div>
