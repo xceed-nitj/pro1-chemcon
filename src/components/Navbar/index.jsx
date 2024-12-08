@@ -54,6 +54,7 @@ const navigation = [
     subItems: [
       { name: "Registration Fee", href: "/registrationfee" },
       { name: "Registration Link", href: "/registrationlink" },
+{ name: "Registered Participants", href: "https://chemcon2024.com/news/67555b169f24ce1ecb0ca5dd" },
       { name: "Frequently Asked Questions (FAQ)", href: "/registrationfaq" },
 
     ],
