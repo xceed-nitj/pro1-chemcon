@@ -53,7 +53,8 @@ const Speaker = (props) => {
               alt={speaker.Name}
               className="w-32 h-32 rounded-full object-cover mb-4"
             />
-            <p className="font-sans text-[18px] font-semibold  text-gray-700">{speaker.Name}</p>
+            <p className="font-sans text-[18px] font-bold  text-gray-900">{speaker.Name}</p>
+<p className="font-sans text-[12px] font-semibold  text-gray-500">{speaker.Institute}</p>
             </div>
             </Link>
         ))}
