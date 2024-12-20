@@ -22,7 +22,7 @@ function SecNavbar(props) {
       {isHomePage && (
         <button onClick={props.onClickScroll}>
           <span>
-            <p  className="ml-28  text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2"> SPEAKERS</p>
+            <p  className="ml-28  text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2"> LIST OF SPEAKERS</p>
           </span>
         </button>
       )}
