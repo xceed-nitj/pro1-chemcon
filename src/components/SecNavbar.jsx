@@ -27,7 +27,7 @@ function SecNavbar(props) {
   <span>
     <p
       className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg
-      group-hover:bg-gray-200 group-hover:text-blue-600"
+     group-hover:bg-green-500 group-hover:text-white"
     >
       LIST OF SPEAKERS
     </p>
