@@ -30,13 +30,13 @@ function Home(props) {
     <div className="fixed top-0 w-screen z-40 ">
         <Navbar />
       </div>
-      <SecNavbar />
+      <SecNavbar onClickScroll={scrollToSection}/>
     
-      <HeroSection confid={props.confId} onClickScroll={scrollToSection} />
+      <HeroSection confid={props.confId}  />
       <AboutNews confid={props.confId} />
-      <Speaker confid={props.confId} />
+      <Speaker confid={props.confId}  ref={targetSectionRef}  />
       <Slider confid={props.confId} />
-      <Timeline confid={props.confId} ref={targetSectionRef}  />
+      <Timeline confid={props.confId}  />
       {/* <Speakers /> */}
       <OurEvents confid={props.confId}  />
       <AboutNITJ confid={props.confId} />
