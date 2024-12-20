@@ -77,7 +77,7 @@ function SpeakerCard() {
                                 <img src={speaker.imageUrl} className={`object-contain w-full h-full rounded-xl`} />
                                 <div className='absolute bottom-0 bg-gradient-to-t from-40% via-90% from-black/60  w-full p-4 rounded-xl'>
                                     <h1 className='text-white font-semibold text-xl'>{speaker.name}</h1>
-                                     <h1 className='text-white font-semibold text-xl'>{speaker.institute}</h1>
+                                     <h2 className='text-white font-semibold'>{speaker.institute}</h2>
                                 </div>
                             </div>
                         )}
