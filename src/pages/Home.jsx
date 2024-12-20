@@ -34,8 +34,8 @@ function Home(props) {
     
       <HeroSection confid={props.confId} onClickScroll={scrollToSection} />
       <AboutNews confid={props.confId} />
-      <Slider confid={props.confId} />
       <Speaker confid={props.confId} />
+      <Slider confid={props.confId} />
       <Timeline confid={props.confId} ref={targetSectionRef}  />
       {/* <Speakers /> */}
       <OurEvents confid={props.confId}  />
