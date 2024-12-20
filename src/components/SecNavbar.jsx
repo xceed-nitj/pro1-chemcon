@@ -20,11 +20,20 @@ function SecNavbar(props) {
       </span>
 
       {isHomePage && (
-        <button onClick={props.onClickScroll}>
-          <span>
-            <p  className="ml-28  text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2"> LIST OF SPEAKERS</p>
-          </span>
-        </button>
+       <button
+  onClick={props.onClickScroll}
+  className="group relative transition-all duration-300 ease-in-out hover:scale-105"
+>
+  <span>
+    <p
+      className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg
+      group-hover:bg-gray-200 group-hover:text-blue-600"
+    >
+      LIST OF SPEAKERS
+    </p>
+  </span>
+</button>
+
       )}
 
       <span className="absolute right-[120px] top-[58px]">
