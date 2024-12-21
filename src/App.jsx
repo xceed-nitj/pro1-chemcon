@@ -14,6 +14,7 @@ import ParticlesComponent from "./components/Particle";
 import './App.css'
 import CommontemplateCommittee from "./pages/Committee/CommonTemplateCommittee";
 import Hotels from "./pages/Accomodation/Hotels";
+import SpeakerPage from "./pages/SpeakerPage";
 function App() {
    const confid="65fed89def981d3a955ddd9f";
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="accommodation" element={<Accommodation confid={confid}/>} />
         <Route path="hotelslist" element={<Hotels confid={confid}/>} />
         <Route path="souvenir" element={<Souvenir />} />
+        <Route path="speakers" element={<SpeakerPage confid={confid} />} />
         <Route path="registrationfee" element={<RegistrationFee />} />
         <Route path="registrationlink" element={<RegistrationLink />} />
         <Route path="registrationfaq" element={<RegistrationFAQ pageid="671fb502dbcf15e8ac081476" />} />
