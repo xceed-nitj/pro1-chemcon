@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CountdownTimer from "./CountdownTimer";
+import { Link } from "react-router-dom";
 
 function SecNavbar(props) {
   const [isHomePage, setIsHomePage] = useState(false);
@@ -33,6 +34,24 @@ function SecNavbar(props) {
     </p>
   </span>
 </button>
+
+      )}
+
+{!isHomePage && (
+  <Link to='/speakers'>
+       <button
+  className="group relative transition-all duration-300 ease-in-out hover:scale-105"
+>
+  <span>
+    <p
+      className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg
+     group-hover:bg-green-500 group-hover:text-white"
+    >
+      LIST OF SPEAKERS
+    </p>
+  </span>
+</button>
+</Link>
 
       )}
 

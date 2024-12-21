@@ -72,7 +72,7 @@ const Speaker  = forwardRef((props, ref) =>{
           rel="noopener noreferrer"
           to={speaker.ProfileLink !== "" ? speaker.ProfileLink : "/"}
         >
-          <div className="w-full bg-white shadow-md hover:shadow-xl hover:shadow-accent-700 rounded-lg border border-gray-200 flex flex-col items-center justify-center p-4 min-h-[250px]">
+          <div className="w-full bg-white shadow-md hover:shadow-xl hover:shadow-accent-700 rounded-lg border border-gray-200 flex flex-col items-center justify-center p-4 min-h-[287px]">
             <img
               src={speaker.ImgLink}
               alt={speaker.Name}
