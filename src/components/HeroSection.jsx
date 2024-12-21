@@ -235,7 +235,7 @@ function HeroSection(props) {
 
           </button> */}
 <a
-            href="https://docs.google.com/document/u/1/d/e/2PACX-1vQQj7IazzfusT_QXmkIL3Pc9m7Vo9i_IqXOHfgGQ1sdKe_a1zkIEWOfYB6Uz54DmeGs_Mc2Ew9fMfv5/pub" target="_blank" rel="noopener noreferrer" className="mx-auto"
+            href="https://docs.google.com/document/u/1/d/e/2PACX-1vRjWCr2kIO67CAcCz--1dCqer8dvDH5yYGQV7jA_XblMNko4KPk3B4ZT4no98o-sEcg-II7pbaN_ga4/pub" target="_blank" rel="noopener noreferrer" className="mx-auto"
           >
           <button className='mx-auto flex flex-row animate-bounce    bg-white mt-3 '>
          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-7 stroke-violet-700  ">
