@@ -6,11 +6,11 @@ import getEnvironment from "../getenvironment";
 import { Link } from "react-router-dom";
 // import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { FaDownload } from "react-icons/fa";
-
+// import Invitation from "./common/invitation";
 function HeroSection(props) {
   const confid = props.confid;
   const [data, setData] = useState(null);
-
+  // const [showinvitation, SetShowinvitation] = useState(true);
   const [apiUrl, setApiUrl] = useState(null);
   useEffect(() => {
     // Fetch the environment URL
@@ -118,6 +118,8 @@ function HeroSection(props) {
 
   return (
     <>
+      
+      {/* <Invitation /> */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center max-w-7xl mx-auto lg:px-8 px-3 mt-[58px] lg:mt-[2px] ">
         <div className=" flex flex-col items-center md:items-start justify-center z-20 py-4 gap-3 ">
 
