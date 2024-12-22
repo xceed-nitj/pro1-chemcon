@@ -1,7 +1,6 @@
-import { useState } from 'react';
 
-function Invitation() {
-  const [show, setShow] = useState(true);
+function Invitation({ show, setShow }) {
+ 
 
   return (
     <>
