@@ -85,7 +85,7 @@
 import { useEffect, useState } from "react";
 import CountdownTimer from "./CountdownTimer";
 import { Link } from "react-router-dom";
-import Invitation from "./common/invitation";
+import Invitation from './common/Invitation';
 
 function SecNavbar(props) {
   const [isHomePage, setIsHomePage] = useState(false);
