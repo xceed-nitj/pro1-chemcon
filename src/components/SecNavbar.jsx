@@ -20,16 +20,30 @@ function SecNavbar(props) {
         </span>
 
         {isHomePage ? (
-          <button
-            onClick={props.onClickScroll}
-            className="group relative transition-all duration-300 ease-in-out hover:scale-105"
-          >
-            <span>
-              <p className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
-                LIST OF SPEAKERS
-              </p>
-            </span>
-          </button>
+          <>
+            <button
+              onClick={props.onClickScroll}
+              className="group relative transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              <span>
+                <p className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                  LIST OF SPEAKERS
+                </p>
+              </span>
+            </button>
+
+            <button
+              onClick={() => setShow(true)}
+              className="group relative transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              <span>
+                <p className="text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-violet-500 group-hover:text-white">
+                  OFFICIAL INVITATION
+                </p>
+              </span>
+            </button>
+          </>
+
         ) : (
           <Link to="/speakers">
             <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
@@ -42,22 +56,12 @@ function SecNavbar(props) {
           </Link>
         )}
 
-        <button
-          onClick={() => setShow(true)}
-          className="group relative transition-all duration-300 ease-in-out hover:scale-105"
-        >
-          <span>
-            <p className="text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-violet-500 group-hover:text-white">
-              OFFICIAL INVITATION
-            </p>
-          </span>
-        </button>
 
         <span className="absolute right-[120px] top-[58px]">
           <CountdownTimer />
         </span>
       </div>
-      {isHomePage  && <Invitation show={show} setShow={setShow}/>}
+      {isHomePage && <Invitation show={show} setShow={setShow} />}
     </>
   );
 }
