@@ -43,7 +43,7 @@ function Invitation({ show, setShow }) {
             <img
               src="/invitation.jpeg"
               alt="Invitation"
-              className="w-[80%] sm:h-[700px] sm:aspect-auto sm:w-auto mx-auto "
+              className="w-[80%] sm:h-[650px] sm:aspect-auto sm:w-auto mx-auto "
             />
           </div>
         </div>
