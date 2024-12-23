@@ -57,7 +57,7 @@ function SecNavbar(props) {
         >
           <span>
             <p className="text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-violet-500 group-hover:text-white">
-              OFFICIAL INVITATION
+              INAUGURAL INVITATION
             </p>
           </span>
         </button>
