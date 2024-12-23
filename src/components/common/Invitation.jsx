@@ -1,37 +1,37 @@
 import ConfettiExplosion from 'react-confetti-explosion';
-//import  { useState } from 'react';
+import  { useState ,useEffect } from 'react';
 
 function Invitation({ show, setShow }) {
-  // const [isConfettiVisible, setIsConfettiVisible] = useState(true);
+  const [isConfettiVisible, setIsConfettiVisible] = useState(false);
 
-  // useEffect(() => {
-  //   let confettiTimeout;
-  //   let hideConfettiTimeout;
+  useEffect(() => {
+    let confettiTimeout;
+   // let hideConfettiTimeout;
 
-  //   if (show) {
-  //     // Trigger confetti after a delay
-  //     confettiTimeout = setTimeout(() => {
-  //       setIsConfettiVisible(true);
-  //     }, 0);
+    if (show) {
+      // Trigger confetti after a delay
+      confettiTimeout = setTimeout(() => {
+        setIsConfettiVisible(true);
+      }, 400);
 
-  //     // Hide confetti after 5 seconds
-  //     hideConfettiTimeout = setTimeout(() => {
-  //       setIsConfettiVisible(false);
-  //     }, 4000);
-  //   }
+      // // Hide confetti after 5 seconds
+      // hideConfettiTimeout = setTimeout(() => {
+      //   setIsConfettiVisible(false);
+      // }, 4000);
+    }
 
-  //   // Cleanup timeouts on unmount or when `show` changes
-  //   return () => {
-  //     clearTimeout(confettiTimeout);
-  //     clearTimeout(hideConfettiTimeout);
-  //   };
-  // }, [show]);
+    // Cleanup timeouts on unmount or when `show` changes
+    return () => {
+      clearTimeout(confettiTimeout);
+     // clearTimeout(hideConfettiTimeout);
+    };
+  }, [show]);
 
   return (
     <>
       {show && (
         <div className="flex w-full h-screen bg-black bg-opacity-70 backdrop-blur-sm justify-center fixed top-14 z-50">
-          <ConfettiExplosion zIndex={50} force={0.9} particleCount={300}  duration={5000} width={2200} />
+          {isConfettiVisible && <ConfettiExplosion zIndex={50} force={0.9} particleCount={300}  duration={5000} width={2200} />}
           <button
             className="absolute top-0 right-2 bg-white text-black font-bold w-8 h-10 flex items-center justify-center hover:bg-accent-600 hover:text-white focus:outline-none"
             onClick={() => setShow(false)}
