@@ -43,7 +43,7 @@ function Invitation({ show, setShow }) {
             <img
               src="/invitation.jpeg"
               alt="Invitation"
-              className="h-[calc(100%-60px)] sm:h-[700px]"
+              className="h-[calc(100%-100px)] sm:h-[700px]"
             />
           </div>
         </div>
