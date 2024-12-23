@@ -20,7 +20,8 @@ function SpeakerPage(props) {
       withCredentials: true
     })
       .then(res => {
-        setSpeakers(res.data || []); // Ensure slides is initialized even if response.data is undefined
+        const sortedSpeakers = (res.data || []).sort((a, b) => a.sequence - b.sequence);
+        setSpeakers(sortedSpeakers);
         console.log(res.data);
       })
       .catch(err => console.log(err));

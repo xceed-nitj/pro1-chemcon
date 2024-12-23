@@ -30,7 +30,7 @@ function Invitation({ show, setShow }) {
   return (
     <>
       {show && (
-        <div className="flex w-full h-screen bg-black bg-opacity-50 backdrop-blur-sm justify-center fixed top-14 z-50">
+        <div className="flex w-full h-screen bg-black bg-opacity-70 backdrop-blur-sm justify-center fixed top-14 z-50">
           {isConfettiVisible && <Confetti numberOfPieces={300} gravity={0.4} />}
           <button
             className="absolute top-0 right-2 bg-white text-black font-bold w-8 h-10 flex items-center justify-center hover:bg-accent-600 hover:text-white focus:outline-none"
@@ -43,7 +43,7 @@ function Invitation({ show, setShow }) {
             <img
               src="/invitation.jpeg"
               alt="Invitation"
-              className="h-[calc(100%-60px)] sm:h-[700px]"
+              className="w-[80%] sm:h-[650px] sm:aspect-auto sm:w-auto mx-auto "
             />
           </div>
         </div>
