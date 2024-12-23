@@ -73,27 +73,28 @@ function Invitation({ show, setShow }) {
           >
             <ImCross/>
           </button>
-          <div className="w-full flex flex-col items-center justify-start">
+          <button
+                className="absolute left-2 top-1/2 z-50 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
+                onClick={prevSlide}
+                aria-label="Previous slide"
+              >
+                <BsChevronCompactLeft className='w-4 h-4 sm:w-8 sm:h-8 ' />
+              </button>
+              <button
+                className="absolute top-1/2 right-2 z-50 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
+                onClick={nextSlide}
+                aria-label="Next slide"
+              >
+                <BsChevronCompactRight className='w-4 h-4 sm:w-8 sm:h-8' />
+              </button>
+          <div className="w-full flex flex-col items-center  justify-center sm:justify-start">
             <div className="relative w-[80%] sm:h-[650px] mx-auto">
               <img
                 src={images[currentIndex]}
                 alt="Invitation"
                 className="w-full h-full object-contain  rounded-lg"
               />
-              <button
-                className="absolute left-0 top-1/2  transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
-                onClick={prevSlide}
-                aria-label="Previous slide"
-              >
-                <BsChevronCompactLeft size={30} />
-              </button>
-              <button
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
-                onClick={nextSlide}
-                aria-label="Next slide"
-              >
-                <BsChevronCompactRight size={30} />
-              </button>
+              
             </div>
           </div>
         </div>
