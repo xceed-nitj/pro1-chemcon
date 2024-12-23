@@ -7,39 +7,33 @@ function Invitation({ show, setShow }) {
   const [isConfettiVisible, setIsConfettiVisible] = useState(false);
   const images = ['/invitation.jpeg', '/speaker.png'];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoChanged, setIsAutoChanged] = useState(false); // Tracks if the auto-change has occurred
 
   useEffect(() => {
     let confettiTimeout;
 
     if (show) {
-      // Trigger confetti after a delay
       confettiTimeout = setTimeout(() => {
         setIsConfettiVisible(true);
       }, 400);
     }
 
-    // Cleanup timeout on unmount or when `show` changes
     return () => {
       clearTimeout(confettiTimeout);
     };
   }, [show]);
 
   useEffect(() => {
-    let autoChangeTimeout;
+    let interval;
 
-    if (show && !isAutoChanged) {
-      // Automatically change to the second image after 5 seconds
-      autoChangeTimeout = setTimeout(() => {
-        setCurrentIndex(1);
-        setIsAutoChanged(true); // Ensure it only happens once
+    if (show) {
+      // Change the image every 5 seconds
+      interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       }, 5000);
     }
 
-    return () => {
-      clearTimeout(autoChangeTimeout);
-    };
-  }, [show, isAutoChanged]);
+    return () => clearInterval(interval); 
+    }, [show, images.length]);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -56,45 +50,47 @@ function Invitation({ show, setShow }) {
   return (
     <>
       {show && (
-        <div className="flex w-full h-screen bg-black bg-opacity-70 backdrop-blur-sm justify-center fixed top-14 z-50">
-          {isConfettiVisible && (
-            <ConfettiExplosion
-              zIndex={50}
-              force={0.9}
-              particleCount={300}
-              duration={5000}
-              width={2200}
-            />
-          )}
+        <div className="flex w-full h-screen bg-black bg-opacity-70 backdrop-blur-sm justify-center  fixed top-14 z-50">
+
           <button
             className="absolute top-0 right-2 bg-white z-50 text-black font-bold w-8 h-8 flex items-center justify-center hover:bg-accent-600 hover:text-white focus:outline-none"
             onClick={() => setShow(false)}
             aria-label="Close invitation"
           >
-            <ImCross/>
+            <ImCross />
           </button>
           <button
-                className="absolute left-2 top-1/2 z-50 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
-                onClick={prevSlide}
-                aria-label="Previous slide"
-              >
-                <BsChevronCompactLeft className='w-4 h-4 sm:w-8 sm:h-8 ' />
-              </button>
-              <button
-                className="absolute top-1/2 right-2 z-50 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
-                onClick={nextSlide}
-                aria-label="Next slide"
-              >
-                <BsChevronCompactRight className='w-4 h-4 sm:w-8 sm:h-8' />
-              </button>
+            className="absolute left-2 top-1/2 z-50 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
+            onClick={prevSlide}
+            aria-label="Previous slide"
+          >
+            <BsChevronCompactLeft className='w-4 h-4 sm:w-8 sm:h-8 ' />
+          </button>
+          <button
+            className="absolute top-1/2 right-2 z-50 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-white hover:text-black"
+            onClick={nextSlide}
+            aria-label="Next slide"
+          >
+            <BsChevronCompactRight className='w-4 h-4 sm:w-8 sm:h-8' />
+          </button>
           <div className="w-full flex flex-col items-center  justify-center sm:justify-start">
+            {isConfettiVisible && (
+              <ConfettiExplosion
+                zIndex={50}
+                force={0.9}
+                particleCount={300}
+                duration={5000}
+                width={2000}
+              />
+            )}
             <div className="relative w-[80%] sm:h-[650px] mx-auto">
+
               <img
                 src={images[currentIndex]}
                 alt="Invitation"
                 className="w-full h-full object-contain  rounded-lg"
               />
-              
+
             </div>
           </div>
         </div>
