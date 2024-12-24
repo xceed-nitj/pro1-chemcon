@@ -21,7 +21,7 @@ function SecNavbar(props) {
 
   return (
     <>
-      <div className="mt-[56px] h-[50px] sm:hidden hidden lg:flex bg-accent-200 shadow z-50 px-2 sm:px-4 lg:px-8 py-3 lg:space-x-8">
+      <div className="mt-[56px] h-[50px] sm:hidden hidden lg:flex bg-accent-200 shadow z-50 px-2 sm:px-4 lg:px-8 py-3 lg:space-x-5 ">
         <span>
           <p className="font-bold">IIChE ChemCon 2024 | December 27-30, 2024</p>
         </span>
@@ -30,10 +30,10 @@ function SecNavbar(props) {
           <>
             <button
               onClick={props.onClickScroll}
-              className="group relative transition-all duration-300 ease-in-out hover:scale-105"
+              className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
             >
               <span>
-                <p className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
                   LIST OF SPEAKERS
                 </p>
               </span>
@@ -43,7 +43,7 @@ function SecNavbar(props) {
           <Link to="/speakers">
             <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
               <span>
-                <p className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
                   LIST OF SPEAKERS
                 </p>
               </span>
@@ -63,24 +63,24 @@ function SecNavbar(props) {
         </button>
 
         <a
-  href="https://nitj.ac.in/files/1735040665636-Tentative Schedule_CHEMCON2024_Final.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
-    <span>
-      <p className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
-        Technical Events Schedule
-      </p>
-    </span>
-  </button>
-</a>
+          href="https://nitj.ac.in/files/1735040665636-Tentative Schedule_CHEMCON2024_Final.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
+            <span>
+              <p className="text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-accent-500 group-hover:text-white">
+                Technical Events Schedule
+              </p>
+            </span>
+          </button>
+        </a>
 
         <span className="absolute right-[120px] top-[58px]">
           <CountdownTimer />
         </span>
       </div>
-      { <Invitation show={show} setShow={setShow} />}
+      {<Invitation show={show} setShow={setShow} />}
     </>
   );
 }
