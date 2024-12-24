@@ -62,6 +62,20 @@ function SecNavbar(props) {
           </span>
         </button>
 
+        <a
+  href="https://nitj.ac.in/files/1735040665636-Tentative Schedule_CHEMCON2024_Final.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
+    <span>
+      <p className="ml-28 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+        Technical Events Schedule
+      </p>
+    </span>
+  </button>
+</a>
+
         <span className="absolute right-[120px] top-[58px]">
           <CountdownTimer />
         </span>
