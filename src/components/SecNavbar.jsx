@@ -3,7 +3,7 @@ import CountdownTimer from "./CountdownTimer";
 import { Link } from "react-router-dom";
 import Invitation from './common/Invitation';
 
-function SecNavbar({scrollToSection}) {
+function SecNavbar({onClickScroll}) {
   const [isHomePage, setIsHomePage] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -29,12 +29,12 @@ function SecNavbar({scrollToSection}) {
         {isHomePage ? (
           <>
             <button
-             onClick={() => scrollToSection('ourSpeakers')}
-              className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
+         onClick={() => onClickScroll('ourspeakers')}              
+        className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
             >
               <span>
                 <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
-                  LIST OF SPEAKERS
+                  Our Speakers
                 </p>
               </span>
             </button>
@@ -44,7 +44,7 @@ function SecNavbar({scrollToSection}) {
             <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
               <span>
                 <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
-                  LIST OF SPEAKERS
+                Our Speakers
                 </p>
               </span>
             </button>
@@ -54,21 +54,21 @@ function SecNavbar({scrollToSection}) {
 {isHomePage ? (
           <>
             <button
-             onClick={() => scrollToSection('invitedSpeakers')}
-              className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
+         onClick={() => onClickScroll('invitedspeakers')}              
+         className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
             >
               <span>
-                <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                <p className=" text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-yellow-500 group-hover:text-white">
                   Invited Speakers
                 </p>
               </span>
             </button>
           </>
         ) : (
-          <Link to="/speakers">
+          <Link to="/invitedspeakers">
             <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
               <span>
-                <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                <p className=" text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-yellow-500 group-hover:text-white">
                   Invited Speakers
                 </p>
               </span>
@@ -82,7 +82,7 @@ function SecNavbar({scrollToSection}) {
         >
           <span>
             <p className="text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-violet-500 group-hover:text-white">
-              INAUGURAL INVITATION
+              Inaugural Invitation
             </p>
           </span>
         </button>
