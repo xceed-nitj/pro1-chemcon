@@ -3,7 +3,7 @@ import CountdownTimer from "./CountdownTimer";
 import { Link } from "react-router-dom";
 import Invitation from './common/Invitation';
 
-function SecNavbar(props) {
+function SecNavbar({scrollToSection}) {
   const [isHomePage, setIsHomePage] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -29,7 +29,7 @@ function SecNavbar(props) {
         {isHomePage ? (
           <>
             <button
-              onClick={props.onClickScroll}
+             onClick={() => scrollToSection('ourSpeakers')}
               className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
             >
               <span>
@@ -45,6 +45,31 @@ function SecNavbar(props) {
               <span>
                 <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
                   LIST OF SPEAKERS
+                </p>
+              </span>
+            </button>
+          </Link>
+        )}
+
+{isHomePage ? (
+          <>
+            <button
+             onClick={() => scrollToSection('invitedSpeakers')}
+              className="group relative transition-all duration-300 ease-in-out hover:scale-105 "
+            >
+              <span>
+                <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                  Invited Speakers
+                </p>
+              </span>
+            </button>
+          </>
+        ) : (
+          <Link to="/speakers">
+            <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
+              <span>
+                <p className="ml-10 text-sm font-semibold rounded-full text-black bg-white px-4 py-[2px] border-radius-2 shadow-lg group-hover:bg-green-500 group-hover:text-white">
+                  Invited Speakers
                 </p>
               </span>
             </button>

@@ -16,14 +16,24 @@ function Home(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const targetSectionRef = useRef(null);
+  const ourSpeakersRef = useRef(null);
+  const invitedSpeakersRef = useRef(null);
 
   // Step 2: Define the scroll function
-  const scrollToSection = () => {
-    targetSectionRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+  const scrollToSection = (section) => {
+    console.log("Scrolling to:", section);
+
+    if (section === 'ourSpeakers') {
+      ourSpeakersRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    } else if (section === 'invitedSpeakers') {
+      invitedSpeakersRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
   return (
     <>
@@ -34,7 +44,7 @@ function Home(props) {
     
       <HeroSection confid={props.confId}  />
       <AboutNews confid={props.confId} />
-      <Speaker confid={props.confId}  ref={targetSectionRef}  />
+      <Speaker confid={props.confId}  ourSpeakersRef={ourSpeakersRef} invitedSpeakersRef={invitedSpeakersRef}  />
       <Slider confid={props.confId} />
       <Timeline confid={props.confId}  />
       {/* <Speakers /> */}
