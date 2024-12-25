@@ -62,7 +62,7 @@ const Speaker  = forwardRef((props, ref) =>{
  <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-5">Invited Speakers</h2>
       <div className="w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-4 px-6">
-          {speakersTpe1.map((speaker) => (
+          {speakersType1.map((speaker) => (
             <Link
               key={speaker.id}
               target="_blank"
