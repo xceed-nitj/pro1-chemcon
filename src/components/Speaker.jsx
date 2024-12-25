@@ -28,8 +28,8 @@ const Speaker  = forwardRef((props, ref) =>{
       .then(res => {
         const sortedSpeakers = (res.data || []).filter(speaker => speaker.talkType !== 1).sort((a, b) => a.sequence - b.sequence);
         setSpeakers(sortedSpeakers);        console.log(res.data);
-        const sortedSpeakers = (res.data || []).filter(speaker => speaker.talkType == 1).sort((a, b) => a.sequence - b.sequence);
-        setSpeakersType1(sortedSpeakers);        console.log(res.data);
+        const sortedSpeakers2 = (res.data || []).filter(speaker => speaker.talkType == 1).sort((a, b) => a.sequence - b.sequence);
+        setSpeakersType1(sortedSpeakers2);        console.log(res.data);
       })
       .catch(err => console.log(err));
   }}, [apiUrl, confid]); // Add apiUrl and confid to the dependency array
