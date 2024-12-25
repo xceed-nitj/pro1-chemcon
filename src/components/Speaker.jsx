@@ -11,7 +11,7 @@ import {  Link } from "react-router-dom";
 //   { id: 4, name: "Emily Davis", photo: "https://via.placeholder.com/150" },
 // ];
 
-const Speaker  = forwardRef((props, ref,ref1) =>{
+const Speaker  = forwardRef((props, ref) =>{
     const confid = props.confid;
     const [speakers, setSpeakers] = useState([]);
     const [apiUrl, setApiUrl] = useState(null);
@@ -60,9 +60,8 @@ const Speaker  = forwardRef((props, ref,ref1) =>{
  
          
     </div>
-    <div ref={ref1}> dummy
 
-</div>
+
 
 </>
   );
