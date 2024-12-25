@@ -14,6 +14,7 @@ import {  Link } from "react-router-dom";
 const Speaker  = forwardRef((props, ref) =>{
     const confid = props.confid;
     const [speakers, setSpeakers] = useState([]);
+    const [speakersType1, setSpeakersType1] = useState([]);
     const [apiUrl, setApiUrl] = useState(null);
     useEffect(() => {
         // Fetch the environment URL
@@ -25,8 +26,10 @@ const Speaker  = forwardRef((props, ref) =>{
       withCredentials: true
     })
       .then(res => {
-        const sortedSpeakers = (res.data || []).sort((a, b) => a.sequence - b.sequence);
+        const sortedSpeakers = (res.data || []).filter(speaker => speaker.talkType !== 1).sort((a, b) => a.sequence - b.sequence);
         setSpeakers(sortedSpeakers);        console.log(res.data);
+        const sortedSpeakers = (res.data || []).filter(speaker => speaker.talkType == 1).sort((a, b) => a.sequence - b.sequence);
+        setSpeakersType1(sortedSpeakers);        console.log(res.data);
       })
       .catch(err => console.log(err));
   }}, [apiUrl, confid]); // Add apiUrl and confid to the dependency array
@@ -56,6 +59,30 @@ const Speaker  = forwardRef((props, ref) =>{
           ))}
         </div>
       </div>
+ <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-5">Invited Speakers</h2>
+      <div className="w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-4 px-6">
+          {speakersTpe1.map((speaker) => (
+            <Link
+              key={speaker.id}
+              target="_blank"
+              rel="noopener noreferrer"
+              to={speaker.ProfileLink !== "" ? speaker.ProfileLink : "/"}
+            >
+              <div className="w-full bg-white shadow-md hover:shadow-xl hover:shadow-accent-700 rounded-lg border border-gray-200 flex flex-col items-center justify-center p-4 min-h-[287px]">
+                <img
+                  src={speaker.ImgLink}
+                  alt={speaker.Name}
+                  className="w-32 h-32 rounded-full object-cover mb-4"
+                />
+                <p className="font-sans text-[18px] font-bold text-gray-900">{speaker.Name}</p>
+                <p className="font-sans text-[12px] font-semibold text-gray-500">{speaker.Institute}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+        
     </div>
 
   );
