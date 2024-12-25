@@ -11,19 +11,30 @@ import Slider from "../components/Slider";
 import SecNavbar from "../components/SecNavbar";
 import Navbar from "../components/Navbar"
 import Speaker from "../components/Speaker";
+import InvitedSpeaker from "../components/InvitedSpeaker";
 // import AboutNews from "./components/Dummy";
 function Home(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const targetSectionRef = useRef(null);
+  const ourspeakersRef = useRef(null);
+  const invitedspeakersRef = useRef(null);
 
   // Step 2: Define the scroll function
-  const scrollToSection = () => {
-    targetSectionRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+  const scrollToSection = (section) => {
+    
+    if(section=='ourspeakers'){
+      ourspeakersRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }else if(section=='invitedspeakers'){
+      invitedspeakersRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    
   };
   return (
     <>
@@ -34,7 +45,8 @@ function Home(props) {
     
       <HeroSection confid={props.confId}  />
       <AboutNews confid={props.confId} />
-      <Speaker confid={props.confId}  ref={targetSectionRef}  />
+      <Speaker confid={props.confId}  ref={ourspeakersRef}   />
+      <InvitedSpeaker confid={props.confId}  ref={invitedspeakersRef}   />
       <Slider confid={props.confId} />
       <Timeline confid={props.confId}  />
       {/* <Speakers /> */}
