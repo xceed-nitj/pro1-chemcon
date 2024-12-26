@@ -88,7 +88,7 @@ function SecNavbar({onClickScroll}) {
         </button>
 
         <a
-          href="https://nitj.ac.in/files/1735040665636-Tentative Schedule_CHEMCON2024_Final.pdf"
+          href="https://nitj.ac.in/files/1735198331758-Final%20Scientific%20Agenda%20_%20Chemcon%202024-1.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
