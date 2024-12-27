@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CountdownTimer from "./CountdownTimer";
+// import CountdownTimer from "./CountdownTimer";
 import { Link } from "react-router-dom";
 import Invitation from './common/Invitation';
 
@@ -101,9 +101,9 @@ function SecNavbar({onClickScroll}) {
           </button>
         </a>
 
-        <span className="absolute right-[120px] md:top-[110px] xl:top-[58px] z-50">
+        {/* <span className="absolute right-[120px] md:top-[110px] xl:top-[58px] z-50">
           <CountdownTimer />
-        </span>
+        </span> */}
       </div>
       {<Invitation show={show} setShow={setShow} />}
     </>
