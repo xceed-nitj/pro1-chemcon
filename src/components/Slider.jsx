@@ -5,11 +5,12 @@ import axios from "axios";
 import getEnvironment from "../getenvironment";
 
 function Slider(props) {
-   const [apiUrl, setApiUrl] = useState(null);
+  const [apiUrl, setApiUrl] = useState(null);
     useEffect(() => {
         // Fetch the environment URL
         getEnvironment().then(url => setApiUrl(url));
-    }, []);  const [slides, setSlides] = useState([]); // Initialize slides state with an empty array
+    }, []);  
+  const [slides, setSlides] = useState([]); // Initialize slides state with an empty array
   const confid = props.confid;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,7 +20,8 @@ function Slider(props) {
       withCredentials: true
     })
       .then(res => {
-        setSlides(res.data || []); // Ensure slides is initialized even if response.data is undefined
+        const filteredSlides = (res.data || []).filter(slide => slide.feature).sort((a, b) => a.sequence - b.sequence); // Filter slides where feature is true
+        setSlides( filteredSlides); 
         console.log(res.data);
       })
       .catch(err => console.log(err));
@@ -58,18 +60,18 @@ function Slider(props) {
         {slides.length > 0 && ( // Check if slides array is not empty before accessing its properties
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].imgLink})` }}
-            className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+            className='w-full h-full rounded-2xl bg-center bg-cover '
           >
-            <div className="absolute text-2xl font-sans font-medium bottom-0 left-0 right-0 bg-black/50 text-white text-center p-2">
+            <div className="absolute text-sm lg:text-xl font-sans font-medium bottom-0 left-0 right-0 bg-black/50 text-white text-center p-2">
               {slides[currentIndex].name}
             </div>
           </div>
         )}
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0  left-5 text-2xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer'>
-          <BsChevronCompactLeft onClick={prevSlide} size={30} />
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0   left-5 rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer'>
+          <BsChevronCompactLeft onClick={prevSlide} className='w-4 h-4 md:w-8 md:h-8' />
         </div>
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0  right-5 text-2xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer'>
-          <BsChevronCompactRight onClick={nextSlide} size={30} />
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0  right-5 rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer'>
+          <BsChevronCompactRight onClick={nextSlide} className='w-4 h-4 md:w-8 md:h-8'  />
         </div>
         <div className='flex top-4 justify-center py-2'>
           {slides.map((slide, slideIndex) => (
