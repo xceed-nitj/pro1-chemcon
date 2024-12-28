@@ -1,3 +1,150 @@
+import { useState, useEffect } from 'react';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
+
+function Slider() {
+  const [slides, setSlides] = useState([]);
+  const [heading, setHeading] = useState("Inaugural Function");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const inaugural = [
+    { imgLink: "https://nitj.ac.in/files/1735399335249-0L9A2115.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399354448-0L9A2089.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399374524-0L9A2146.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399392312-0L9A2163.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399410039-0L9A2228.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399427569-0L9A2339.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399448976-0L9A2343.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399471501-0L9A2371.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399491301-0L9A2392.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735399542768-0L9A2396.JPG", name: "" }
+  ];
+
+  const invitations = [
+    { imgLink: "https://nitj.ac.in/files/1728104187991-WhatsApp%20Image%202024-10-05%20at%207.35.55%20AM.jpeg", name: "IIChE CHEMCON 2024 team with L&T Director Sh Parthasarthi at L&T house Mumbai" },
+    { imgLink: "https://nitj.ac.in/files/1728104229106-WhatsApp%20Image%202024-10-05%20at%207.38.31%20AM.jpeg", name: "CHEMCON Team at UPL" },
+    { imgLink: "https://nitj.ac.in/files/1728104266596-WhatsApp%20Image%202024-10-05%20at%207.38.32%20AM.jpeg", name: "Inviting Industry Partners" },
+    { imgLink: "https://nitj.ac.in/files/1728104330664-WhatsApp%20Image%202024-10-03%20at%2010.25.43%20PM.jpeg", name: "Inviting Prof. A. B. Pandit, VC, ICT Mumbai for CHEMCON 2024" },
+    { imgLink: "https://nitj.ac.in/files/1728104394354-WhatsApp%20Image%202024-10-03%20at%2010.25.42%20PM.jpeg", name: "Inviting Industry Partners - Arti Industries" },
+    { imgLink: "https://nitj.ac.in/files/1729938898055-WhatsApp%20Image%202024-10-24%20at%204.25.00%20PM.jpeg", name: "Team Chemcon inviting Sh. A K Singh, CEO Petronet LNG at New Delhi" },
+    { imgLink: "https://nitj.ac.in/files/1729938997356-WhatsApp%20Image%202024-10-24%20at%204.25.24%20PM.jpeg", name: "Inviting Industry Partners" },
+    { imgLink: "https://nitj.ac.in/files/1729939106207-WhatsApp%20Image%202024-10-24%20at%204.26.01%20PM.jpeg", name: "Team Chemcon Inviting Sh O P Singh, Director ONGC" }
+  ];
+
+  const day1 = [
+    { imgLink: "https://nitj.ac.in/files/1735399990395-0L9A2970.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400011292-0L9A2983.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400027152-0L9A3010.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400046195-0L9A3028.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400061118-0L9A3051.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400146087-0L9A3083.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400205408-0L9A3107.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400237759-0L9A3111.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735400358695-0L9A3261.JPG", name: "" }
+  ];
+
+  useEffect(() => {
+    // Set initial slides to 'invitations'
+    setSlides(inaugural);
+
+
+
+  }, []);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 4500);
+    return () => clearInterval(intervalId);
+  }, [currentIndex, slides]);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const handleSetSlides = (newSlides, name) => {
+    setHeading(name);
+    setSlides(newSlides);
+    setCurrentIndex(0); // Reset to the first slide
+  };
+
+  return (
+    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 mb-32 sm:mb-5">
+      <div className="h-[420px] w-full md:h-[520px] lg:h-[680px] m-auto py-16 relative group">
+
+        <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-3">{heading}</h2>
+        <div className="flex justify-center space-x-4 mb-3 font-sans flex-wrap">
+
+
+          <button onClick={() => handleSetSlides(inaugural, "Inaugural Function")}
+            className={`px-4 py-1 rounded-lg  mb-2 ${heading === "Inaugural Function"
+              ? "bg-accent-500 text-white font-bold"
+              : "bg-accent-100 text-gray-700 font-semibold"
+              }`}>Inaugural Function</button>
+          <button onClick={() => handleSetSlides(day1, "CHEMCON Day-1")} className={`px-4 py-1 rounded-lg  mb-2 ${heading === "CHEMCON Day-1"
+            ? "bg-accent-500 text-white font-bold"
+            : "bg-accent-100 text-gray-700 font-semibold"
+            }`}>Day 1 Photos</button>
+            <button onClick={() => handleSetSlides(invitations, "Invitations")} className={`px-4 py-1 rounded-lg  mb-2 ${heading === "Invitations"
+          ? "bg-accent-500 text-white font-bold"
+          : "bg-accent-100 text-gray-700 font-semibold"
+          }`}>Invitations</button>
+
+        </div>
+        
+        {slides.length > 0 && slides[currentIndex] && (
+          <div
+            style={{ backgroundImage: `url(${slides[currentIndex].imgLink})` }}
+            className="w-full h-full rounded-2xl bg-center bg-cover relative border-2 border-accent-500 shadow-lg shadow-accent-500"
+          >
+            {slides[currentIndex].name && (
+              <div className="absolute text-sm lg:text-xl font-sans font-medium bottom-0 left-0 right-0 bg-black/50 text-white text-center p-2">
+                {slides[currentIndex].name}
+              </div>
+            )}
+            <div
+              className="hidden group-hover:block absolute top-[50%] -translate-x-0 left-5 rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black cursor-pointer"
+              onClick={prevSlide}
+            >
+              <BsChevronCompactLeft className="w-4 h-4 md:w-8 md:h-8" />
+            </div>
+            <div
+              className="hidden group-hover:block absolute top-[50%] -translate-x-0 right-5 rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black cursor-pointer"
+              onClick={nextSlide}
+            >
+              <BsChevronCompactRight className="w-4 h-4 md:w-8 md:h-8" />
+            </div>
+          </div>
+        )}
+
+        <div className="flex justify-center py-2 ">
+          {slides.map((_, index) => (
+            <RxDotFilled
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`text-2xl cursor-pointer ${index === currentIndex ? "text-accent-500 " : "text-black"
+                }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Slider;
+
+
+//This is the code if you want to fetch images from Backend
+/*
 import  { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
@@ -92,3 +239,4 @@ function Slider(props) {
 }
 
 export default Slider;
+*/
