@@ -44,10 +44,11 @@ function Home(props) {
       <SecNavbar onClickScroll={scrollToSection}/>
     
       <HeroSection confid={props.confId}  />
+      <Slider  />
+      {/* <Slider confid={props.confId} /> */}
       <AboutNews confid={props.confId} />
       <Speaker confid={props.confId}  ref={ourspeakersRef}   />
       <InvitedSpeaker confid={props.confId}  ref={invitedspeakersRef}   />
-      <Slider confid={props.confId} />
       <Timeline confid={props.confId}  />
       {/* <Speakers /> */}
       <OurEvents confid={props.confId}  />
