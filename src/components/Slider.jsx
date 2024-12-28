@@ -73,12 +73,12 @@ function Slider(props) {
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0  right-5 rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer'>
           <BsChevronCompactRight onClick={nextSlide} className='w-4 h-4 md:w-8 md:h-8'  />
         </div>
-        <div className='flex top-4 justify-center py-2'>
+        <div className='flex top-4 justify-center py-2  '>
           {slides.map((slide, slideIndex) => (
             <div
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
-              className={`text-3xl cursor-pointer ${
+              className={`text-sm sm:text-xl md:text-3xl cursor-pointer ${
                 currentIndex === slideIndex ? 'text-accent-500' : ''
               }`}
             >
