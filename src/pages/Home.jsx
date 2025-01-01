@@ -12,6 +12,7 @@ import SecNavbar from "../components/SecNavbar";
 import Navbar from "../components/Navbar"
 import Speaker from "../components/Speaker";
 import InvitedSpeaker from "../components/InvitedSpeaker";
+import VideoGallery from "../components/VideoGallery";
 // import AboutNews from "./components/Dummy";
 function Home(props) {
   useEffect(() => {
@@ -45,6 +46,7 @@ function Home(props) {
     
       <HeroSection confid={props.confId}  />
       <Slider  />
+      <VideoGallery/>
       {/* <Slider confid={props.confId} /> */}
       <AboutNews confid={props.confId} />
       <Speaker confid={props.confId}  ref={ourspeakersRef}   />

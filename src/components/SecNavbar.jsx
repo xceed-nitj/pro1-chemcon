@@ -76,6 +76,20 @@ function SecNavbar({onClickScroll}) {
           </Link>
         )}
 
+         <a
+          href="https://docs.google.com/document/d/e/2PACX-1vSWIe1xRPemQm_kLC5ylBRfRGse50r6VuWnfdVtw7pZWwxh4CdzkeCS_1ms7bXOybbSWcoSDxXq1ipz/pub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="group relative transition-all duration-300 ease-in-out hover:scale-105">
+            <span>
+              <p className="text-sm font-semibold rounded-full text-black bg-white px-2 py-[2px] border-radius-2 shadow-lg group-hover:bg-blue-500 group-hover:text-white">
+              Best Paper Awards
+              </p>
+            </span>
+          </button>
+        </a>
+
         <button
           onClick={() => setShow(true)}
           className="group relative transition-all duration-300 ease-in-out hover:scale-105"
@@ -86,6 +100,8 @@ function SecNavbar({onClickScroll}) {
             </p>
           </span>
         </button>
+        
+
 
         <a
           href="https://nitj.ac.in/files/1735198331758-Final%20Scientific%20Agenda%20_%20Chemcon%202024-1.pdf"
@@ -101,6 +117,7 @@ function SecNavbar({onClickScroll}) {
           </button>
         </a>
 
+       
         {/* <span className="absolute right-[120px] md:top-[110px] xl:top-[58px] z-50">
           <CountdownTimer />
         </span> */}

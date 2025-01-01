@@ -43,6 +43,15 @@ function Slider() {
     { imgLink: "https://nitj.ac.in/files/1735400358695-0L9A3261.JPG", name: "" }
   ];
 
+  const day3 = [
+    { imgLink: "https://nitj.ac.in/files/1735642366747-0L9A5751.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735642396710-0L9A5762.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735642446103-0L9A5753.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735642420804-0L9A5758.JPG", name: "" },
+    { imgLink: "https://nitj.ac.in/files/1735642282938-0L9A5708.JPG", name: "" },
+    
+  ];
+
   useEffect(() => {
     // Set initial slides to 'invitations'
     setSlides(inaugural);
@@ -93,6 +102,10 @@ function Slider() {
             ? "bg-accent-500 text-white font-bold"
             : "bg-accent-100 text-gray-700 font-semibold"
             }`}>Day 1 </button>
+          <button onClick={() => handleSetSlides(day3, "Day3")} className={`px-4 py-1 rounded-lg  mb-2 ${heading === "Day3"
+          ? "bg-accent-500 text-white font-bold"
+          : "bg-accent-100 text-gray-700 font-semibold"
+          }`}>Day 3</button>
             <button onClick={() => handleSetSlides(invitations, "Invitations")} className={`px-4 py-1 rounded-lg  mb-2 ${heading === "Invitations"
           ? "bg-accent-500 text-white font-bold"
           : "bg-accent-100 text-gray-700 font-semibold"
