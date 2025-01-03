@@ -1,5 +1,5 @@
-import  { useState } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { useState } from "react";
+// import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 function VideoGallery() {
@@ -13,25 +13,41 @@ function VideoGallery() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    setCurrentIndex(isFirstSlide ? videos.length - 1 : currentIndex - 1);
-  };
+  // const prevSlide = () => {
+  //   const isFirstSlide = currentIndex === 0;
+  //   setCurrentIndex(isFirstSlide ? videos.length - 1 : currentIndex - 1);
+  // };
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === videos.length - 1;
-    setCurrentIndex(isLastSlide ? 0 : currentIndex + 1);
-  };
+  // const nextSlide = () => {
+  //   const isLastSlide = currentIndex === videos.length - 1;
+  //   setCurrentIndex(isLastSlide ? 0 : currentIndex + 1);
+  // };
 
   return (
-    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8 mb-5 mt-16">
-      <div className="h-[420px] w-full md:h-[520px] lg:h-[680px] m-auto py-16 relative group ">
+    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8  mb-28 sm:mb-5 mt-16">
+      <div className="h-[420px] w-full md:h-[520px] lg:h-[680px] m-auto py-16 relative group">
         <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-3">
           Video Gallery
         </h2>
 
+        <div className="flex justify-center space-x-4 mb-3 font-sans flex-wrap">
+          {videos.map((video, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`px-4 py-1 rounded-lg mb-2 ${
+                currentIndex === index
+                  ? "bg-violet-700 text-white font-bold"
+                  : "bg-violet-100 text-gray-700 font-semibold"
+              }`}
+            >
+              {video.name}
+            </button>
+          ))}
+        </div>
+
         {videos.length > 0 && (
-          <div className="w-full h-full rounded-2xl bg-center bg-cover relative border-2 border-accent-500 shadow-lg shadow-accent-500">
+          <div className="w-full h-full rounded-2xl bg-center bg-cover relative border-2 border-violet-700 shadow-lg shadow-violet-700">
             <iframe
               width="100%"
               height="100%"
@@ -47,7 +63,7 @@ function VideoGallery() {
                 {videos[currentIndex].name}
               </div>
             )}
-            <div
+            {/* <div
               className="hidden group-hover:block absolute top-[50%] -translate-x-0 left-5 rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black cursor-pointer"
               onClick={prevSlide}
             >
@@ -58,7 +74,7 @@ function VideoGallery() {
               onClick={nextSlide}
             >
               <BsChevronCompactRight className="w-4 h-4 md:w-8 md:h-8" />
-            </div>
+            </div> */}
           </div>
         )}
 
@@ -68,7 +84,7 @@ function VideoGallery() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`text-2xl cursor-pointer ${
-                index === currentIndex ? "text-accent-500" : "text-black"
+                index === currentIndex ? "text-violet-700" : "text-black"
               }`}
             />
           ))}
