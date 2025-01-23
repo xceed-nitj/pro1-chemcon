@@ -16,14 +16,14 @@ function DriveLinks() {
             {links.map((link, index) => (
               <div
                 key={index}
-                className="p-4 border border-gray-300 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className="p-4 border border-gray-300 rounded-lg shadow-sm hover:shadow-md transition-shadow  hover:shadow-accent-600"
               >
                 <a
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div>
+                  <div >
                     <div className="text-black font-medium  truncate">
                       {link.name}
                     </div>
