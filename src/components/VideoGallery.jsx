@@ -24,8 +24,8 @@ function VideoGallery() {
   // };
 
   return (
-    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8  mb-28 sm:mb-5 mt-16">
-      <div className="h-[420px] w-full md:h-[520px] lg:h-[680px] m-auto py-16 relative group">
+    <div className="bg-white container space-y-8 lg:max-w-7xl mx-auto px-8 sm:px-10 lg:px-8  mb-28 sm:mb-5 ">
+      <div className="h-[420px] w-full md:h-[520px] lg:h-[680px] m-auto relative group">
         <h2 className="text-4xl font-sans font-bold text-center text-gray-950 mb-3">
           Video Gallery
         </h2>

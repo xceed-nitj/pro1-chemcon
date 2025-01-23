@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar"
 import Speaker from "../components/Speaker";
 import InvitedSpeaker from "../components/InvitedSpeaker";
 import VideoGallery from "../components/VideoGallery";
+import DriveLinks from "../components/Drivelink";
 // import AboutNews from "./components/Dummy";
 function Home(props) {
   useEffect(() => {
@@ -46,6 +47,7 @@ function Home(props) {
     
       <HeroSection confid={props.confId}  />
       <Slider  />
+      <DriveLinks/>
       <VideoGallery/>
       {/* <Slider confid={props.confId} /> */}
       <AboutNews confid={props.confId} />
