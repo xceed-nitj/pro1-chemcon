@@ -6,6 +6,7 @@ Hello! This is the repository for the Chemcon 2024 website. This website is buil
 
 ### Install the ESLint Extension for VS Code
 
+
 - Go to the Extensions view in VS Code.
 
 - In the Extensions view, search for "ESLint".
